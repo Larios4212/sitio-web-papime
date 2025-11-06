@@ -1,0 +1,10 @@
+/* theme-dark.css — optional overrides for dark theme (import only when needed) */
+:root.theme-dark, html.theme-dark {
+  --bg: #0f172a;
+  --fg: #f1f5f9;
+  --brand: #60a5fa;
+  --brand-hover: #3b82f6;
+  --muted: #94a3b8;
+  --card: #1e293b;
+  --border: #334155;
+}

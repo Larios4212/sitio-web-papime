@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- head.html — parcial con meta y enlaces a CSS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAPIME - Visualización 3D - catalogos</title>
+<meta name="description" content="PAPIME - aulas virtuales y modelos 3D para la enseñanza de las ciencias de la tierra">
+<link rel="icon" href="/assets/icons/favicon.svg">
+
+<!-- CSS bundle: importar tokens, base, layout, components y páginas específicas -->
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+<!-- page-specific styles (ejemplo) -->
+<link rel="stylesheet" href="/css/pages/modelos-3d.css">
+<!-- theme-dark puede importarse si se desea -->
+<!-- <link rel="stylesheet" href="/css/theme-dark.css"> -->
+
+<!-- Schema.org (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PAPIME - Visualización de Modelos 3D",
+  "url": "https://papime.example/"
+}
+</script>
+
+</head>
+<body>
+  <!-- header.html — parcial con logo y navegación principal -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-text">PAPIME</span>
+        <span class="logo-subtitle">Modelos 3D</span>
+      </div>
+      <nav aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="/index.html" class="nav-link">Inicio</a></li>
+          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
+          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
+          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
+          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
+          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
+          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
+          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <!-- theme toggle control (visual only, no JS) -->
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
+        <label for="theme-switch" class="theme-label">🌙</label>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section id="catalogos" class="section">
+      <div class="container">
+        <h1>Catálogos Educativos</h1>
+        <p class="section-intro">Colecciones temáticas organizadas para facilitar el acceso a los recursos educativos.</p>
+        
+        <div class="grid">
+          <article class="card">
+            <h2 class="card-title">🐠 Animales Marinos</h2>
+            <p class="card-description">Fauna bentónica y pelágica con especímenes de diferentes ambientes marinos.</p>
+            <a href="/catalogos/animales-marinos.html" class="btn btn-primary">Ver Catálogo</a>
+          </article>
+          
+          <article class="card">
+            <h2 class="card-title">🦎 Animales Terrestres</h2>
+            <p class="card-description">Fauna fósil y actual de ecosistemas terrestres diversos.</p>
+            <a href="/catalogos/animales-terrestres.html" class="btn btn-primary">Ver Catálogo</a>
+          </article>
+          
+          <article class="card">
+            <h2 class="card-title">🪨 Rocas y Minerales</h2>
+            <p class="card-description">Clasificación completa de rocas ígneas, sedimentarias y metamórficas.</p>
+            <a href="/catalogos/rocas-minerales.html" class="btn btn-primary">Ver Catálogo</a>
+          </article>
+          
+          <article class="card">
+            <h2 class="card-title">🏔️ Formas del Relieve</h2>
+            <p class="card-description">Geomorfología y procesos que modelan la superficie terrestre.</p>
+            <a href="/catalogos/formas-relieve.html" class="btn btn-primary">Ver Catálogo</a>
+          </article>
+          
+          <article class="card">
+            <h2 class="card-title">🔬 Equipo de Campo</h2>
+            <p class="card-description">Instrumentos y herramientas para trabajo geológico de campo.</p>
+            <a href="/catalogos/equipo-campo.html" class="btn btn-primary">Ver Catálogo</a>
+          </article>
+          
+          <article class="card">
+            <h2 class="card-title">🚗 Transporte</h2>
+            <p class="card-description">Vehículos y equipamiento para expediciones geológicas.</p>
+            <a href="/catalogos/transporte.html" class="btn btn-primary">Ver Catálogo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer.html — parcial con créditos y logos -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Créditos del Proyecto</h3>
+        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
+        <p class="copyright">© 2025 UNAM</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Logos</h3>
+        <div class="institutional-logos">
+          <div class="logo-placeholder">UNAM</div>
+          <div class="logo-placeholder">DGAPA</div>
+          <div class="logo-placeholder">PAPIME</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

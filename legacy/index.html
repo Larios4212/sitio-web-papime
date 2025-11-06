@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPIME - Proyecto de Apoyo a Proyectos para Innovar y Mejorar la Educación</title>
+    <meta name="description" content="Sitio web del proyecto PAPIME para la visualización de modelos 3D educativos en geología, mineralogía y geomorfología.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="PAPIME - Visualización de Modelos 3D Educativos">
+    <meta property="og:description" content="Proyecto de apoyo educativo con aulas virtuales y modelos 3D para el aprendizaje de ciencias de la tierra.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://papime.edu.mx">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PAPIME - Visualización de Modelos 3D",
+        "url": "https://papime.edu.mx",
+        "description": "Proyecto educativo con aulas virtuales y modelos 3D para ciencias de la tierra"
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">PAPIME</span>
+                    <span class="logo-subtitle">Modelos 3D</span>
+                </div>
+                
+                <nav aria-label="Principal" class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li><a href="#proyecto" class="nav-link">Proyecto</a></li>
+                        <li><a href="#aulas-virtuales" class="nav-link">Aulas virtuales</a></li>
+                        <li><a href="#material-multimedia" class="nav-link">Material multimedia</a></li>
+                        <li><a href="#modelos-3d" class="nav-link">Modelos 3D</a></li>
+                        <li><a href="#catalogos" class="nav-link">Catálogos</a></li>
+                        <li><a href="#practica-virtual" class="nav-link">Práctica virtual</a></li>
+                        <li><a href="#manuales-recursos" class="nav-link">Recursos</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar a tema oscuro">
+                    <label for="theme-switch" class="theme-label">🌙</label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Proyecto PAPIME: Innovación Educativa con Modelos 3D</h1>
+                    <p class="hero-subtitle">Transformando la enseñanza de las ciencias de la tierra a través de aulas virtuales interactivas y visualización tridimensional</p>
+                    <a href="#aulas-virtuales" class="btn btn-primary">Explorar Aulas Virtuales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Proyecto Section -->
+        <section id="proyecto" class="section">
+            <div class="container">
+                <h2 class="section-title">Acerca del Proyecto</h2>
+                <p class="section-intro">Este proyecto PAPIME tiene como finalidad desarrollar recursos educativos innovadores que faciliten el aprendizaje de conceptos complejos en geología, mineralogía y geomorfología mediante el uso de tecnologías inmersivas y modelos tridimensionales.</p>
+                
+                <div id="objetivo" class="subsection">
+                    <h3 class="subsection-title">Objetivo</h3>
+                    <p>Crear un entorno educativo virtual que permita a estudiantes y profesores explorar conceptos geológicos de manera interactiva, mejorando la comprensión espacial y facilitando el aprendizaje activo mediante la visualización de modelos 3D y experiencias inmersivas.</p>
+                </div>
+
+                <div id="participantes" class="subsection">
+                    <h3 class="subsection-title">Participantes</h3>
+                    <div class="grid">
+                        <article class="card participant-card">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23e2e8f0'><circle cx='50' cy='35' r='15'/><path d='M25 75c0-15 10-25 25-25s25 10 25 25'/></svg>" alt="Foto del participante" class="participant-photo">
+                            <h4 class="participant-name">Dr. [Nombre Coordinador]</h4>
+                            <p class="participant-role">Coordinador del Proyecto</p>
+                            <p class="participant-affiliation">Facultad de Ingeniería, UNAM</p>
+                            <ul class="participant-links">
+                                <!-- TODO: Agregar enlaces reales -->
+                                <li><a href="#" class="external" rel="noopener" target="_blank">ORCID</a></li>
+                            </ul>
+                        </article>
+                        
+                        <article class="card participant-card">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23e2e8f0'><circle cx='50' cy='35' r='15'/><path d='M25 75c0-15 10-25 25-25s25 10 25 25'/></svg>" alt="Foto del participante" class="participant-photo">
+                            <h4 class="participant-name">Dr. [Nombre Colaborador]</h4>
+                            <p class="participant-role">Investigador Principal</p>
+                            <p class="participant-affiliation">Instituto de Geología, UNAM</p>
+                            <ul class="participant-links">
+                                <!-- TODO: Agregar enlaces reales -->
+                                <li><a href="#" class="external" rel="noopener" target="_blank">ResearchGate</a></li>
+                            </ul>
+                        </article>
+                        
+                        <article class="card participant-card">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23e2e8f0'><circle cx='50' cy='35' r='15'/><path d='M25 75c0-15 10-25 25-25s25 10 25 25'/></svg>" alt="Foto del participante" class="participant-photo">
+                            <h4 class="participant-name">M.C. [Nombre Técnico]</h4>
+                            <p class="participant-role">Desarrollador de Contenido 3D</p>
+                            <p class="participant-affiliation">Facultad de Ingeniería, UNAM</p>
+                            <ul class="participant-links">
+                                <!-- TODO: Agregar enlaces reales -->
+                                <li><a href="#" class="external" rel="noopener" target="_blank">LinkedIn</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="agradecimientos" class="subsection">
+                    <h3 class="subsection-title">Agradecimientos</h3>
+                    <div class="highlight-box">
+                        <p>Agradecemos el apoyo de la Dirección General de Asuntos del Personal Académico (DGAPA) de la UNAM a través del Programa PAPIME, así como a todas las instituciones y personas que han contribuido al desarrollo de este proyecto educativo innovador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aulas Virtuales Section -->
+        <section id="aulas-virtuales" class="section">
+            <div class="container">
+                <h2 class="section-title">Aulas Virtuales</h2>
+                <p class="section-intro">Explora nuestros espacios virtuales inmersivos diseñados para el aprendizaje interactivo de las ciencias de la tierra.</p>
+                
+                <div class="grid grid-large">
+                    <article id="aula-geologia-mineralogia" class="card card-large">
+                        <h3 class="card-title">Geología y Mineralogía</h3>
+                        <p class="card-description">Sumérgete en el fascinante mundo de los minerales y rocas. Explora cristalografía, propiedades físicas y químicas en un entorno virtual interactivo.</p>
+                        <!-- TODO: Reemplazar con enlace real a Spatial -->
+                        <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+                    </article>
+                    
+                    <article id="aula-geomorfologia" class="card card-large">
+                        <h3 class="card-title">Geomorfología</h3>
+                        <p class="card-description">Descubre las formas del relieve terrestre y los procesos que las modelan. Experimenta con paisajes virtuales y observa la evolución geomorfológica.</p>
+                        <!-- TODO: Reemplazar con enlace real a Spatial -->
+                        <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+                    </article>
+                    
+                    <article id="aula-ambientes-sedimentarios" class="card card-large">
+                        <h3 class="card-title">Ambientes Sedimentarios</h3>
+                        <p class="card-description">Explora diferentes ambientes de sedimentación y comprende los procesos deposicionales que forman las rocas sedimentarias.</p>
+                        <!-- TODO: Reemplazar con enlace real a Spatial -->
+                        <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material Multimedia Section -->
+        <section id="material-multimedia" class="section">
+            <div class="container">
+                <h2 class="section-title">Material Multimedia</h2>
+                <p class="section-intro">Recursos audiovisuales e interactivos para complementar el aprendizaje.</p>
+                
+                <div id="videos" class="subsection">
+                    <h3 class="subsection-title">Videos Educativos</h3>
+                    <div class="video-grid">
+                        <!-- TODO: Reemplazar con URLs reales de YouTube -->
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="infografias-360-animaciones" class="subsection">
+                    <h3 class="subsection-title">Infografías, Recorridos 360° y Animaciones</h3>
+                    <div class="media-gallery">
+                        <figure class="media-item">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23f1f5f9'><rect width='400' height='300' fill='%23e2e8f0'/><text x='200' y='160' text-anchor='middle' fill='%23475569' font-size='16'>Infografía Placeholder</text></svg>" alt="Infografía educativa" class="media-image">
+                            <figcaption>Procesos geológicos fundamentales</figcaption>
+                        </figure>
+                        <figure class="media-item">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23f1f5f9'><rect width='400' height='300' fill='%23e2e8f0'/><text x='200' y='160' text-anchor='middle' fill='%23475569' font-size='16'>Recorrido 360° Placeholder</text></svg>" alt="Recorrido virtual 360 grados" class="media-image">
+                            <figcaption>Recorrido virtual por formaciones rocosas</figcaption>
+                        </figure>
+                        <figure class="media-item">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23f1f5f9'><rect width='400' height='300' fill='%23e2e8f0'/><text x='200' y='160' text-anchor='middle' fill='%23475569' font-size='16'>Animación Placeholder</text></svg>" alt="Animación educativa" class="media-image">
+                            <figcaption>Animación del ciclo de las rocas</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modelos 3D Section -->
+        <section id="modelos-3d" class="section">
+            <div class="container">
+                <h2 class="section-title">Modelos 3D</h2>
+                <p class="section-intro">Colección de modelos tridimensionales para visualización y descarga.</p>
+                
+                <div class="grid">
+                    <article class="card model-card">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' fill='%23f1f5f9'><rect width='300' height='200' fill='%23e2e8f0'/><text x='150' y='110' text-anchor='middle' fill='%23475569' font-size='14'>Vista Previa 3D</text></svg>" alt="Vista previa del modelo 3D" class="model-preview">
+                        <div class="model-info">
+                            <h3 class="model-name">Cuarzo Cristalino</h3>
+                            <span class="chip">Minerales</span>
+                            <a href="#" class="btn btn-ghost">Ver/Descargar</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card model-card">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' fill='%23f1f5f9'><rect width='300' height='200' fill='%23e2e8f0'/><text x='150' y='110' text-anchor='middle' fill='%23475569' font-size='14'>Vista Previa 3D</text></svg>" alt="Vista previa del modelo 3D" class="model-preview">
+                        <div class="model-info">
+                            <h3 class="model-name">Formación Estratigráfica</h3>
+                            <span class="chip">Rocas Sedimentarias</span>
+                            <a href="#" class="btn btn-ghost">Ver/Descargar</a>
+                        </div>
+                    </article>
+                    
+                    <article class="card model-card">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' fill='%23f1f5f9'><rect width='300' height='200' fill='%23e2e8f0'/><text x='150' y='110' text-anchor='middle' fill='%23475569' font-size='14'>Vista Previa 3D</text></svg>" alt="Vista previa del modelo 3D" class="model-preview">
+                        <div class="model-info">
+                            <h3 class="model-name">Relieve Montañoso</h3>
+                            <span class="chip">Geomorfología</span>
+                            <a href="#" class="btn btn-ghost">Ver/Descargar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogos Educativos Section -->
+        <section id="catalogos" class="section">
+            <div class="container">
+                <h2 class="section-title">Catálogos Educativos</h2>
+                <p class="section-intro">Colecciones temáticas organizadas para facilitar el acceso a los recursos educativos.</p>
+                
+                <div class="catalog-sections">
+                    <div id="animales-marinos" class="catalog-section">
+                        <h3 class="catalog-title">Animales Marinos</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Fauna Bentónica</h4>
+                                <p>Organismos del fondo marino</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Fauna Pelágica</h4>
+                                <p>Organismos de aguas abiertas</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="animales-terrestres" class="catalog-section">
+                        <h3 class="catalog-title">Animales Terrestres</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Fauna Fósil</h4>
+                                <p>Organismos terrestres extintos</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Fauna Actual</h4>
+                                <p>Organismos terrestres contemporáneos</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="mobiliario" class="catalog-section">
+                        <h3 class="catalog-title">Mobiliario</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Equipo de Laboratorio</h4>
+                                <p>Instrumentos científicos virtuales</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="formas-relieve" class="catalog-section">
+                        <h3 class="catalog-title">Formas del Relieve Terrestre</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Relieve Volcánico</h4>
+                                <p>Formas originadas por vulcanismo</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Relieve Erosivo</h4>
+                                <p>Formas modeladas por erosión</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="transporte" class="catalog-section">
+                        <h3 class="catalog-title">Transporte</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Vehículos de Campo</h4>
+                                <p>Equipamiento para trabajo geológico</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="rocas" class="catalog-section">
+                        <h3 class="catalog-title">Rocas</h3>
+                        
+                        <!-- Tab system with CSS only -->
+                        <div class="tab-system">
+                            <div class="tab-controls">
+                                <input type="radio" id="tab-igneas" name="rock-tabs" checked>
+                                <label for="tab-igneas" class="tab-label">Ígneas</label>
+                                
+                                <input type="radio" id="tab-sedimentarias" name="rock-tabs">
+                                <label for="tab-sedimentarias" class="tab-label">Sedimentarias</label>
+                            </div>
+                            
+                            <div class="tab-content">
+                                <div id="rocas-igneas" class="tab-panel">
+                                    <div class="grid">
+                                        <article class="card catalog-item">
+                                            <h4>Granito</h4>
+                                            <p>Roca plutónica félsica</p>
+                                        </article>
+                                        <article class="card catalog-item">
+                                            <h4>Basalto</h4>
+                                            <p>Roca volcánica máfica</p>
+                                        </article>
+                                        <article class="card catalog-item">
+                                            <h4>Obsidiana</h4>
+                                            <p>Vidrio volcánico natural</p>
+                                        </article>
+                                    </div>
+                                </div>
+                                
+                                <div id="rocas-sedimentarias" class="tab-panel">
+                                    <div class="grid">
+                                        <article class="card catalog-item">
+                                            <h4>Arenisca</h4>
+                                            <p>Roca clástica de grano medio</p>
+                                        </article>
+                                        <article class="card catalog-item">
+                                            <h4>Caliza</h4>
+                                            <p>Roca carbonatada</p>
+                                        </article>
+                                        <article class="card catalog-item">
+                                            <h4>Lutita</h4>
+                                            <p>Roca clástica de grano fino</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="minerales" class="catalog-section">
+                        <h3 class="catalog-title">Minerales</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Silicatos</h4>
+                                <p>Minerales más abundantes</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Carbonatos</h4>
+                                <p>Minerales con CO₃²⁻</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Sulfuros</h4>
+                                <p>Minerales metálicos importantes</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div id="equipo-de-campo" class="catalog-section">
+                        <h3 class="catalog-title">Equipo de Campo</h3>
+                        <div class="grid">
+                            <article class="card catalog-item">
+                                <h4>Martillo Geológico</h4>
+                                <p>Herramienta básica de campo</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Brújula Brunton</h4>
+                                <p>Instrumento de medición estructural</p>
+                            </article>
+                            <article class="card catalog-item">
+                                <h4>Lupa de Campo</h4>
+                                <p>Observación de detalles minerales</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Práctica Virtual Section -->
+        <section id="practica-virtual" class="section">
+            <div class="container">
+                <h2 class="section-title">Práctica Virtual</h2>
+                <p class="section-intro">Guía interactiva para realizar prácticas de laboratorio y campo de manera virtual.</p>
+                
+                <div class="practice-content">
+                    <div class="practice-steps">
+                        <h3>Pasos de la Práctica</h3>
+                        <ol>
+                            <li>Accede al aula virtual correspondiente</li>
+                            <li>Selecciona los especímenes a estudiar</li>
+                            <li>Utiliza las herramientas de análisis disponibles</li>
+                            <li>Registra tus observaciones en la hoja de trabajo</li>
+                            <li>Compara tus resultados con los ejemplos de referencia</li>
+                            <li>Completa el cuestionario de evaluación</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="practice-download">
+                        <h3>Recursos Descargables</h3>
+                        <!-- TODO: Reemplazar con enlace real a PDF -->
+                        <a href="#" class="btn btn-primary" download>Descargar Guía de Práctica (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manuales y Recursos Section -->
+        <section id="manuales-recursos" class="section">
+            <div class="container">
+                <h2 class="section-title">Manuales y Recursos Educativos</h2>
+                <p class="section-intro">Documentos de apoyo, guías y manuales para complementar el aprendizaje.</p>
+                
+                <ul class="resources-list">
+                    <!-- TODO: Reemplazar con enlaces reales a PDFs -->
+                    <li class="resource-item">
+                        <a href="#" class="resource-link external" rel="noopener" target="_blank">
+                            <span class="resource-icon">📖</span>
+                            Manual de Identificación de Minerales
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="#" class="resource-link external" rel="noopener" target="_blank">
+                            <span class="resource-icon">🗺️</span>
+                            Guía de Cartografía Geológica
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="#" class="resource-link external" rel="noopener" target="_blank">
+                            <span class="resource-icon">🔬</span>
+                            Técnicas de Petrografía Microscópica
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="#" class="resource-link external" rel="noopener" target="_blank">
+                            <span class="resource-icon">🏔️</span>
+                            Atlas de Formas del Relieve
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Créditos del Proyecto</h3>
+                    <p>Proyecto PAPIME desarrollado con el apoyo de la Dirección General de Asuntos del Personal Académico (DGAPA) de la Universidad Nacional Autónoma de México.</p>
+                    <p class="copyright">© 2024 UNAM. Todos los derechos reservados.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>
+                        <strong>Email:</strong> 
+                        <!-- TODO: Reemplazar con email real -->
+                        <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Logos Institucionales</h3>
+                    <div class="institutional-logos">
+                        <!-- TODO: Reemplazar con logos reales -->
+                        <div class="logo-placeholder">UNAM</div>
+                        <div class="logo-placeholder">DGAPA</div>
+                        <div class="logo-placeholder">PAPIME</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="accessibility-notice">
+                    Este sitio web cumple con las pautas de accesibilidad WCAG 2.1 nivel AA.
+                    <a href="#" class="external" rel="noopener" target="_blank">Política de Accesibilidad</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

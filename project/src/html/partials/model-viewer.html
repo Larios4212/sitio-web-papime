@@ -1,0 +1,41 @@
+<!-- Modal para visualizar modelos 3D -->
+<div id="model-viewer-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+  <div class="modal-backdrop" aria-hidden="true"></div>
+  <div class="modal-content" role="document">
+    <div class="modal-header">
+      <h3 id="modal-title">Visualizador 3D</h3>
+      <button type="button" class="modal-close" aria-label="Cerrar visualizador" title="Cerrar">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="model-viewer-container">
+        <div class="model-loading">
+          <div class="loading-spinner"></div>
+          <p>Cargando modelo 3D...</p>
+        </div>
+        <iframe id="model-iframe" 
+                title="Visor de modelo 3D" 
+                frameborder="0" 
+                allowfullscreen 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking 
+                execution-while-out-of-viewport 
+                execution-while-not-rendered 
+                web-share>
+        </iframe>
+      </div>
+      <div class="model-controls">
+        <button type="button" class="btn btn-ghost" id="fullscreen-btn">
+          <span>🔍</span> Pantalla completa
+        </button>
+        <button type="button" class="btn btn-ghost" id="share-btn">
+          <span>🔗</span> Compartir
+        </button>
+        <a id="sketchfab-link" class="btn btn-primary" target="_blank" rel="noopener">
+          <span>↗</span> Ver en Sketchfab
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

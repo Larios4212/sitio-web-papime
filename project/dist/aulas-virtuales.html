@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- head.html — parcial con meta y enlaces a CSS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAPIME - Visualización 3D - aulas-virtuales</title>
+<meta name="description" content="PAPIME - aulas virtuales y modelos 3D para la enseñanza de las ciencias de la tierra">
+<link rel="icon" href="/assets/icons/favicon.svg">
+
+<!-- CSS bundle: importar tokens, base, layout, components y páginas específicas -->
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+<!-- page-specific styles (ejemplo) -->
+<link rel="stylesheet" href="/css/pages/modelos-3d.css">
+<!-- theme-dark puede importarse si se desea -->
+<!-- <link rel="stylesheet" href="/css/theme-dark.css"> -->
+
+<!-- Schema.org (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PAPIME - Visualización de Modelos 3D",
+  "url": "https://papime.example/"
+}
+</script>
+
+</head>
+<body>
+  <!-- header.html — parcial con logo y navegación principal -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-text">PAPIME</span>
+        <span class="logo-subtitle">Modelos 3D</span>
+      </div>
+      <nav aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="/index.html" class="nav-link">Inicio</a></li>
+          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
+          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
+          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
+          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
+          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
+          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
+          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <!-- theme toggle control (visual only, no JS) -->
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
+        <label for="theme-switch" class="theme-label">🌙</label>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section id="aulas-virtuales" class="section">
+      <div class="container">
+        <h1>Aulas Virtuales</h1>
+        <p class="section-intro">Explora nuestros espacios virtuales inmersivos diseñados para el aprendizaje interactivo de las ciencias de la tierra.</p>
+        
+        <div class="grid grid-large">
+          <article id="aula-geologia-mineralogia" class="card card-large">
+            <h2 class="card-title">Geología y Mineralogía</h2>
+            <p class="card-description">Sumérgete en el fascinante mundo de los minerales y rocas. Explora cristalografía, propiedades físicas y químicas en un entorno virtual interactivo.</p>
+            <!-- TODO: Reemplazar con enlace real a Spatial -->
+            <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+          </article>
+          
+          <article id="aula-geomorfologia" class="card card-large">
+            <h2 class="card-title">Geomorfología</h2>
+            <p class="card-description">Descubre las formas del relieve terrestre y los procesos que las modelan. Experimenta con paisajes virtuales y observa la evolución geomorfológica.</p>
+            <!-- TODO: Reemplazar con enlace real a Spatial -->
+            <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+          </article>
+          
+          <article id="aula-ambientes-sedimentarios" class="card card-large">
+            <h2 class="card-title">Ambientes Sedimentarios</h2>
+            <p class="card-description">Explora diferentes ambientes de sedimentación y comprende los procesos deposicionales que forman las rocas sedimentarias.</p>
+            <!-- TODO: Reemplazar con enlace real a Spatial -->
+            <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer.html — parcial con créditos y logos -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Créditos del Proyecto</h3>
+        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
+        <p class="copyright">© 2025 UNAM</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Logos</h3>
+        <div class="institutional-logos">
+          <div class="logo-placeholder">UNAM</div>
+          <div class="logo-placeholder">DGAPA</div>
+          <div class="logo-placeholder">PAPIME</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

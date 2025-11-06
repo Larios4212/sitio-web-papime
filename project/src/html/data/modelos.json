@@ -1,0 +1,76 @@
+{
+  "models": [
+    {
+      "id": "tlayacapan",
+      "name": "Tlayacapan, Morelos",
+      "category": "Geomorfología",
+      "description": "Modelo topográfico de la región de Tlayacapan mostrando características geomorfológicas del estado de Morelos",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/tlayacapan-morelos-6002358005f649d29a73bd8013b28b05",
+      "preview": "/assets/img/tlayacapan-preview.jpg"
+    },
+    {
+      "id": "mina-chichicuautla",
+      "name": "Mina cerca de Chichicuautla, Puebla",
+      "category": "Minería",
+      "description": "Estructura de mina abandonada en las proximidades de Chichicuautla, estado de Puebla",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/mina-cerca-de-chichicuautla-puebla-6ffb294237b24fbe873864a2dd4fdf26",
+      "preview": "/assets/img/mina-chichicuautla-preview.jpg"
+    },
+    {
+      "id": "hummock",
+      "name": "Hummock",
+      "category": "Geomorfología",
+      "description": "Formación geomorfológica tipo hummock, característica de procesos glaciales y periglaciales",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/hummock3d-9472268074d344dca9d702a988d8cb50",
+      "preview": "/assets/img/hummock-preview.jpg"
+    },
+    {
+      "id": "crater-tecuitlapa",
+      "name": "Cráter de Tecuitlapa, Puebla",
+      "category": "Vulcanología",
+      "description": "Estructura volcánica del cráter de Tecuitlapa en el estado de Puebla, México",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/crater-de-tecuitlapa-puebla-mexico-7cfecd3086e44ee5947541db2ef497d3",
+      "preview": "/assets/img/crater-tecuitlapa-preview.jpg"
+    },
+    {
+      "id": "cascada-sultepec",
+      "name": "Cascada en San Felipe Sultepec, Tlaxcala",
+      "category": "Hidrología",
+      "description": "Sistema de cascada y erosión fluvial en San Felipe Sultepec, estado de Tlaxcala",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/cascada-49c593ed027d4f34b985a2510aef358b",
+      "preview": "/assets/img/cascada-sultepec-preview.jpg"
+    },
+    {
+      "id": "caverna",
+      "name": "Caverna",
+      "category": "Espeleología",
+      "description": "Sistema de caverna natural mostrando procesos de disolución kárstica y formación de espeleotemas",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/caverna-fd461fc904884df380bb9a06060df3f7",
+      "preview": "/assets/img/caverna-preview.jpg"
+    },
+    {
+      "id": "playa-angelito",
+      "name": "Playa Puerto Angelito, Puerto Escondido, Oaxaca",
+      "category": "Geología Costera",
+      "description": "Morfología costera de Playa Puerto Angelito en Puerto Escondido, estado de Oaxaca",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/modelo-pa-man-af17f1d439c940479488b5fe0863c41c",
+      "preview": "/assets/img/playa-angelito-preview.jpg"
+    },
+    {
+      "id": "crater-san-isidro",
+      "name": "Cráter San Isidro, Puebla",
+      "category": "Vulcanología",
+      "description": "Estructura volcánica del cráter San Isidro en el estado de Puebla, México",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/crater-san-isidro-puebla-853853c786e84f779c1b5ab62857f667",
+      "preview": "/assets/img/crater-san-isidro-preview.jpg"
+    },
+    {
+      "id": "laguna-preciosa",
+      "name": "Laguna La Preciosa",
+      "category": "Limnología",
+      "description": "Sistema lacuestre de La Preciosa mostrando morfología de cuenca endorreica",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/laguna-la-preciosa-ecb501c4839248e3b8403c375c97f49e",
+      "preview": "/assets/img/laguna-preciosa-preview.jpg"
+    }
+  ]
+}

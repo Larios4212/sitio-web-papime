@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- head.html — parcial con meta y enlaces a CSS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAPIME - Visualización 3D - practica-virtual</title>
+<meta name="description" content="PAPIME - aulas virtuales y modelos 3D para la enseñanza de las ciencias de la tierra">
+<link rel="icon" href="/assets/icons/favicon.svg">
+
+<!-- CSS bundle: importar tokens, base, layout, components y páginas específicas -->
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+<!-- page-specific styles (ejemplo) -->
+<link rel="stylesheet" href="/css/pages/modelos-3d.css">
+<!-- theme-dark puede importarse si se desea -->
+<!-- <link rel="stylesheet" href="/css/theme-dark.css"> -->
+
+<!-- Schema.org (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PAPIME - Visualización de Modelos 3D",
+  "url": "https://papime.example/"
+}
+</script>
+
+</head>
+<body>
+  <!-- header.html — parcial con logo y navegación principal -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-text">PAPIME</span>
+        <span class="logo-subtitle">Modelos 3D</span>
+      </div>
+      <nav aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="/index.html" class="nav-link">Inicio</a></li>
+          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
+          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
+          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
+          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
+          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
+          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
+          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <!-- theme toggle control (visual only, no JS) -->
+        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
+        <label for="theme-switch" class="theme-label">🌙</label>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section id="practica-virtual" class="section">
+      <div class="container">
+        <h1>Práctica Virtual</h1>
+        <p class="section-intro">Guía interactiva para realizar prácticas de laboratorio y campo de manera virtual usando los recursos disponibles en las aulas virtuales.</p>
+        
+        <div class="practice-layout">
+          <div class="practice-main">
+            <div class="practice-intro">
+              <h2>Introducción a la Práctica Virtual</h2>
+              <p>Esta práctica virtual te permitirá explorar conceptos geológicos fundamentales utilizando modelos 3D, aulas virtuales inmersivas y recursos multimedia. La práctica está diseñada para complementar el aprendizaje teórico con experiencias prácticas simuladas.</p>
+            </div>
+
+            <div class="practice-objectives">
+              <h2>Objetivos de Aprendizaje</h2>
+              <ul class="objectives-list">
+                <li>Identificar diferentes tipos de minerales y sus propiedades físicas</li>
+                <li>Analizar estructuras geológicas en modelos tridimensionales</li>
+                <li>Comprender procesos geomorfológicos mediante simulaciones virtuales</li>
+                <li>Aplicar técnicas de campo en entornos virtuales controlados</li>
+              </ul>
+            </div>
+
+            <div class="practice-steps">
+              <h2>Desarrollo de la Práctica</h2>
+              <div class="steps-container">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Preparación</h3>
+                    <p>Accede al aula virtual de <strong>Geología y Mineralogía</strong> y familiarízate con el entorno virtual. Descarga la guía de práctica en formato PDF.</p>
+                    <a href="/aulas-virtuales.html" class="btn btn-ghost">Ir a Aulas Virtuales</a>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Observación de Especímenes</h3>
+                    <p>Selecciona al menos 5 minerales diferentes del catálogo virtual. Utiliza las herramientas de análisis disponibles para examinar sus propiedades.</p>
+                    <a href="/modelos-3d.html" class="btn btn-ghost">Ver Modelos 3D</a>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Análisis Estructural</h3>
+                    <p>Utiliza el aula de <strong>Geomorfología</strong> para estudiar formas del relieve. Identifica procesos erosivos y deposicionales en los modelos interactivos.</p>
+                    <a href="/catalogos.html" class="btn btn-ghost">Ver Catálogos</a>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Registro de Observaciones</h3>
+                    <p>Completa la hoja de trabajo incluida en la guía. Registra las características observadas, mediciones realizadas y conclusiones preliminares.</p>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-number">5</div>
+                  <div class="step-content">
+                    <h3>Análisis de Resultados</h3>
+                    <p>Compara tus observaciones con los ejemplos de referencia disponibles en el material multimedia. Utiliza los recursos educativos para profundizar en los conceptos.</p>
+                    <a href="/material-multimedia.html" class="btn btn-ghost">Ver Material Multimedia</a>
+                  </div>
+                </div>
+
+                <div class="step">
+                  <div class="step-number">6</div>
+                  <div class="step-content">
+                    <h3>Evaluación</h3>
+                    <p>Completa el cuestionario de evaluación disponible en la plataforma. Revisa los conceptos clave utilizando los manuales y recursos adicionales.</p>
+                    <a href="/manuales-recursos.html" class="btn btn-ghost">Ver Recursos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="practice-sidebar">
+            <div class="practice-resources">
+              <h3>Recursos de la Práctica</h3>
+              <div class="resource-downloads">
+                <div class="download-item">
+                  <div class="download-info">
+                    <h4>Guía de Práctica Virtual</h4>
+                    <p>Manual completo con instrucciones detalladas y hojas de trabajo</p>
+                    <span class="file-info">PDF - 2.5 MB</span>
+                  </div>
+                  <!-- TODO: Reemplazar con enlace real a PDF -->
+                  <a href="#" class="btn btn-primary" download>
+                    <span>📄</span>
+                    Descargar
+                  </a>
+                </div>
+
+                <div class="download-item">
+                  <div class="download-info">
+                    <h4>Hoja de Trabajo</h4>
+                    <p>Formulario para registro de observaciones y análisis</p>
+                    <span class="file-info">PDF - 0.8 MB</span>
+                  </div>
+                  <!-- TODO: Reemplazar con enlace real a PDF -->
+                  <a href="#" class="btn btn-primary" download>
+                    <span>📋</span>
+                    Descargar
+                  </a>
+                </div>
+
+                <div class="download-item">
+                  <div class="download-info">
+                    <h4>Rúbrica de Evaluación</h4>
+                    <p>Criterios de evaluación y escala de calificaciones</p>
+                    <span class="file-info">PDF - 0.5 MB</span>
+                  </div>
+                  <!-- TODO: Reemplazar con enlace real a PDF -->
+                  <a href="#" class="btn btn-primary" download>
+                    <span>✅</span>
+                    Descargar
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="practice-tips">
+              <h3>Consejos Importantes</h3>
+              <ul class="tips-list">
+                <li><strong>Tiempo estimado:</strong> 2-3 horas de trabajo virtual</li>
+                <li><strong>Navegador recomendado:</strong> Chrome o Firefox actualizado</li>
+                <li><strong>Conexión:</strong> Asegúrate de tener buena conexión a internet</li>
+                <li><strong>Dispositivo:</strong> Computadora con mouse para mejor experiencia 3D</li>
+                <li><strong>Sonido:</strong> Utiliza auriculares para mejor inmersión</li>
+              </ul>
+            </div>
+
+            <div class="practice-support">
+              <h3>Soporte Técnico</h3>
+              <p>Si tienes problemas técnicos durante la práctica, contacta al equipo de soporte:</p>
+              <!-- TODO: Reemplazar con email real -->
+              <a href="mailto:soporte@papime.unam.mx" class="btn btn-ghost">
+                📧 Contactar Soporte
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer.html — parcial con créditos y logos -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Créditos del Proyecto</h3>
+        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
+        <p class="copyright">© 2025 UNAM</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Logos</h3>
+        <div class="institutional-logos">
+          <div class="logo-placeholder">UNAM</div>
+          <div class="logo-placeholder">DGAPA</div>
+          <div class="logo-placeholder">PAPIME</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

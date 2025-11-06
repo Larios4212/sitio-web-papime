@@ -1,0 +1,19 @@
+{
+  "name": "sitio-web-papime",
+  "version": "1.0.0",
+  "description": "Sitio web estático PAPIME con motor de includes",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && node serve.js",
+    "serve": "node serve.js",
+    "watch": "node build.js --watch"
+  },
+  "keywords": ["papime", "static-site", "html", "css", "3d-models"],
+  "author": "PAPIME Team",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "http-server": "^14.1.1"
+  }
+}

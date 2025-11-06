@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- include partials/head.html -->
+</head>
+<body>
+  <!-- include partials/header.html -->
+
+  <main>
+    
+    <section id="modelos-3d" class="section">
+      <div class="container">
+        <h1>Modelos 3D Educativos</h1>
+        <p class="section-intro">Explora nuestra colección de modelos tridimensionales para visualización y descarga.</p>
+        
+        <div class="models-filters">
+          <h2>Filtrar por categoría</h2>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="geomorfologia">Geomorfología</button>
+            <button class="filter-btn" data-filter="vulcanologia">Vulcanología</button>
+            <button class="filter-btn" data-filter="hidrologia">Hidrología</button>
+            <button class="filter-btn" data-filter="geologia-costera">Geología Costera</button>
+            <button class="filter-btn" data-filter="mineria">Minería</button>
+            <button class="filter-btn" data-filter="espeleologia">Espeleología</button>
+            <button class="filter-btn" data-filter="limnologia">Limnología</button>
+          </div>
+        </div>
+
+        <div class="grid" id="models-grid">
+          <!-- Los modelos se cargarán dinámicamente desde JavaScript -->
+          <div class="loading-models">
+            <p>Cargando modelos 3D...</p>
+          </div>
+          
+          <!-- Fallback estático por si JavaScript falla -->
+          <article class="card model-card" data-category="geomorfologia" style="display: none;" id="fallback-cards">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🏔️</div>
+              <div style="font-size: 0.875rem; font-weight: 600; color: #1f2937;">Tlayacapan, Morelos</div>
+              <div style="font-size: 0.75rem; color: #22c55e; margin-top: 4px;">Geomorfología</div>
+            </div>
+            <div class="model-info">
+              <h3 class="model-name">Tlayacapan, Morelos</h3>
+              <span class="chip">Geomorfología</span>
+              <p>Modelo topográfico de la región de Tlayacapan mostrando características geomorfológicas del estado de Morelos.</p>
+              <div class="model-actions">
+                <button class="btn btn-primary view-3d-btn" data-model-id="tlayacapan">🔍 Ver en 3D</button>
+                <a href="https://sketchfab.com/3d-models/tlayacapan-morelos-6002358005f649d29a73bd8013b28b05" class="btn btn-ghost" rel="noopener" target="_blank">↗ Sketchfab</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- include partials/model-viewer.html -->
+  
+  <script src="/assets/js/model-viewer-debug.js"></script>
+
+  <!-- include partials/footer.html -->
+</body>
+</html>

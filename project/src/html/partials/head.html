@@ -1,0 +1,26 @@
+<!-- head.html — parcial con meta y enlaces a CSS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ siteName }} - {{ pageName }}</title>
+<meta name="description" content="PAPIME - aulas virtuales y modelos 3D para la enseñanza de las ciencias de la tierra">
+<link rel="icon" href="/assets/icons/favicon.svg">
+
+<!-- CSS bundle: importar tokens, base, layout, components y páginas específicas -->
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+<!-- page-specific styles (ejemplo) -->
+<link rel="stylesheet" href="/css/pages/modelos-3d.css">
+<!-- theme-dark puede importarse si se desea -->
+<!-- <link rel="stylesheet" href="/css/theme-dark.css"> -->
+
+<!-- Schema.org (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PAPIME - Visualización de Modelos 3D",
+  "url": "https://papime.example/"
+}
+</script>
