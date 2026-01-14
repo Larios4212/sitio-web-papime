@@ -28,148 +28,745 @@
 }
 </script>
 
+  <link rel="stylesheet" href="/css/pages/proyecto.css">
 </head>
 <body>
-  <!-- header.html — parcial con logo y navegación principal -->
+  <!-- header.html — Premium Navigation Header -->
 <header class="header">
+  <!-- Animated background effects -->
+  <div class="header-bg">
+    <div class="header-gradient"></div>
+    <div class="header-glow"></div>
+    <div class="header-particles"></div>
+  </div>
+  
   <div class="container">
     <div class="header-content">
-      <div class="logo">
-        <span class="logo-text">PAPIME</span>
-        <span class="logo-subtitle">Modelos 3D</span>
-      </div>
-      <nav aria-label="Principal">
+      <!-- Premium Logo -->
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="50%" style="stop-color:#764ba2"/>
+                <stop offset="100%" style="stop-color:#f093fb"/>
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2" fill="none" filter="url(#logoGlow)"/>
+            <path d="M12 28 L20 10 L28 28 Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="20" cy="21" r="5" fill="url(#logoGrad)" opacity="0.9"/>
+            <circle cx="20" cy="21" r="2" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-text">PAPIME</span>
+          <span class="logo-subtitle">Geología Interactiva</span>
+        </div>
+      </a>
+      
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <!-- Main Navigation -->
+      <nav class="nav-main" aria-label="Principal">
         <ul class="nav-list">
-          <li><a href="/index.html" class="nav-link">Inicio</a></li>
-          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
-          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
-          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
-          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
-          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
-          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
-          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+          <li>
+            <a href="/index.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="/proyecto.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Proyecto</span>
+            </a>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/aulas-virtuales.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Aulas</span>
+            </a>
+          </li>
+          <li>
+            <a href="/material-multimedia.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Multimedia</span>
+            </a>
+          </li>
+          <li>
+            <a href="/modelos-3d.html" class="nav-link nav-featured">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span>Modelos 3D</span>
+              <span class="nav-badge">Nuevo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/catalogos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Catálogos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/practica-virtual.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Práctica</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manuales-recursos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Recursos</span>
+            </a>
+          </li>
         </ul>
       </nav>
-      <div class="theme-toggle">
-        <!-- theme toggle control (visual only, no JS) -->
-        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
-        <label for="theme-switch" class="theme-label">🌙</label>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Empty - Clean minimal header -->
       </div>
     </div>
   </div>
 </header>
 
-
-  <main>
+<script>
+// Premium Header Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMain = document.querySelector('.nav-main');
+  
+  // Mobile menu toggle
+  if (navToggle && navMain) {
+    navToggle.addEventListener('click', function() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMain.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
     
-    <section id="proyecto" class="section">
-      <div class="container">
-        <h1>Acerca del Proyecto PAPIME</h1>
-        <p>Este proyecto tiene como finalidad desarrollar recursos educativos innovadores que faciliten el aprendizaje de conceptos complejos en geología, mineralogía y geomorfología mediante el uso de tecnologías inmersivas y modelos tridimensionales.</p>
+    // Close menu when clicking a link
+    navMain.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMain.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+  
+  // Header scroll effect with enhanced animation
+  let lastScroll = 0;
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
         
-        <div id="objetivo" class="subsection">
-          <h2>Objetivo</h2>
-          <p>Crear un entorno educativo virtual que permita a estudiantes y profesores explorar conceptos geológicos de manera interactiva, mejorando la comprensión espacial y facilitando el aprendizaje activo mediante la visualización de modelos 3D y experiencias inmersivas.</p>
+        if (currentScroll > 50) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+        
+        // Hide/show on scroll direction
+        if (currentScroll > lastScroll && currentScroll > 200) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Mark current page in nav
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === '/index.html')) {
+      link.classList.add('is-active');
+    }
+  });
+});
+</script>
+
+
+  <main class="proyecto-page">
+    
+    <!-- Hero Section -->
+    <section class="proyecto-hero">
+      <div class="hero-bg">
+        <div class="hero-pattern"></div>
+        <div class="hero-gradient"></div>
+        <div class="floating-elements">
+          <div class="float-el el-1">🎓</div>
+          <div class="float-el el-2">🔬</div>
+          <div class="float-el el-3">🌍</div>
+          <div class="float-el el-4">📚</div>
+          <div class="float-el el-5">🏔️</div>
         </div>
-
-        <div id="participantes" class="subsection">
-          <h2>Participantes</h2>
-          <div class="grid">
-            <!-- card.html — parcial de tarjeta reutilizable
-  Uso: incluir markup de .card y reemplazar contenido según necesidad
--->
-<article class="card">
-  <h3 class="card-title">Título de la tarjeta</h3>
-  <p class="card-description">Descripción breve de la tarjeta. Reemplazar con contenido real.</p>
-  <a href="#" class="btn btn-primary">Acción</a>
-</article>
-
-            <!-- card.html — parcial de tarjeta reutilizable
-  Uso: incluir markup de .card y reemplazar contenido según necesidad
--->
-<article class="card">
-  <h3 class="card-title">Título de la tarjeta</h3>
-  <p class="card-description">Descripción breve de la tarjeta. Reemplazar con contenido real.</p>
-  <a href="#" class="btn btn-primary">Acción</a>
-</article>
-
-            <!-- card.html — parcial de tarjeta reutilizable
-  Uso: incluir markup de .card y reemplazar contenido según necesidad
--->
-<article class="card">
-  <h3 class="card-title">Título de la tarjeta</h3>
-  <p class="card-description">Descripción breve de la tarjeta. Reemplazar con contenido real.</p>
-  <a href="#" class="btn btn-primary">Acción</a>
-</article>
-
-            <!-- card.html — parcial de tarjeta reutilizable
-  Uso: incluir markup de .card y reemplazar contenido según necesidad
--->
-<article class="card">
-  <h3 class="card-title">Título de la tarjeta</h3>
-  <p class="card-description">Descripción breve de la tarjeta. Reemplazar con contenido real.</p>
-  <a href="#" class="btn btn-primary">Acción</a>
-</article>
-
-            <!-- card.html — parcial de tarjeta reutilizable
-  Uso: incluir markup de .card y reemplazar contenido según necesidad
--->
-<article class="card">
-  <h3 class="card-title">Título de la tarjeta</h3>
-  <p class="card-description">Descripción breve de la tarjeta. Reemplazar con contenido real.</p>
-  <a href="#" class="btn btn-primary">Acción</a>
-</article>
-
-            <!-- card.html — parcial de tarjeta reutilizable
-  Uso: incluir markup de .card y reemplazar contenido según necesidad
--->
-<article class="card">
-  <h3 class="card-title">Título de la tarjeta</h3>
-  <p class="card-description">Descripción breve de la tarjeta. Reemplazar con contenido real.</p>
-  <a href="#" class="btn btn-primary">Acción</a>
-</article>
-
-            
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge-group">
+            <span class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              UNAM • DGAPA
+            </span>
+            <span class="hero-badge badge-alt">PAPIME PE101122</span>
+          </div>
+          <h1 class="hero-title">
+            Proyecto <span class="gradient-text">PAPIME</span>
+          </h1>
+          <p class="hero-subtitle">
+            Desarrollo de recursos educativos innovadores para el aprendizaje de Geología 
+            mediante tecnologías inmersivas, modelos 3D y realidad virtual.
+          </p>
+          <div class="hero-cta">
+            <a href="#equipo" class="btn-hero btn-primary-hero">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              Conoce al equipo
+            </a>
+            <a href="#objetivo" class="btn-hero btn-ghost-hero">
+              Objetivos del proyecto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
           </div>
         </div>
-
-        <div id="agradecimientos" class="subsection">
+      </div>
+    </section>
+    
+    <!-- Objetivo Section -->
+    <section id="objetivo" class="objetivo-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nuestra Misión</span>
+          <h2 class="section-title">Objetivo del Proyecto</h2>
+        </div>
+        
+        <div class="objetivo-grid">
+          <div class="objetivo-main">
+            <div class="objetivo-card objetivo-card-featured">
+              <div class="objetivo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4M12 8h.01"/>
+                </svg>
+              </div>
+              <h3>Visión General</h3>
+              <p>Crear un entorno educativo virtual que permita a estudiantes y profesores explorar conceptos geológicos de manera interactiva, mejorando la comprensión espacial y facilitando el aprendizaje activo mediante la visualización de modelos 3D y experiencias inmersivas.</p>
+            </div>
+          </div>
+          
+          <div class="objetivo-features">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h4>Aprendizaje Interactivo</h4>
+              <p>Recursos educativos que permiten la exploración activa de formaciones geológicas.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔮</div>
+              <h4>Tecnología 3D</h4>
+              <p>Modelos tridimensionales de alta precisión basados en datos de campo reales.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🥽</div>
+              <h4>Realidad Virtual</h4>
+              <p>Experiencias inmersivas con fotos 360° de sitios geológicos de México.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h4>Acceso Universal</h4>
+              <p>Plataforma web accesible desde cualquier dispositivo sin instalación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Equipo Section -->
+    <section id="equipo" class="equipo-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nuestro Equipo</span>
+          <h2 class="section-title">Participantes del Proyecto</h2>
+          <p class="section-description">
+            Un equipo multidisciplinario de académicos, investigadores y estudiantes 
+            comprometidos con la innovación educativa.
+          </p>
+        </div>
+        
+        <!-- Responsable del Proyecto -->
+        <div class="equipo-leader">
+          <div class="leader-card">
+            <div class="leader-avatar">
+              <div class="avatar-placeholder">
+                <span>👨‍🔬</span>
+              </div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="leader-info">
+              <span class="leader-role">Responsable del Proyecto</span>
+              <h3 class="leader-name">Dr. Nombre del Responsable</h3>
+              <p class="leader-title">Profesor Titular, Facultad de Ingeniería</p>
+              <p class="leader-bio">
+                Descripción breve del responsable del proyecto, su trayectoria académica 
+                y su experiencia en el área de geología y tecnologías educativas.
+              </p>
+              <div class="leader-links">
+                <a href="mailto:correo@unam.mx" class="leader-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  Contacto
+                </a>
+                <a href="#" class="leader-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                  Perfil académico
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Grid de Participantes -->
+        <div class="equipo-grid">
+          
+          <!-- Participante 1 -->
+          <article class="participante-card" data-delay="0">
+            <div class="participante-avatar">
+              <div class="avatar-img">👩‍🏫</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 1</h4>
+              <span class="participante-role">Colaborador Académico</span>
+              <p class="participante-area">Área de especialización</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 2 -->
+          <article class="participante-card" data-delay="1">
+            <div class="participante-avatar">
+              <div class="avatar-img">👨‍🏫</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 2</h4>
+              <span class="participante-role">Colaborador Académico</span>
+              <p class="participante-area">Área de especialización</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 3 -->
+          <article class="participante-card" data-delay="2">
+            <div class="participante-avatar">
+              <div class="avatar-img">👩‍💻</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 3</h4>
+              <span class="participante-role">Becario / Tesista</span>
+              <p class="participante-area">Desarrollo tecnológico</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 4 -->
+          <article class="participante-card" data-delay="3">
+            <div class="participante-avatar">
+              <div class="avatar-img">👨‍💻</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 4</h4>
+              <span class="participante-role">Becario / Tesista</span>
+              <p class="participante-area">Modelado 3D</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 5 -->
+          <article class="participante-card" data-delay="4">
+            <div class="participante-avatar">
+              <div class="avatar-img">👩‍🎓</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 5</h4>
+              <span class="participante-role">Becario / Tesista</span>
+              <p class="participante-area">Fotografía 360°</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 6 -->
+          <article class="participante-card" data-delay="5">
+            <div class="participante-avatar">
+              <div class="avatar-img">👨‍🎓</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 6</h4>
+              <span class="participante-role">Servicio Social</span>
+              <p class="participante-area">Documentación</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Instituciones Section -->
+    <section class="instituciones-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Apoyo Institucional</span>
+          <h2 class="section-title">Instituciones Participantes</h2>
+        </div>
+        
+        <div class="instituciones-grid">
+          <div class="institucion-card">
+            <div class="institucion-logo">
+              <span>UNAM</span>
+            </div>
+            <h4>Universidad Nacional Autónoma de México</h4>
+            <p>Máxima casa de estudios de México</p>
+          </div>
+          <div class="institucion-card">
+            <div class="institucion-logo">
+              <span>DGAPA</span>
+            </div>
+            <h4>Dirección General de Asuntos del Personal Académico</h4>
+            <p>Programa de Apoyo a Proyectos para Innovar y Mejorar la Educación</p>
+          </div>
+          <div class="institucion-card">
+            <div class="institucion-logo">
+              <span>FI</span>
+            </div>
+            <h4>Facultad de Ingeniería</h4>
+            <p>División de Ingeniería en Ciencias de la Tierra</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Agradecimientos Section -->
+    <section id="agradecimientos" class="agradecimientos-section">
+      <div class="container">
+        <div class="agradecimientos-card">
+          <div class="agradecimientos-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
           <h2>Agradecimientos</h2>
-          <div class="highlight-box">
-            <p>Agradecemos el apoyo de la Dirección General de Asuntos del Personal Académico (DGAPA) de la UNAM a través del Programa PAPIME, así como a todas las instituciones y personas que han contribuido al desarrollo de este proyecto educativo innovador.</p>
+          <p>
+            Agradecemos el apoyo de la <strong>Dirección General de Asuntos del Personal Académico (DGAPA)</strong> 
+            de la UNAM a través del <strong>Programa PAPIME</strong>, así como a todas las instituciones 
+            y personas que han contribuido al desarrollo de este proyecto educativo innovador.
+          </p>
+          <p>
+            Gracias también a los estudiantes y académicos que han participado en las salidas de campo, 
+            la captura de datos, el procesamiento de modelos 3D y la creación de contenido educativo.
+          </p>
+          <div class="agradecimientos-decoration">
+            <span>🏔️</span>
+            <span>🌋</span>
+            <span>💎</span>
+            <span>🌍</span>
+            <span>📚</span>
           </div>
         </div>
       </div>
     </section>
   </main>
+  
+  <script>
+  // Animaciones de scroll reveal
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // Observar elementos
+    document.querySelectorAll('.feature-card, .participante-card, .institucion-card, .objetivo-card').forEach(el => {
+      revealObserver.observe(el);
+    });
+    
+    // Counter animation para stats si los hay
+    const counters = document.querySelectorAll('[data-count]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.dataset.count);
+          let current = 0;
+          const timer = setInterval(() => {
+            current += Math.ceil(target / 30);
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = current;
+            }
+          }, 50);
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Parallax suave en hero
+    const heroContent = document.querySelector('.proyecto-hero .hero-content');
+    window.addEventListener('scroll', () => {
+      const scroll = window.pageYOffset;
+      if (scroll < 600 && heroContent) {
+        heroContent.style.transform = `translateY(${scroll * 0.15}px)`;
+        heroContent.style.opacity = 1 - (scroll / 600);
+      }
+    });
+  });
+  </script>
 
   <!-- footer.html — parcial con créditos y logos -->
 <footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Créditos del Proyecto</h3>
-        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
-        <p class="copyright">© 2025 UNAM</p>
+      <!-- Logo y descripción -->
+      <div class="footer-section footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M12 28 L20 12 L28 28 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <circle cx="20" cy="22" r="4" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-logo-title">PAPIME</span>
+            <span class="footer-logo-subtitle">Geología 3D</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Proyecto educativo desarrollado con el apoyo de DGAPA-UNAM para la enseñanza 
+          de Geología mediante tecnologías 3D y realidad virtual.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a1a2e"/></svg>
+          </a>
+          <a href="mailto:papime@ingenieria.unam.mx" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
+      
+      <!-- Enlaces rápidos -->
       <div class="footer-section">
-        <h3>Contacto</h3>
-        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+        <h3 class="footer-title">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="/modelos-3d.html"><span class="link-icon">→</span> Modelos 3D</a></li>
+          <li><a href="/practica-virtual.html"><span class="link-icon">→</span> Práctica Virtual</a></li>
+          <li><a href="/aulas-virtuales.html"><span class="link-icon">→</span> Aulas Virtuales</a></li>
+          <li><a href="/catalogos.html"><span class="link-icon">→</span> Catálogos</a></li>
+          <li><a href="/material-multimedia.html"><span class="link-icon">→</span> Multimedia</a></li>
+        </ul>
       </div>
+      
+      <!-- Recursos -->
       <div class="footer-section">
-        <h3>Logos</h3>
-        <div class="institutional-logos">
-          <div class="logo-placeholder">UNAM</div>
-          <div class="logo-placeholder">DGAPA</div>
-          <div class="logo-placeholder">PAPIME</div>
+        <h3 class="footer-title">Recursos</h3>
+        <ul class="footer-links">
+          <li><a href="/manuales-recursos.html"><span class="link-icon">→</span> Manuales</a></li>
+          <li><a href="/proyecto.html"><span class="link-icon">→</span> Acerca del Proyecto</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Documentación</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Facultad de Ingeniería, UNAM<br>Ciudad de México</span>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Logos institucionales -->
+    <div class="footer-logos">
+      <div class="institutional-logos">
+        <div class="inst-logo" title="UNAM">
+          <span class="inst-logo-text">UNAM</span>
+        </div>
+        <div class="inst-logo" title="DGAPA">
+          <span class="inst-logo-text">DGAPA</span>
+        </div>
+        <div class="inst-logo" title="PAPIME">
+          <span class="inst-logo-text">PAPIME</span>
+        </div>
+        <div class="inst-logo" title="Facultad de Ingeniería">
+          <span class="inst-logo-text">FI</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Universidad Nacional Autónoma de México. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <span class="separator">•</span>
+          <a href="#">Términos de uso</a>
+          <span class="separator">•</span>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
+
+<script>
+// Update year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

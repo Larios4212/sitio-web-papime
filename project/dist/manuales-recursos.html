@@ -28,148 +28,1324 @@
 }
 </script>
 
+  <link rel="stylesheet" href="css/pages/manuales-recursos.css">
 </head>
-<body>
-  <!-- header.html — parcial con logo y navegación principal -->
+<body class="recursos-page">
+  <!-- header.html — Premium Navigation Header -->
 <header class="header">
+  <!-- Animated background effects -->
+  <div class="header-bg">
+    <div class="header-gradient"></div>
+    <div class="header-glow"></div>
+    <div class="header-particles"></div>
+  </div>
+  
   <div class="container">
     <div class="header-content">
-      <div class="logo">
-        <span class="logo-text">PAPIME</span>
-        <span class="logo-subtitle">Modelos 3D</span>
-      </div>
-      <nav aria-label="Principal">
+      <!-- Premium Logo -->
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="50%" style="stop-color:#764ba2"/>
+                <stop offset="100%" style="stop-color:#f093fb"/>
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2" fill="none" filter="url(#logoGlow)"/>
+            <path d="M12 28 L20 10 L28 28 Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="20" cy="21" r="5" fill="url(#logoGrad)" opacity="0.9"/>
+            <circle cx="20" cy="21" r="2" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-text">PAPIME</span>
+          <span class="logo-subtitle">Geología Interactiva</span>
+        </div>
+      </a>
+      
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <!-- Main Navigation -->
+      <nav class="nav-main" aria-label="Principal">
         <ul class="nav-list">
-          <li><a href="/index.html" class="nav-link">Inicio</a></li>
-          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
-          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
-          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
-          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
-          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
-          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
-          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+          <li>
+            <a href="/index.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="/proyecto.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Proyecto</span>
+            </a>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/aulas-virtuales.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Aulas</span>
+            </a>
+          </li>
+          <li>
+            <a href="/material-multimedia.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Multimedia</span>
+            </a>
+          </li>
+          <li>
+            <a href="/modelos-3d.html" class="nav-link nav-featured">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span>Modelos 3D</span>
+              <span class="nav-badge">Nuevo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/catalogos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Catálogos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/practica-virtual.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Práctica</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manuales-recursos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Recursos</span>
+            </a>
+          </li>
         </ul>
       </nav>
-      <div class="theme-toggle">
-        <!-- theme toggle control (visual only, no JS) -->
-        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
-        <label for="theme-switch" class="theme-label">🌙</label>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Empty - Clean minimal header -->
       </div>
     </div>
   </div>
 </header>
 
+<script>
+// Premium Header Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMain = document.querySelector('.nav-main');
+  
+  // Mobile menu toggle
+  if (navToggle && navMain) {
+    navToggle.addEventListener('click', function() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMain.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    
+    // Close menu when clicking a link
+    navMain.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMain.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+  
+  // Header scroll effect with enhanced animation
+  let lastScroll = 0;
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+        
+        // Hide/show on scroll direction
+        if (currentScroll > lastScroll && currentScroll > 200) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Mark current page in nav
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === '/index.html')) {
+      link.classList.add('is-active');
+    }
+  });
+});
+</script>
+
 
   <main>
-    <section id="manuales-recursos" class="section">
-      <div class="container">
-        <h1>Manuales y Recursos Educativos</h1>
-        <p class="section-intro">Documentos de apoyo, guías y manuales para complementar el aprendizaje.</p>
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="recursos-hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-mesh"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-particles"></div>
+      </div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge-wrapper">
+            <span class="hero-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              Biblioteca Digital PAPIME
+            </span>
+          </div>
+          
+          <h1 class="hero-title">
+            Manuales y
+            <span class="title-gradient">Recursos Educativos</span>
+          </h1>
+          
+          <p class="hero-description">
+            Documentos de apoyo, guías especializadas y manuales técnicos 
+            para complementar tu aprendizaje en geología. Todo el material 
+            necesario para campo y laboratorio.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value" data-target="15">0</span>
+              <span class="stat-label">Manuales</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value" data-target="6">0</span>
+              <span class="stat-label">Categorías</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">PDF</span>
+              <span class="stat-label">Formato</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#recursos" class="hero-cta">
+              <span>Ver Recursos</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+              </svg>
+            </a>
+            <a href="#buscar" class="hero-search-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+              <span>Buscar recurso</span>
+            </a>
+          </div>
+        </div>
         
-        <div class="resources-grid">
-          <div class="resource-category">
-            <h2>Guías de Campo</h2>
-            <ul class="resources-list">
-              <li class="resource-item">
-                <a href="#" class="resource-link external" rel="noopener" target="_blank">
-                  <span class="resource-icon">📖</span>
-                  <div>
-                    <h3>Manual de Identificación de Minerales</h3>
-                    <p>Guía completa para identificar minerales en campo y laboratorio</p>
-                  </div>
-                </a>
-              </li>
-              <li class="resource-item">
-                <a href="#" class="resource-link external" rel="noopener" target="_blank">
-                  <span class="resource-icon">🗺️</span>
-                  <div>
-                    <h3>Guía de Cartografía Geológica</h3>
-                    <p>Metodología para el mapeo geológico y representación cartográfica</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+        <div class="hero-visual">
+          <div class="books-showcase">
+            <div class="book book-1">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <span class="book-icon">📖</span>
+                <span class="book-title">Minerales</span>
+              </div>
+            </div>
+            <div class="book book-2">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <span class="book-icon">🗺️</span>
+                <span class="book-title">Cartografía</span>
+              </div>
+            </div>
+            <div class="book book-3">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <span class="book-icon">🔬</span>
+                <span class="book-title">Laboratorio</span>
+              </div>
+            </div>
+            <div class="book book-4">
+              <div class="book-spine"></div>
+              <div class="book-cover">
+                <span class="book-icon">🏔️</span>
+                <span class="book-title">Relieve</span>
+              </div>
+            </div>
           </div>
+          <div class="visual-glow"></div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Explorar</span>
+      </div>
+    </section>
 
-          <div class="resource-category">
-            <h2>Técnicas de Laboratorio</h2>
-            <ul class="resources-list">
-              <li class="resource-item">
-                <a href="#" class="resource-link external" rel="noopener" target="_blank">
-                  <span class="resource-icon">🔬</span>
-                  <div>
-                    <h3>Técnicas de Petrografía Microscópica</h3>
-                    <p>Análisis de rocas y minerales bajo microscopio petrográfico</p>
-                  </div>
-                </a>
-              </li>
-              <li class="resource-item">
-                <a href="#" class="resource-link external" rel="noopener" target="_blank">
-                  <span class="resource-icon">⚗️</span>
-                  <div>
-                    <h3>Análisis Químico de Minerales</h3>
-                    <p>Métodos analíticos para determinación de composición química</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+    <!-- ============================================
+         QUICK NAVIGATION
+         ============================================ -->
+    <section class="quick-nav-section">
+      <div class="container">
+        <div class="quick-nav">
+          <a href="#guias-campo" class="qn-item">
+            <div class="qn-icon">📖</div>
+            <span>Guías de Campo</span>
+          </a>
+          <a href="#laboratorio" class="qn-item">
+            <div class="qn-icon">🔬</div>
+            <span>Laboratorio</span>
+          </a>
+          <a href="#atlas" class="qn-item">
+            <div class="qn-icon">🏔️</div>
+            <span>Atlas</span>
+          </a>
+          <a href="#software" class="qn-item">
+            <div class="qn-icon">💻</div>
+            <span>Software</span>
+          </a>
+          <a href="#glosarios" class="qn-item">
+            <div class="qn-icon">📚</div>
+            <span>Glosarios</span>
+          </a>
+          <a href="#plantillas" class="qn-item">
+            <div class="qn-icon">📋</div>
+            <span>Plantillas</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         RECURSOS SECTION
+         ============================================ -->
+    <section id="recursos" class="recursos-section">
+      <div class="container">
+        
+        <!-- Guías de Campo -->
+        <div id="guias-campo" class="resource-category-block">
+          <div class="category-header">
+            <div class="category-icon icon-field">
+              <span>📖</span>
+              <div class="icon-ring"></div>
+            </div>
+            <div class="category-info">
+              <span class="category-tag">Trabajo de Campo</span>
+              <h2 class="category-title">Guías de Campo</h2>
+              <p class="category-desc">Documentación esencial para trabajo en campo y prácticas</p>
+            </div>
+            <div class="category-count">
+              <span class="count-number">4</span>
+              <span class="count-label">recursos</span>
+            </div>
           </div>
+          
+          <div class="resources-grid">
+            <article class="resource-card">
+              <div class="rc-header">
+                <div class="rc-icon">📖</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">2.5 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Manual de Identificación de Minerales</h3>
+              <p class="rc-description">Guía completa para identificar minerales en campo y laboratorio con pruebas físicas y químicas</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Mineralogía</span>
+                <span class="rc-tag">Campo</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
 
-          <div class="resource-category">
-            <h2>Atlas y Referencias</h2>
-            <ul class="resources-list">
-              <li class="resource-item">
-                <a href="#" class="resource-link external" rel="noopener" target="_blank">
-                  <span class="resource-icon">🏔️</span>
-                  <div>
-                    <h3>Atlas de Formas del Relieve</h3>
-                    <p>Catálogo visual de formas geomorfológicas y procesos</p>
-                  </div>
+            <article class="resource-card">
+              <div class="rc-header">
+                <div class="rc-icon">🗺️</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">4.2 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Guía de Cartografía Geológica</h3>
+              <p class="rc-description">Metodología para el mapeo geológico y representación cartográfica profesional</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Cartografía</span>
+                <span class="rc-tag">Mapeo</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
                 </a>
-              </li>
-              <li class="resource-item">
-                <a href="#" class="resource-link external" rel="noopener" target="_blank">
-                  <span class="resource-icon">📊</span>
-                  <div>
-                    <h3>Tabla de Propiedades Minerales</h3>
-                    <p>Referencia rápida de propiedades físicas y ópticas</p>
-                  </div>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
                 </a>
-              </li>
-            </ul>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card">
+              <div class="rc-header">
+                <div class="rc-icon">🧭</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">1.8 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Manual de Brújula y GPS</h3>
+              <p class="rc-description">Guía práctica para uso de brújula geológica y sistemas GPS en campo</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Orientación</span>
+                <span class="rc-tag">GPS</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card">
+              <div class="rc-header">
+                <div class="rc-icon">📸</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">3.1 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Documentación Fotográfica en Geología</h3>
+              <p class="rc-description">Técnicas para documentación visual de afloramientos y muestras</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Fotografía</span>
+                <span class="rc-tag">Documentación</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Técnicas de Laboratorio -->
+        <div id="laboratorio" class="resource-category-block">
+          <div class="category-header">
+            <div class="category-icon icon-lab">
+              <span>🔬</span>
+              <div class="icon-ring"></div>
+            </div>
+            <div class="category-info">
+              <span class="category-tag">Análisis y Técnicas</span>
+              <h2 class="category-title">Técnicas de Laboratorio</h2>
+              <p class="category-desc">Métodos y procedimientos para análisis en laboratorio</p>
+            </div>
+            <div class="category-count">
+              <span class="count-number">3</span>
+              <span class="count-label">recursos</span>
+            </div>
+          </div>
+          
+          <div class="resources-grid">
+            <article class="resource-card card-lab">
+              <div class="rc-header">
+                <div class="rc-icon">🔬</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">5.8 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Técnicas de Petrografía Microscópica</h3>
+              <p class="rc-description">Análisis de rocas y minerales bajo microscopio petrográfico polarizado</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Petrografía</span>
+                <span class="rc-tag">Microscopía</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-lab">
+              <div class="rc-header">
+                <div class="rc-icon">⚗️</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">3.4 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Análisis Químico de Minerales</h3>
+              <p class="rc-description">Métodos analíticos para determinación de composición química mineral</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Química</span>
+                <span class="rc-tag">Análisis</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-lab">
+              <div class="rc-header">
+                <div class="rc-icon">💎</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">4.1 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Preparación de Secciones Delgadas</h3>
+              <p class="rc-description">Guía paso a paso para preparar láminas delgadas de rocas</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Secciones</span>
+                <span class="rc-tag">Preparación</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Atlas y Referencias -->
+        <div id="atlas" class="resource-category-block">
+          <div class="category-header">
+            <div class="category-icon icon-atlas">
+              <span>🏔️</span>
+              <div class="icon-ring"></div>
+            </div>
+            <div class="category-info">
+              <span class="category-tag">Material de Referencia</span>
+              <h2 class="category-title">Atlas y Referencias</h2>
+              <p class="category-desc">Material visual y tablas de consulta rápida</p>
+            </div>
+            <div class="category-count">
+              <span class="count-number">3</span>
+              <span class="count-label">recursos</span>
+            </div>
+          </div>
+          
+          <div class="resources-grid">
+            <article class="resource-card card-atlas">
+              <div class="rc-header">
+                <div class="rc-icon">🏔️</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">12.3 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Atlas de Formas del Relieve</h3>
+              <p class="rc-description">Catálogo visual completo de formas geomorfológicas y procesos asociados</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Geomorfología</span>
+                <span class="rc-tag">Visual</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-atlas">
+              <div class="rc-header">
+                <div class="rc-icon">📊</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">1.2 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Tabla de Propiedades Minerales</h3>
+              <p class="rc-description">Referencia rápida de propiedades físicas y ópticas de minerales comunes</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Tablas</span>
+                <span class="rc-tag">Referencia</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-atlas">
+              <div class="rc-header">
+                <div class="rc-icon">🌋</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">8.7 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Atlas de Estructuras Volcánicas</h3>
+              <p class="rc-description">Guía visual de estructuras volcánicas y depósitos asociados</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Vulcanología</span>
+                <span class="rc-tag">Estructuras</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Software y Herramientas -->
+        <div id="software" class="resource-category-block">
+          <div class="category-header">
+            <div class="category-icon icon-software">
+              <span>💻</span>
+              <div class="icon-ring"></div>
+            </div>
+            <div class="category-info">
+              <span class="category-tag">Herramientas Digitales</span>
+              <h2 class="category-title">Software y Herramientas</h2>
+              <p class="category-desc">Guías de software especializado en geología</p>
+            </div>
+            <div class="category-count">
+              <span class="count-number">2</span>
+              <span class="count-label">recursos</span>
+            </div>
+          </div>
+          
+          <div class="resources-grid">
+            <article class="resource-card card-software">
+              <div class="rc-header">
+                <div class="rc-icon">🌍</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">6.2 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Manual de Google Earth Pro para Geología</h3>
+              <p class="rc-description">Uso de Google Earth Pro en análisis geomorfológico y prospección</p>
+              <div class="rc-tags">
+                <span class="rc-tag">GIS</span>
+                <span class="rc-tag">Teledetección</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-software">
+              <div class="rc-header">
+                <div class="rc-icon">📐</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">4.5 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Introducción a QGIS para Geólogos</h3>
+              <p class="rc-description">Tutorial básico de QGIS orientado a aplicaciones geológicas</p>
+              <div class="rc-tags">
+                <span class="rc-tag">QGIS</span>
+                <span class="rc-tag">Mapas</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Glosarios -->
+        <div id="glosarios" class="resource-category-block">
+          <div class="category-header">
+            <div class="category-icon icon-glossary">
+              <span>📚</span>
+              <div class="icon-ring"></div>
+            </div>
+            <div class="category-info">
+              <span class="category-tag">Terminología</span>
+              <h2 class="category-title">Glosarios Especializados</h2>
+              <p class="category-desc">Definiciones y terminología técnica</p>
+            </div>
+            <div class="category-count">
+              <span class="count-number">2</span>
+              <span class="count-label">recursos</span>
+            </div>
+          </div>
+          
+          <div class="resources-grid">
+            <article class="resource-card card-glossary">
+              <div class="rc-header">
+                <div class="rc-icon">📖</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">2.1 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Glosario de Términos Geológicos</h3>
+              <p class="rc-description">Diccionario completo de términos geológicos en español-inglés</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Glosario</span>
+                <span class="rc-tag">Bilingüe</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-glossary">
+              <div class="rc-header">
+                <div class="rc-icon">💎</div>
+                <div class="rc-meta">
+                  <span class="rc-format">PDF</span>
+                  <span class="rc-size">1.5 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Glosario de Mineralogía</h3>
+              <p class="rc-description">Términos especializados en mineralogía y cristalografía</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Mineralogía</span>
+                <span class="rc-tag">Cristalografía</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Plantillas -->
+        <div id="plantillas" class="resource-category-block">
+          <div class="category-header">
+            <div class="category-icon icon-templates">
+              <span>📋</span>
+              <div class="icon-ring"></div>
+            </div>
+            <div class="category-info">
+              <span class="category-tag">Formatos Editables</span>
+              <h2 class="category-title">Plantillas y Formatos</h2>
+              <p class="category-desc">Plantillas descargables para trabajo de campo</p>
+            </div>
+            <div class="category-count">
+              <span class="count-number">3</span>
+              <span class="count-label">recursos</span>
+            </div>
+          </div>
+          
+          <div class="resources-grid">
+            <article class="resource-card card-template">
+              <div class="rc-header">
+                <div class="rc-icon">📝</div>
+                <div class="rc-meta">
+                  <span class="rc-format">DOCX</span>
+                  <span class="rc-size">245 KB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Libreta de Campo Digital</h3>
+              <p class="rc-description">Plantilla editable para registro de observaciones en campo</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Editable</span>
+                <span class="rc-tag">Campo</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-template">
+              <div class="rc-header">
+                <div class="rc-icon">📊</div>
+                <div class="rc-meta">
+                  <span class="rc-format">XLSX</span>
+                  <span class="rc-size">180 KB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Hoja de Registro de Muestras</h3>
+              <p class="rc-description">Excel para catalogar y registrar muestras geológicas</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Excel</span>
+                <span class="rc-tag">Muestras</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+
+            <article class="resource-card card-template">
+              <div class="rc-header">
+                <div class="rc-icon">🗺️</div>
+                <div class="rc-meta">
+                  <span class="rc-format">AI/PDF</span>
+                  <span class="rc-size">1.8 MB</span>
+                </div>
+              </div>
+              <h3 class="rc-title">Símbolos Geológicos Vectoriales</h3>
+              <p class="rc-description">Paquete de símbolos estándar para mapas geológicos</p>
+              <div class="rc-tags">
+                <span class="rc-tag">Vectores</span>
+                <span class="rc-tag">Símbolos</span>
+              </div>
+              <div class="rc-actions">
+                <a href="#" class="rc-btn rc-preview" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Vista previa
+                </a>
+                <a href="#" class="rc-btn rc-download" download>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Descargar
+                </a>
+              </div>
+              <div class="rc-decoration"></div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="recursos-cta">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      
+      <div class="container">
+        <div class="cta-content">
+          <span class="cta-badge">📥 Todo en un solo lugar</span>
+          <h2>¿Necesitas más recursos?</h2>
+          <p>
+            Explora nuestro material multimedia con videos, tours 360° y 
+            animaciones interactivas para complementar tu aprendizaje.
+          </p>
+          <div class="cta-buttons">
+            <a href="material-multimedia.html" class="cta-btn cta-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Material Multimedia
+            </a>
+            <a href="practica-virtual.html" class="cta-btn cta-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Práctica Virtual
+            </a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- footer.html — parcial con créditos y logos -->
 <footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Créditos del Proyecto</h3>
-        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
-        <p class="copyright">© 2025 UNAM</p>
+      <!-- Logo y descripción -->
+      <div class="footer-section footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M12 28 L20 12 L28 28 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <circle cx="20" cy="22" r="4" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-logo-title">PAPIME</span>
+            <span class="footer-logo-subtitle">Geología 3D</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Proyecto educativo desarrollado con el apoyo de DGAPA-UNAM para la enseñanza 
+          de Geología mediante tecnologías 3D y realidad virtual.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a1a2e"/></svg>
+          </a>
+          <a href="mailto:papime@ingenieria.unam.mx" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
+      
+      <!-- Enlaces rápidos -->
       <div class="footer-section">
-        <h3>Contacto</h3>
-        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+        <h3 class="footer-title">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="/modelos-3d.html"><span class="link-icon">→</span> Modelos 3D</a></li>
+          <li><a href="/practica-virtual.html"><span class="link-icon">→</span> Práctica Virtual</a></li>
+          <li><a href="/aulas-virtuales.html"><span class="link-icon">→</span> Aulas Virtuales</a></li>
+          <li><a href="/catalogos.html"><span class="link-icon">→</span> Catálogos</a></li>
+          <li><a href="/material-multimedia.html"><span class="link-icon">→</span> Multimedia</a></li>
+        </ul>
       </div>
+      
+      <!-- Recursos -->
       <div class="footer-section">
-        <h3>Logos</h3>
-        <div class="institutional-logos">
-          <div class="logo-placeholder">UNAM</div>
-          <div class="logo-placeholder">DGAPA</div>
-          <div class="logo-placeholder">PAPIME</div>
+        <h3 class="footer-title">Recursos</h3>
+        <ul class="footer-links">
+          <li><a href="/manuales-recursos.html"><span class="link-icon">→</span> Manuales</a></li>
+          <li><a href="/proyecto.html"><span class="link-icon">→</span> Acerca del Proyecto</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Documentación</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Facultad de Ingeniería, UNAM<br>Ciudad de México</span>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Logos institucionales -->
+    <div class="footer-logos">
+      <div class="institutional-logos">
+        <div class="inst-logo" title="UNAM">
+          <span class="inst-logo-text">UNAM</span>
+        </div>
+        <div class="inst-logo" title="DGAPA">
+          <span class="inst-logo-text">DGAPA</span>
+        </div>
+        <div class="inst-logo" title="PAPIME">
+          <span class="inst-logo-text">PAPIME</span>
+        </div>
+        <div class="inst-logo" title="Facultad de Ingeniería">
+          <span class="inst-logo-text">FI</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Universidad Nacional Autónoma de México. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <span class="separator">•</span>
+          <a href="#">Términos de uso</a>
+          <span class="separator">•</span>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
+<script>
+// Update year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+  <script>
+    // Counter Animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-value[data-target]');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, 16);
+      });
+    }
+
+    // Scroll Reveal
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          
+          if (entry.target.classList.contains('recursos-hero')) {
+            animateCounters();
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.resource-card, .resource-category-block, .recursos-hero').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Quick Nav Active State
+    const sections = document.querySelectorAll('.resource-category-block');
+    const navItems = document.querySelectorAll('.qn-item');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + current) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

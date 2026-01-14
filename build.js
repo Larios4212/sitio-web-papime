@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 class StaticSiteBuilder {
   constructor() {
     this.srcDir = './project/src';
+    // Use temp folder to avoid OneDrive locking issues, then copy back
     this.distDir = './project/dist';
     this.pagesDir = path.join(this.srcDir, 'html/pages');
     this.partialsDir = path.join(this.srcDir, 'html/partials');
@@ -126,7 +128,7 @@ class StaticSiteBuilder {
           // Escribir al directorio dist
           const destPath = path.join(this.distDir, relativeFilePath);
           this.ensureDir(path.dirname(destPath));
-          fs.writeFileSync(destPath, content, 'utf8');
+          this.safeWriteFile(destPath, content);
           
           console.log(`  ✓ Built: ${destPath}`);
         }
@@ -169,8 +171,32 @@ class StaticSiteBuilder {
   // Limpiar directorio dist
   clean() {
     if (fs.existsSync(this.distDir)) {
-      fs.rmSync(this.distDir, { recursive: true, force: true });
-      console.log(`🗑️  Cleaned ${this.distDir}`);
+      try {
+        fs.rmSync(this.distDir, { recursive: true, force: true, maxRetries: 3, retryDelay: 1000 });
+        console.log(`🗑️  Cleaned ${this.distDir}`);
+      } catch (err) {
+        console.log(`⚠️  Could not clean dist folder, trying to overwrite files...`);
+      }
+    }
+  }
+
+  // Write file with retry for OneDrive locked files
+  safeWriteFile(filePath, content) {
+    try {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    } catch (err) {
+      // If file is locked, try to delete and recreate
+      try {
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+        }
+        fs.writeFileSync(filePath, content, 'utf8');
+        return true;
+      } catch (retryErr) {
+        console.log(`  ⚠️  Could not write ${filePath} - file may be locked`);
+        return false;
+      }
     }
   }
 

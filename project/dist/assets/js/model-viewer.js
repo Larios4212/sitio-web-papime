@@ -34,7 +34,7 @@ class ModelViewer {
         this.modelsData[modelo.id] = modelo;
       });
     } catch (error) {
-      console.error('Error cargando datos de modelos:', error);
+      console.error('Error cargando los datos del modelo:', error);
     }
   }
 

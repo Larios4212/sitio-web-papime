@@ -2,29 +2,418 @@
 <html lang="es">
 <head>
   <!-- include partials/head.html -->
+  <link rel="stylesheet" href="/css/pages/inicio.css">
 </head>
 <body>
   <!-- include partials/header.html -->
 
-  <main>
-    <section id="inicio" class="hero">
+  <main class="home-page">
+    
+    <!-- Hero Principal -->
+    <section class="home-hero">
+      <div class="hero-bg">
+        <div class="hero-mesh"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+      </div>
+      
       <div class="container">
-        <div class="hero-content">
-          <h1>Proyecto PAPIME: Innovación Educativa con Modelos 3D</h1>
-          <p class="hero-subtitle">Transformando la enseñanza de las ciencias de la tierra mediante visualización tridimensional.</p>
-          <a href="/project/src/html/pages/aulas-virtuales.html" class="btn btn-primary">Explorar Aulas Virtuales</a>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <div class="hero-badges">
+              <span class="badge badge-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                UNAM • Facultad de Ingeniería
+              </span>
+              <span class="badge badge-secondary">PAPIME PE101122</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Explora la Geología <br>
+              <span class="title-gradient">en Tercera Dimensión</span>
+            </h1>
+            
+            <p class="hero-description">
+              Sumérgete en una experiencia educativa única donde los paisajes geológicos 
+              de México cobran vida. Modelos 3D interactivos, fotos 360° inmersivas y 
+              recorridos virtuales de campo diseñados para transformar el aprendizaje.
+            </p>
+            
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-value" data-count="9">0</span>
+                <span class="stat-label">Modelos 3D</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value" data-count="8">0</span>
+                <span class="stat-label">Estaciones</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value" data-count="5">0</span>
+                <span class="stat-label">Estados</span>
+              </div>
+            </div>
+            
+            <div class="hero-cta">
+              <a href="/practica-virtual.html" class="btn-cta btn-primary-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Iniciar Práctica Virtual
+              </a>
+              <a href="/modelos-3d.html" class="btn-cta btn-ghost-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                Explorar Modelos
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="card-3d-preview">
+                <div class="preview-glow"></div>
+                <div class="preview-content">
+                  <div class="preview-icon">🌋</div>
+                  <div class="preview-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                  </div>
+                </div>
+                <div class="preview-label">Vista 3D Interactiva</div>
+              </div>
+              <div class="floating-badges">
+                <div class="float-badge fb-1">
+                  <span>🏔️</span> Geomorfología
+                </div>
+                <div class="float-badge fb-2">
+                  <span>💎</span> Minerales
+                </div>
+                <div class="float-badge fb-3">
+                  <span>🌊</span> Hidrología
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Descubre más</span>
+      </div>
+    </section>
+    
+    <!-- Sección: ¿Qué es PAPIME? -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="section-badge">Innovación Educativa</span>
+            <h2 class="section-title">¿Qué es el Proyecto PAPIME?</h2>
+            <p class="about-text">
+              El <strong>Programa de Apoyo a Proyectos para Innovar y Mejorar la Educación (PAPIME)</strong> 
+              de la DGAPA-UNAM impulsa el desarrollo de recursos educativos que transforman 
+              la manera en que estudiantes y profesores interactúan con el conocimiento.
+            </p>
+            <p class="about-text">
+              Este proyecto específico se enfoca en las <strong>Ciencias de la Tierra</strong>, 
+              creando herramientas digitales que permiten explorar formaciones geológicas, 
+              estructuras volcánicas, sistemas lacustres y otros fenómenos naturales de México 
+              sin necesidad de desplazarse físicamente a campo.
+            </p>
+            <div class="about-features">
+              <div class="feature">
+                <div class="feature-icon">🎓</div>
+                <div>
+                  <h4>Educación Accesible</h4>
+                  <p>Recursos gratuitos para toda la comunidad universitaria</p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">🔬</div>
+                <div>
+                  <h4>Base Científica</h4>
+                  <p>Modelos basados en datos reales de investigación de campo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="visual-stack">
+              <div class="stack-item item-1">
+                <img src="/assets/img/placeholder-geo-1.svg" alt="Formación geológica" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                  <span>🏔️</span>
+                </div>
+              </div>
+              <div class="stack-item item-2">
+                <img src="/assets/img/placeholder-geo-2.svg" alt="Modelo 3D" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                  <span>🌋</span>
+                </div>
+              </div>
+              <div class="stack-item item-3">
+                <img src="/assets/img/placeholder-geo-3.svg" alt="Vista 360" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                  <span>📸</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section id="proyecto" class="section">
+    
+    <!-- Sección: Características -->
+    <section class="features-section">
       <div class="container">
-        <h2>Acerca del Proyecto</h2>
-        <p>Proyecto PAPIME para crear recursos educativos con modelos 3D.</p>
+        <div class="section-header">
+          <span class="section-badge">Explora Nuestras Herramientas</span>
+          <h2 class="section-title">Todo lo que Necesitas para Aprender</h2>
+          <p class="section-description">
+            Una suite completa de recursos digitales diseñados para complementar 
+            y enriquecer la enseñanza de geología.
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          
+          <a href="/modelos-3d.html" class="feature-card feature-card-lg">
+            <div class="feature-bg">
+              <div class="feature-gradient"></div>
+            </div>
+            <div class="feature-content">
+              <div class="feature-icon-lg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3>Modelos 3D Interactivos</h3>
+              <p>9 modelos tridimensionales de alta precisión que puedes rotar, acercar y explorar desde cualquier ángulo. Desde cráteres volcánicos hasta sistemas de cavernas.</p>
+              <span class="feature-link">
+                Explorar modelos
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+            <div class="feature-decoration">
+              <div class="deco-cube"></div>
+            </div>
+          </a>
+          
+          <a href="/practica-virtual.html" class="feature-card">
+            <div class="feature-icon-sm">🥽</div>
+            <h3>Práctica Virtual</h3>
+            <p>8 estaciones de campo con fotos 360° inmersivas. Experimenta la geología como si estuvieras ahí.</p>
+            <span class="feature-link">
+              Ver estaciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/catalogos.html" class="feature-card">
+            <div class="feature-icon-sm">📚</div>
+            <h3>Catálogos</h3>
+            <p>Colecciones organizadas de minerales, rocas y fósiles con información detallada.</p>
+            <span class="feature-link">
+              Ver catálogos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/aulas-virtuales.html" class="feature-card">
+            <div class="feature-icon-sm">🏫</div>
+            <h3>Aulas Virtuales</h3>
+            <p>Espacios de aprendizaje en línea con actividades interactivas y evaluaciones.</p>
+            <span class="feature-link">
+              Acceder
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/material-multimedia.html" class="feature-card">
+            <div class="feature-icon-sm">🎬</div>
+            <h3>Material Multimedia</h3>
+            <p>Videos educativos, animaciones y recursos visuales para reforzar conceptos.</p>
+            <span class="feature-link">
+              Ver material
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/manuales-recursos.html" class="feature-card">
+            <div class="feature-icon-sm">📖</div>
+            <h3>Manuales y Recursos</h3>
+            <p>Documentación, guías de campo y materiales de apoyo descargables.</p>
+            <span class="feature-link">
+              Ver recursos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+        </div>
       </div>
     </section>
+    
+    <!-- Sección: Mapa de Sitios -->
+    <section class="locations-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Ubicaciones Reales</span>
+          <h2 class="section-title">Sitios Geológicos de México</h2>
+          <p class="section-description">
+            Nuestros modelos y recorridos capturan formaciones únicas de diferentes estados del país.
+          </p>
+        </div>
+        
+        <div class="locations-grid">
+          <div class="location-card">
+            <div class="location-icon">🌋</div>
+            <h4>Puebla</h4>
+            <p>Cráteres, lagunas y estructuras volcánicas del Cuaternario</p>
+            <span class="location-count">5 sitios</span>
+          </div>
+          <div class="location-card">
+            <div class="location-icon">🏔️</div>
+            <h4>Morelos</h4>
+            <p>Formaciones geomorfológicas y relieves característicos</p>
+            <span class="location-count">1 sitio</span>
+          </div>
+          <div class="location-card">
+            <div class="location-icon">💧</div>
+            <h4>Tlaxcala</h4>
+            <p>Sistemas hidráulicos y cascadas con erosión fluvial</p>
+            <span class="location-count">1 sitio</span>
+          </div>
+          <div class="location-card">
+            <div class="location-icon">🏖️</div>
+            <h4>Oaxaca</h4>
+            <p>Geología costera y morfología de playas</p>
+            <span class="location-count">1 sitio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección: CTA Final -->
+    <section class="cta-section">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Listo para Explorar?</h2>
+          <p>Comienza tu viaje por la geología de México con nuestras herramientas interactivas.</p>
+          <div class="cta-buttons">
+            <a href="/practica-virtual.html" class="btn-cta-final btn-primary-final">
+              Comenzar Ahora
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="/proyecto.html" class="btn-cta-final btn-ghost-final">
+              Conocer el Proyecto
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </main>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Counter animation
+    const counters = document.querySelectorAll('[data-count]');
+    const observerOptions = { threshold: 0.5 };
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.dataset.count);
+          let current = 0;
+          const increment = target / 40;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, 40);
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.feature-card, .location-card, .about-content, .about-visual');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Parallax on hero
+    const heroContent = document.querySelector('.hero-content');
+    const heroVisual = document.querySelector('.hero-visual');
+    
+    window.addEventListener('scroll', () => {
+      const scroll = window.pageYOffset;
+      if (scroll < 800) {
+        if (heroContent) {
+          heroContent.style.transform = `translateY(${scroll * 0.1}px)`;
+        }
+        if (heroVisual) {
+          heroVisual.style.transform = `translateY(${scroll * 0.15}px)`;
+        }
+      }
+    });
+    
+    // Smooth scroll for scroll indicator
+    document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
+      document.querySelector('.about-section')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  </script>
 
   <!-- include partials/footer.html -->
 </body>
-</html>
+</html> 

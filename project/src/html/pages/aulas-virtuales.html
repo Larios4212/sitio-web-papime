@@ -2,42 +2,549 @@
 <html lang="es">
 <head>
   <!-- include partials/head.html -->
+  <link rel="stylesheet" href="/css/pages/aulas-virtuales.css">
 </head>
 <body>
   <!-- include partials/header.html -->
 
-  <main>
-    <section id="aulas-virtuales" class="section">
-      <div class="container">
-        <h1>Aulas Virtuales</h1>
-        <p class="section-intro">Explora nuestros espacios virtuales inmersivos diseñados para el aprendizaje interactivo de las ciencias de la tierra.</p>
+  <main class="aulas-page">
+    
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="aulas-hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+      </div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="hero-badge badge-vr">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/>
+                <path d="M6 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+                <path d="M14 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+              </svg>
+              Realidad Virtual
+            </span>
+            <span class="hero-badge badge-meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              Metaverso
+            </span>
+          </div>
+          
+          <h1 class="hero-title">
+            Aulas Virtuales
+            <span class="title-gradient">Inmersivas</span>
+          </h1>
+          
+          <p class="hero-description">
+            Explora espacios virtuales 3D diseñados para el aprendizaje interactivo 
+            de las ciencias de la tierra. Sumérgete en entornos inmersivos donde 
+            podrás experimentar la geología como nunca antes.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value" data-count="3">0</span>
+              <span class="stat-label">Aulas VR</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value" data-count="100">0</span>
+              <span class="stat-label">% Inmersivo</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Exploración</span>
+            </div>
+          </div>
+          
+          <a href="#aulas" class="hero-cta-btn">
+            <span>Explorar Aulas</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <polyline points="19 12 12 19 5 12"/>
+            </svg>
+          </a>
+        </div>
         
-        <div class="grid grid-large">
-          <article id="aula-geologia-mineralogia" class="card card-large">
-            <h2 class="card-title">Geología y Mineralogía</h2>
-            <p class="card-description">Sumérgete en el fascinante mundo de los minerales y rocas. Explora cristalografía, propiedades físicas y químicas en un entorno virtual interactivo.</p>
-            <!-- TODO: Reemplazar con enlace real a Spatial -->
-            <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+        <div class="hero-visual">
+          <div class="vr-headset">
+            <div class="headset-glow"></div>
+            <div class="headset-icon">🥽</div>
+            <div class="headset-rings">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+            </div>
+          </div>
+          
+          <div class="floating-elements">
+            <div class="float-element fe-1">💎</div>
+            <div class="float-element fe-2">🏔️</div>
+            <div class="float-element fe-3">🌊</div>
+            <div class="float-element fe-4">🪨</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ============================================
+         INTRO SECTION
+         ============================================ -->
+    <section class="aulas-intro">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-content">
+            <span class="section-badge">Tecnología Educativa</span>
+            <h2 class="section-title">¿Qué son las Aulas Virtuales?</h2>
+            <p>
+              Nuestras aulas virtuales son espacios tridimensionales interactivos 
+              desarrollados en la plataforma <strong>Spatial</strong>, donde los estudiantes 
+              pueden explorar, aprender y colaborar en un entorno inmersivo.
+            </p>
+            <p>
+              Diseñadas para complementar la enseñanza presencial, estas aulas 
+              permiten visualizar conceptos geológicos complejos, manipular 
+              modelos 3D y realizar prácticas virtuales guiadas.
+            </p>
+            
+            <div class="intro-features">
+              <div class="intro-feature">
+                <div class="if-icon">🌐</div>
+                <div class="if-text">
+                  <strong>Acceso Web</strong>
+                  <span>Sin instalación requerida</span>
+                </div>
+              </div>
+              <div class="intro-feature">
+                <div class="if-icon">👥</div>
+                <div class="if-text">
+                  <strong>Multijugador</strong>
+                  <span>Colabora con compañeros</span>
+                </div>
+              </div>
+              <div class="intro-feature">
+                <div class="if-icon">🎮</div>
+                <div class="if-text">
+                  <strong>VR Compatible</strong>
+                  <span>Oculus, Meta Quest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="intro-visual">
+            <div class="visual-card">
+              <div class="vc-header">
+                <div class="vc-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="vc-title">Spatial.io</span>
+              </div>
+              <div class="vc-body">
+                <div class="vc-preview">
+                  <div class="preview-placeholder">
+                    <span class="pp-icon">🏛️</span>
+                    <span class="pp-text">Vista previa del aula virtual</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         AULAS GRID
+         ============================================ -->
+    <section id="aulas" class="aulas-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Espacios Disponibles</span>
+          <h2 class="section-title">Nuestras Aulas Virtuales</h2>
+          <p class="section-description">Selecciona un aula para entrar al metaverso educativo</p>
+        </div>
+        
+        <div class="aulas-grid">
+          
+          <!-- Aula 1: Geología y Mineralogía -->
+          <article class="aula-card aula-featured" id="aula-geologia-mineralogia">
+            <div class="aula-bg">
+              <div class="aula-gradient"></div>
+              <div class="aula-pattern"></div>
+            </div>
+            
+            <div class="aula-content">
+              <div class="aula-header">
+                <div class="aula-icon-wrapper">
+                  <span class="aula-icon">💎</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <div class="aula-badges">
+                  <span class="aula-badge ab-popular">⭐ Destacada</span>
+                  <span class="aula-badge ab-vr">VR Ready</span>
+                </div>
+              </div>
+              
+              <h3 class="aula-title">Geología y Mineralogía</h3>
+              <p class="aula-description">
+                Sumérgete en el fascinante mundo de los minerales y rocas. 
+                Explora cristalografía, propiedades físicas y químicas, 
+                sistemas cristalinos y clasificación mineralógica en un 
+                entorno virtual completamente interactivo.
+              </p>
+              
+              <div class="aula-features">
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Modelos 3D de cristales</span>
+                </div>
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Colección de minerales</span>
+                </div>
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Laboratorio virtual</span>
+                </div>
+              </div>
+              
+              <a href="#" class="aula-btn" target="_blank" rel="noopener">
+                <span>Entrar al Metaverso</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="aula-decoration">
+              <div class="deco-crystal"></div>
+            </div>
           </article>
           
-          <article id="aula-geomorfologia" class="card card-large">
-            <h2 class="card-title">Geomorfología</h2>
-            <p class="card-description">Descubre las formas del relieve terrestre y los procesos que las modelan. Experimenta con paisajes virtuales y observa la evolución geomorfológica.</p>
-            <!-- TODO: Reemplazar con enlace real a Spatial -->
-            <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+          <!-- Aula 2: Geomorfología -->
+          <article class="aula-card" id="aula-geomorfologia">
+            <div class="aula-bg">
+              <div class="aula-gradient gradient-green"></div>
+              <div class="aula-pattern"></div>
+            </div>
+            
+            <div class="aula-content">
+              <div class="aula-header">
+                <div class="aula-icon-wrapper icon-green">
+                  <span class="aula-icon">🏔️</span>
+                  <div class="icon-glow glow-green"></div>
+                </div>
+                <div class="aula-badges">
+                  <span class="aula-badge ab-vr">VR Ready</span>
+                </div>
+              </div>
+              
+              <h3 class="aula-title">Geomorfología</h3>
+              <p class="aula-description">
+                Descubre las formas del relieve terrestre y los procesos 
+                que las modelan. Experimenta con paisajes virtuales, 
+                observa la evolución geomorfológica y comprende los 
+                agentes erosivos en acción.
+              </p>
+              
+              <div class="aula-features">
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Paisajes interactivos</span>
+                </div>
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Simulación de erosión</span>
+                </div>
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Formaciones geológicas</span>
+                </div>
+              </div>
+              
+              <a href="#" class="aula-btn btn-green" target="_blank" rel="noopener">
+                <span>Entrar al Metaverso</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
           </article>
           
-          <article id="aula-ambientes-sedimentarios" class="card card-large">
-            <h2 class="card-title">Ambientes Sedimentarios</h2>
-            <p class="card-description">Explora diferentes ambientes de sedimentación y comprende los procesos deposicionales que forman las rocas sedimentarias.</p>
-            <!-- TODO: Reemplazar con enlace real a Spatial -->
-            <a href="#" class="btn btn-primary external" data-ext="spatial" rel="noopener" target="_blank">Entrar al Metaverso</a>
+          <!-- Aula 3: Ambientes Sedimentarios -->
+          <article class="aula-card" id="aula-ambientes-sedimentarios">
+            <div class="aula-bg">
+              <div class="aula-gradient gradient-cyan"></div>
+              <div class="aula-pattern"></div>
+            </div>
+            
+            <div class="aula-content">
+              <div class="aula-header">
+                <div class="aula-icon-wrapper icon-cyan">
+                  <span class="aula-icon">🌊</span>
+                  <div class="icon-glow glow-cyan"></div>
+                </div>
+                <div class="aula-badges">
+                  <span class="aula-badge ab-vr">VR Ready</span>
+                </div>
+              </div>
+              
+              <h3 class="aula-title">Ambientes Sedimentarios</h3>
+              <p class="aula-description">
+                Explora diferentes ambientes de sedimentación y comprende 
+                los procesos deposicionales que forman las rocas sedimentarias. 
+                Viaja desde playas hasta fondos oceánicos virtuales.
+              </p>
+              
+              <div class="aula-features">
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Ambientes marinos</span>
+                </div>
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Depósitos continentales</span>
+                </div>
+                <div class="af-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Estructuras sedimentarias</span>
+                </div>
+              </div>
+              
+              <a href="#" class="aula-btn btn-cyan" target="_blank" rel="noopener">
+                <span>Entrar al Metaverso</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
           </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         HOW TO ACCESS
+         ============================================ -->
+    <section class="how-to-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Guía de Acceso</span>
+          <h2 class="section-title">¿Cómo Entrar a las Aulas?</h2>
+          <p class="section-description">Sigue estos sencillos pasos para acceder a nuestros espacios virtuales</p>
+        </div>
+        
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">🖱️</div>
+            <h4>Haz clic en "Entrar"</h4>
+            <p>Selecciona el aula virtual que deseas explorar y haz clic en el botón de acceso</p>
+          </div>
+          
+          <div class="step-connector">
+            <svg width="40" height="24" viewBox="0 0 40 24">
+              <path d="M0 12 L30 12 M25 6 L32 12 L25 18" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">👤</div>
+            <h4>Crea tu Avatar</h4>
+            <p>Personaliza tu avatar virtual o inicia sesión con tu cuenta de Spatial existente</p>
+          </div>
+          
+          <div class="step-connector">
+            <svg width="40" height="24" viewBox="0 0 40 24">
+              <path d="M0 12 L30 12 M25 6 L32 12 L25 18" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">🚀</div>
+            <h4>¡Explora!</h4>
+            <p>Navega por el espacio virtual, interactúa con los objetos y aprende de forma inmersiva</p>
+          </div>
+        </div>
+        
+        <div class="requirements-box">
+          <div class="rb-header">
+            <span class="rb-icon">💻</span>
+            <h4>Requisitos Técnicos</h4>
+          </div>
+          <div class="rb-content">
+            <div class="rb-item">
+              <span class="rb-check">✓</span>
+              <span>Navegador moderno (Chrome, Firefox, Edge)</span>
+            </div>
+            <div class="rb-item">
+              <span class="rb-check">✓</span>
+              <span>Conexión a internet estable</span>
+            </div>
+            <div class="rb-item">
+              <span class="rb-check">✓</span>
+              <span>Opcional: Visor VR para experiencia inmersiva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="aulas-cta">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <span class="cta-badge">¿Listo para explorar?</span>
+          <h2>Comienza tu aventura virtual</h2>
+          <p>Descubre nuevas formas de aprender geología en entornos inmersivos y colaborativos</p>
+          <div class="cta-buttons">
+            <a href="#aulas" class="cta-btn cta-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/>
+                <circle cx="8" cy="12" r="2"/>
+                <circle cx="16" cy="12" r="2"/>
+              </svg>
+              <span>Entrar a un Aula VR</span>
+            </a>
+            <a href="/practica-virtual.html" class="cta-btn cta-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Práctica Virtual</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- include partials/footer.html -->
+  
+  <script>
+    // Counter animation
+    const counters = document.querySelectorAll('.stat-value[data-count]');
+    
+    const animateCounter = (counter) => {
+      const target = parseInt(counter.dataset.count);
+      const duration = 2000;
+      const start = 0;
+      const startTime = performance.now();
+      
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        
+        counter.textContent = current;
+        
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      
+      requestAnimationFrame(update);
+    };
+    
+    // Intersection Observer for counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.aula-card, .step-card, .intro-content, .intro-visual');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    console.log('✨ Aulas Virtuales Premium cargada');
+  </script>
 </body>
 </html>

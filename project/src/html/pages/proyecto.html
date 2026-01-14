@@ -2,44 +2,412 @@
 <html lang="es">
 <head>
   <!-- include partials/head.html -->
+  <link rel="stylesheet" href="/css/pages/proyecto.css">
 </head>
 <body>
   <!-- include partials/header.html -->
 
-  <main>
+  <main class="proyecto-page">
     
-    <section id="proyecto" class="section">
-      <div class="container">
-        <h1>Acerca del Proyecto PAPIME</h1>
-        <p>Este proyecto tiene como finalidad desarrollar recursos educativos innovadores que faciliten el aprendizaje de conceptos complejos en geología, mineralogía y geomorfología mediante el uso de tecnologías inmersivas y modelos tridimensionales.</p>
-        
-        <div id="objetivo" class="subsection">
-          <h2>Objetivo</h2>
-          <p>Crear un entorno educativo virtual que permita a estudiantes y profesores explorar conceptos geológicos de manera interactiva, mejorando la comprensión espacial y facilitando el aprendizaje activo mediante la visualización de modelos 3D y experiencias inmersivas.</p>
+    <!-- Hero Section -->
+    <section class="proyecto-hero">
+      <div class="hero-bg">
+        <div class="hero-pattern"></div>
+        <div class="hero-gradient"></div>
+        <div class="floating-elements">
+          <div class="float-el el-1">🎓</div>
+          <div class="float-el el-2">🔬</div>
+          <div class="float-el el-3">🌍</div>
+          <div class="float-el el-4">📚</div>
+          <div class="float-el el-5">🏔️</div>
         </div>
-
-        <div id="participantes" class="subsection">
-          <h2>Participantes</h2>
-          <div class="grid">
-            <!-- include partials/card.html -->
-            <!-- include partials/card.html -->
-            <!-- include partials/card.html -->
-            <!-- include partials/card.html -->
-            <!-- include partials/card.html -->
-            <!-- include partials/card.html -->
-            
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge-group">
+            <span class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              UNAM • DGAPA
+            </span>
+            <span class="hero-badge badge-alt">PAPIME PE101122</span>
+          </div>
+          <h1 class="hero-title">
+            Proyecto <span class="gradient-text">PAPIME</span>
+          </h1>
+          <p class="hero-subtitle">
+            Desarrollo de recursos educativos innovadores para el aprendizaje de Geología 
+            mediante tecnologías inmersivas, modelos 3D y realidad virtual.
+          </p>
+          <div class="hero-cta">
+            <a href="#equipo" class="btn-hero btn-primary-hero">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              Conoce al equipo
+            </a>
+            <a href="#objetivo" class="btn-hero btn-ghost-hero">
+              Objetivos del proyecto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
           </div>
         </div>
-
-        <div id="agradecimientos" class="subsection">
+      </div>
+    </section>
+    
+    <!-- Objetivo Section -->
+    <section id="objetivo" class="objetivo-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nuestra Misión</span>
+          <h2 class="section-title">Objetivo del Proyecto</h2>
+        </div>
+        
+        <div class="objetivo-grid">
+          <div class="objetivo-main">
+            <div class="objetivo-card objetivo-card-featured">
+              <div class="objetivo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4M12 8h.01"/>
+                </svg>
+              </div>
+              <h3>Visión General</h3>
+              <p>Crear un entorno educativo virtual que permita a estudiantes y profesores explorar conceptos geológicos de manera interactiva, mejorando la comprensión espacial y facilitando el aprendizaje activo mediante la visualización de modelos 3D y experiencias inmersivas.</p>
+            </div>
+          </div>
+          
+          <div class="objetivo-features">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h4>Aprendizaje Interactivo</h4>
+              <p>Recursos educativos que permiten la exploración activa de formaciones geológicas.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔮</div>
+              <h4>Tecnología 3D</h4>
+              <p>Modelos tridimensionales de alta precisión basados en datos de campo reales.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🥽</div>
+              <h4>Realidad Virtual</h4>
+              <p>Experiencias inmersivas con fotos 360° de sitios geológicos de México.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h4>Acceso Universal</h4>
+              <p>Plataforma web accesible desde cualquier dispositivo sin instalación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Equipo Section -->
+    <section id="equipo" class="equipo-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Nuestro Equipo</span>
+          <h2 class="section-title">Participantes del Proyecto</h2>
+          <p class="section-description">
+            Un equipo multidisciplinario de académicos, investigadores y estudiantes 
+            comprometidos con la innovación educativa.
+          </p>
+        </div>
+        
+        <!-- Responsable del Proyecto -->
+        <div class="equipo-leader">
+          <div class="leader-card">
+            <div class="leader-avatar">
+              <div class="avatar-placeholder">
+                <span>👨‍🔬</span>
+              </div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="leader-info">
+              <span class="leader-role">Responsable del Proyecto</span>
+              <h3 class="leader-name">Dr. Nombre del Responsable</h3>
+              <p class="leader-title">Profesor Titular, Facultad de Ingeniería</p>
+              <p class="leader-bio">
+                Descripción breve del responsable del proyecto, su trayectoria académica 
+                y su experiencia en el área de geología y tecnologías educativas.
+              </p>
+              <div class="leader-links">
+                <a href="mailto:correo@unam.mx" class="leader-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  Contacto
+                </a>
+                <a href="#" class="leader-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                  Perfil académico
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Grid de Participantes -->
+        <div class="equipo-grid">
+          
+          <!-- Participante 1 -->
+          <article class="participante-card" data-delay="0">
+            <div class="participante-avatar">
+              <div class="avatar-img">👩‍🏫</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 1</h4>
+              <span class="participante-role">Colaborador Académico</span>
+              <p class="participante-area">Área de especialización</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 2 -->
+          <article class="participante-card" data-delay="1">
+            <div class="participante-avatar">
+              <div class="avatar-img">👨‍🏫</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 2</h4>
+              <span class="participante-role">Colaborador Académico</span>
+              <p class="participante-area">Área de especialización</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 3 -->
+          <article class="participante-card" data-delay="2">
+            <div class="participante-avatar">
+              <div class="avatar-img">👩‍💻</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 3</h4>
+              <span class="participante-role">Becario / Tesista</span>
+              <p class="participante-area">Desarrollo tecnológico</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 4 -->
+          <article class="participante-card" data-delay="3">
+            <div class="participante-avatar">
+              <div class="avatar-img">👨‍💻</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 4</h4>
+              <span class="participante-role">Becario / Tesista</span>
+              <p class="participante-area">Modelado 3D</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 5 -->
+          <article class="participante-card" data-delay="4">
+            <div class="participante-avatar">
+              <div class="avatar-img">👩‍🎓</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 5</h4>
+              <span class="participante-role">Becario / Tesista</span>
+              <p class="participante-area">Fotografía 360°</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Participante 6 -->
+          <article class="participante-card" data-delay="5">
+            <div class="participante-avatar">
+              <div class="avatar-img">👨‍🎓</div>
+            </div>
+            <div class="participante-info">
+              <h4 class="participante-name">Nombre del Participante 6</h4>
+              <span class="participante-role">Servicio Social</span>
+              <p class="participante-area">Documentación</p>
+            </div>
+            <div class="participante-hover">
+              <a href="mailto:correo@unam.mx" class="participante-link" title="Enviar correo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Instituciones Section -->
+    <section class="instituciones-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Apoyo Institucional</span>
+          <h2 class="section-title">Instituciones Participantes</h2>
+        </div>
+        
+        <div class="instituciones-grid">
+          <div class="institucion-card">
+            <div class="institucion-logo">
+              <span>UNAM</span>
+            </div>
+            <h4>Universidad Nacional Autónoma de México</h4>
+            <p>Máxima casa de estudios de México</p>
+          </div>
+          <div class="institucion-card">
+            <div class="institucion-logo">
+              <span>DGAPA</span>
+            </div>
+            <h4>Dirección General de Asuntos del Personal Académico</h4>
+            <p>Programa de Apoyo a Proyectos para Innovar y Mejorar la Educación</p>
+          </div>
+          <div class="institucion-card">
+            <div class="institucion-logo">
+              <span>FI</span>
+            </div>
+            <h4>Facultad de Ingeniería</h4>
+            <p>División de Ingeniería en Ciencias de la Tierra</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Agradecimientos Section -->
+    <section id="agradecimientos" class="agradecimientos-section">
+      <div class="container">
+        <div class="agradecimientos-card">
+          <div class="agradecimientos-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
           <h2>Agradecimientos</h2>
-          <div class="highlight-box">
-            <p>Agradecemos el apoyo de la Dirección General de Asuntos del Personal Académico (DGAPA) de la UNAM a través del Programa PAPIME, así como a todas las instituciones y personas que han contribuido al desarrollo de este proyecto educativo innovador.</p>
+          <p>
+            Agradecemos el apoyo de la <strong>Dirección General de Asuntos del Personal Académico (DGAPA)</strong> 
+            de la UNAM a través del <strong>Programa PAPIME</strong>, así como a todas las instituciones 
+            y personas que han contribuido al desarrollo de este proyecto educativo innovador.
+          </p>
+          <p>
+            Gracias también a los estudiantes y académicos que han participado en las salidas de campo, 
+            la captura de datos, el procesamiento de modelos 3D y la creación de contenido educativo.
+          </p>
+          <div class="agradecimientos-decoration">
+            <span>🏔️</span>
+            <span>🌋</span>
+            <span>💎</span>
+            <span>🌍</span>
+            <span>📚</span>
           </div>
         </div>
       </div>
     </section>
   </main>
+  
+  <script>
+  // Animaciones de scroll reveal
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // Observar elementos
+    document.querySelectorAll('.feature-card, .participante-card, .institucion-card, .objetivo-card').forEach(el => {
+      revealObserver.observe(el);
+    });
+    
+    // Counter animation para stats si los hay
+    const counters = document.querySelectorAll('[data-count]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.dataset.count);
+          let current = 0;
+          const timer = setInterval(() => {
+            current += Math.ceil(target / 30);
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = current;
+            }
+          }, 50);
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Parallax suave en hero
+    const heroContent = document.querySelector('.proyecto-hero .hero-content');
+    window.addEventListener('scroll', () => {
+      const scroll = window.pageYOffset;
+      if (scroll < 600 && heroContent) {
+        heroContent.style.transform = `translateY(${scroll * 0.15}px)`;
+        heroContent.style.opacity = 1 - (scroll / 600);
+      }
+    });
+  });
+  </script>
 
   <!-- include partials/footer.html -->
 </body>

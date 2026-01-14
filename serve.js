@@ -19,7 +19,10 @@ const mimeTypes = {
   '.ico': 'image/x-icon',
   '.pdf': 'application/pdf',
   '.glb': 'model/gltf-binary',
-  '.gltf': 'model/gltf+json'
+  '.gltf': 'model/gltf+json',
+  '.mp4': 'video/mp4',
+  '.webm': 'video/webm',
+  '.heic': 'image/heic'
 };
 
 function getMimeType(filePath) {
@@ -53,7 +56,7 @@ function serveStaticFile(res, filePath) {
 
 const server = http.createServer((req, res) => {
   const urlObj = new URL(req.url, `http://${req.headers.host}`);
-  let pathname = urlObj.pathname;
+  let pathname = decodeURIComponent(urlObj.pathname);
   
   // Redirect root to index.html
   if (pathname === '/') {

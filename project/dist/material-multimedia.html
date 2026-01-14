@@ -28,75 +28,903 @@
 }
 </script>
 
+  <link rel="stylesheet" href="/css/pages/material-multimedia.css">
 </head>
 <body>
-  <!-- header.html — parcial con logo y navegación principal -->
+  <!-- header.html — Premium Navigation Header -->
 <header class="header">
+  <!-- Animated background effects -->
+  <div class="header-bg">
+    <div class="header-gradient"></div>
+    <div class="header-glow"></div>
+    <div class="header-particles"></div>
+  </div>
+  
   <div class="container">
     <div class="header-content">
-      <div class="logo">
-        <span class="logo-text">PAPIME</span>
-        <span class="logo-subtitle">Modelos 3D</span>
-      </div>
-      <nav aria-label="Principal">
+      <!-- Premium Logo -->
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="50%" style="stop-color:#764ba2"/>
+                <stop offset="100%" style="stop-color:#f093fb"/>
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2" fill="none" filter="url(#logoGlow)"/>
+            <path d="M12 28 L20 10 L28 28 Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="20" cy="21" r="5" fill="url(#logoGrad)" opacity="0.9"/>
+            <circle cx="20" cy="21" r="2" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-text">PAPIME</span>
+          <span class="logo-subtitle">Geología Interactiva</span>
+        </div>
+      </a>
+      
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <!-- Main Navigation -->
+      <nav class="nav-main" aria-label="Principal">
         <ul class="nav-list">
-          <li><a href="/index.html" class="nav-link">Inicio</a></li>
-          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
-          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
-          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
-          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
-          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
-          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
-          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+          <li>
+            <a href="/index.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="/proyecto.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Proyecto</span>
+            </a>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/aulas-virtuales.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Aulas</span>
+            </a>
+          </li>
+          <li>
+            <a href="/material-multimedia.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Multimedia</span>
+            </a>
+          </li>
+          <li>
+            <a href="/modelos-3d.html" class="nav-link nav-featured">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span>Modelos 3D</span>
+              <span class="nav-badge">Nuevo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/catalogos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Catálogos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/practica-virtual.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Práctica</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manuales-recursos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Recursos</span>
+            </a>
+          </li>
         </ul>
       </nav>
-      <div class="theme-toggle">
-        <!-- theme toggle control (visual only, no JS) -->
-        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
-        <label for="theme-switch" class="theme-label">🌙</label>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Empty - Clean minimal header -->
       </div>
     </div>
   </div>
 </header>
 
-
-  <main>
-    <section id="material-multimedia" class="section">
-      <div class="container">
-        <h1>Material Multimedia</h1>
-        <p class="section-intro">Recursos audiovisuales e interactivos para complementar el aprendizaje.</p>
+<script>
+// Premium Header Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMain = document.querySelector('.nav-main');
+  
+  // Mobile menu toggle
+  if (navToggle && navMain) {
+    navToggle.addEventListener('click', function() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMain.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    
+    // Close menu when clicking a link
+    navMain.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMain.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+  
+  // Header scroll effect with enhanced animation
+  let lastScroll = 0;
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
         
-        <div id="videos" class="subsection">
-          <h2>Videos Educativos</h2>
-          <div class="video-grid">
-            <!-- TODO: Reemplazar con URLs reales de YouTube -->
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        if (currentScroll > 50) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+        
+        // Hide/show on scroll direction
+        if (currentScroll > lastScroll && currentScroll > 200) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Mark current page in nav
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === '/index.html')) {
+      link.classList.add('is-active');
+    }
+  });
+});
+</script>
+
+
+  <main class="multimedia-page">
+    
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="multimedia-hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+      </div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="hero-badge badge-video">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Videos
+            </span>
+            <span class="hero-badge badge-360">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+              </svg>
+              360°
+            </span>
+            <span class="hero-badge badge-info">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+              Infografías
+            </span>
+          </div>
+          
+          <h1 class="hero-title">
+            Material
+            <span class="title-gradient">Multimedia</span>
+          </h1>
+          
+          <p class="hero-description">
+            Recursos audiovisuales e interactivos diseñados para enriquecer 
+            tu aprendizaje. Videos educativos, recorridos 360°, infografías 
+            y animaciones de alta calidad.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-icon">🎬</div>
+              <div class="stat-info">
+                <span class="stat-value" data-count="12">0</span>
+                <span class="stat-label">Videos</span>
+              </div>
             </div>
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="stat">
+              <div class="stat-icon">🌐</div>
+              <div class="stat-info">
+                <span class="stat-value" data-count="8">0</span>
+                <span class="stat-label">Tours 360°</span>
+              </div>
             </div>
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video educativo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="stat">
+              <div class="stat-icon">📊</div>
+              <div class="stat-info">
+                <span class="stat-value" data-count="15">0</span>
+                <span class="stat-label">Infografías</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-nav">
+            <a href="#videos" class="nav-btn nav-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              <span>Ver Videos</span>
+            </a>
+            <a href="#recursos" class="nav-btn nav-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Explorar Todo</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="media-showcase">
+            <div class="showcase-main">
+              <div class="play-button">
+                <div class="play-glow"></div>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="showcase-thumbnails">
+              <div class="thumb thumb-1">🎥</div>
+              <div class="thumb thumb-2">🌐</div>
+              <div class="thumb thumb-3">📊</div>
             </div>
           </div>
         </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
 
-        <div id="infografias-360-animaciones" class="subsection">
-          <h2>Infografías, Recorridos 360° y Animaciones</h2>
-          <div class="media-gallery">
-            <figure class="media-item">
-              <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23f1f5f9'><rect width='400' height='300' fill='%23e2e8f0'/><text x='200' y='160' text-anchor='middle' fill='%23475569' font-size='16'>Infografía</text></svg>" alt="Infografía educativa" class="media-image">
-              <figcaption>Procesos geológicos fundamentales</figcaption>
-            </figure>
-            <figure class="media-item">
-              <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23f1f5f9'><rect width='400' height='300' fill='%23e2e8f0'/><text x='200' y='160' text-anchor='middle' fill='%23475569' font-size='16'>Recorrido 360°</text></svg>" alt="Recorrido virtual 360 grados" class="media-image">
-              <figcaption>Recorrido virtual por formaciones rocosas</figcaption>
-            </figure>
-            <figure class="media-item">
-              <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%23f1f5f9'><rect width='400' height='300' fill='%23e2e8f0'/><text x='200' y='160' text-anchor='middle' fill='%23475569' font-size='16'>Animación</text></svg>" alt="Animación educativa" class="media-image">
-              <figcaption>Animación del ciclo de las rocas</figcaption>
-            </figure>
+    <!-- ============================================
+         CATEGORY NAV
+         ============================================ -->
+    <section class="category-nav">
+      <div class="container">
+        <div class="nav-cards">
+          <a href="#videos" class="nav-card nc-videos">
+            <div class="nc-icon">🎬</div>
+            <div class="nc-content">
+              <h3>Videos Educativos</h3>
+              <p>Contenido audiovisual explicativo</p>
+            </div>
+            <div class="nc-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#recorridos-360" class="nav-card nc-360">
+            <div class="nc-icon">🌐</div>
+            <div class="nc-content">
+              <h3>Recorridos 360°</h3>
+              <p>Experiencias inmersivas virtuales</p>
+            </div>
+            <div class="nc-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#infografias" class="nav-card nc-infografias">
+            <div class="nc-icon">📊</div>
+            <div class="nc-content">
+              <h3>Infografías</h3>
+              <p>Visualización de datos geológicos</p>
+            </div>
+            <div class="nc-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#animaciones" class="nav-card nc-animaciones">
+            <div class="nc-icon">🎞️</div>
+            <div class="nc-content">
+              <h3>Animaciones</h3>
+              <p>Procesos geológicos animados</p>
+            </div>
+            <div class="nc-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         VIDEOS SECTION
+         ============================================ -->
+    <section id="videos" class="content-section videos-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-icon">🎬</div>
+          <span class="section-badge">Contenido Audiovisual</span>
+          <h2 class="section-title">Videos Educativos</h2>
+          <p class="section-description">
+            Explora nuestra colección de videos que explican conceptos geológicos 
+            de manera clara y visual
+          </p>
+        </div>
+        
+        <div class="videos-grid">
+          <!-- Video 1 -->
+          <article class="video-card video-featured">
+            <div class="video-wrapper">
+              <div class="video-container">
+                <!-- TODO: Reemplazar con URL real de YouTube -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Introducción a la Geología" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-overlay">
+                <span class="video-duration">15:30</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <span class="video-badge">⭐ Destacado</span>
+              <h3>Introducción a la Geología</h3>
+              <p>Conceptos fundamentales de las ciencias de la tierra</p>
+              <div class="video-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 min</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 2.4k</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Video 2 -->
+          <article class="video-card">
+            <div class="video-wrapper">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Formación de Rocas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-overlay">
+                <span class="video-duration">12:45</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Formación de Rocas</h3>
+              <p>El ciclo de las rocas explicado</p>
+              <div class="video-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 12 min</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Video 3 -->
+          <article class="video-card">
+            <div class="video-wrapper">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vulcanología Básica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-overlay">
+                <span class="video-duration">18:20</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Vulcanología Básica</h3>
+              <p>Tipos de volcanes y actividad volcánica</p>
+              <div class="video-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 18 min</span>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Video 4 -->
+          <article class="video-card">
+            <div class="video-wrapper">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mineralogía" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="video-overlay">
+                <span class="video-duration">10:15</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Mineralogía</h3>
+              <p>Identificación y clasificación de minerales</p>
+              <div class="video-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 min</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div class="section-action">
+          <button class="load-more-btn">
+            <span>Ver más videos</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <polyline points="19 12 12 19 5 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         RECORRIDOS 360 SECTION
+         ============================================ -->
+    <section id="recorridos-360" class="content-section tours-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-icon">🌐</div>
+          <span class="section-badge">Experiencias Inmersivas</span>
+          <h2 class="section-title">Recorridos 360°</h2>
+          <p class="section-description">
+            Sumérgete en recorridos virtuales interactivos de sitios geológicos reales
+          </p>
+        </div>
+        
+        <div class="tours-grid">
+          <!-- Tour 1 -->
+          <article class="tour-card">
+            <div class="tour-preview">
+              <div class="tour-placeholder">
+                <div class="tour-sphere">
+                  <div class="sphere-ring"></div>
+                  <span class="sphere-icon">🏔️</span>
+                </div>
+              </div>
+              <div class="tour-overlay">
+                <button class="tour-play">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="tour-badge">360°</span>
+            </div>
+            <div class="tour-info">
+              <h3>Cuenca Oriental de Puebla</h3>
+              <p>Explora las formaciones volcánicas y lagunas cratéricas</p>
+              <a href="/practica-virtual.html" class="tour-link">
+                <span>Iniciar recorrido</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Tour 2 -->
+          <article class="tour-card">
+            <div class="tour-preview">
+              <div class="tour-placeholder">
+                <div class="tour-sphere">
+                  <div class="sphere-ring"></div>
+                  <span class="sphere-icon">🌋</span>
+                </div>
+              </div>
+              <div class="tour-overlay">
+                <button class="tour-play">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="tour-badge">360°</span>
+            </div>
+            <div class="tour-info">
+              <h3>Cráteres Volcánicos</h3>
+              <p>Vista panorámica de cráteres y calderas</p>
+              <a href="/practica-virtual.html" class="tour-link">
+                <span>Iniciar recorrido</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Tour 3 -->
+          <article class="tour-card">
+            <div class="tour-preview">
+              <div class="tour-placeholder">
+                <div class="tour-sphere">
+                  <div class="sphere-ring"></div>
+                  <span class="sphere-icon">💎</span>
+                </div>
+              </div>
+              <div class="tour-overlay">
+                <button class="tour-play">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="tour-badge">360°</span>
+            </div>
+            <div class="tour-info">
+              <h3>Mina La Preciosa</h3>
+              <p>Interior de formaciones minerales únicas</p>
+              <a href="/practica-virtual.html" class="tour-link">
+                <span>Iniciar recorrido</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         INFOGRAFIAS SECTION
+         ============================================ -->
+    <section id="infografias" class="content-section infografias-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-icon">📊</div>
+          <span class="section-badge">Visualización de Datos</span>
+          <h2 class="section-title">Infografías</h2>
+          <p class="section-description">
+            Información geológica presentada de forma visual y comprensible
+          </p>
+        </div>
+        
+        <div class="infografias-grid">
+          <!-- Infografía 1 -->
+          <article class="infografia-card">
+            <div class="infografia-preview">
+              <div class="infografia-placeholder">
+                <span class="ip-icon">🪨</span>
+                <span class="ip-text">Ciclo de las Rocas</span>
+              </div>
+            </div>
+            <div class="infografia-info">
+              <h3>El Ciclo de las Rocas</h3>
+              <p>Transformación continua entre tipos de rocas</p>
+              <div class="infografia-actions">
+                <button class="info-btn btn-view">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  Ver
+                </button>
+                <button class="info-btn btn-download">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  PDF
+                </button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Infografía 2 -->
+          <article class="infografia-card">
+            <div class="infografia-preview">
+              <div class="infografia-placeholder">
+                <span class="ip-icon">🌍</span>
+                <span class="ip-text">Tectónica de Placas</span>
+              </div>
+            </div>
+            <div class="infografia-info">
+              <h3>Tectónica de Placas</h3>
+              <p>Movimiento de las placas continentales</p>
+              <div class="infografia-actions">
+                <button class="info-btn btn-view">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  Ver
+                </button>
+                <button class="info-btn btn-download">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  PDF
+                </button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Infografía 3 -->
+          <article class="infografia-card">
+            <div class="infografia-preview">
+              <div class="infografia-placeholder">
+                <span class="ip-icon">💎</span>
+                <span class="ip-text">Escala de Mohs</span>
+              </div>
+            </div>
+            <div class="infografia-info">
+              <h3>Escala de Dureza de Mohs</h3>
+              <p>Clasificación de dureza de minerales</p>
+              <div class="infografia-actions">
+                <button class="info-btn btn-view">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  Ver
+                </button>
+                <button class="info-btn btn-download">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  PDF
+                </button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Infografía 4 -->
+          <article class="infografia-card">
+            <div class="infografia-preview">
+              <div class="infografia-placeholder">
+                <span class="ip-icon">🌋</span>
+                <span class="ip-text">Tipos de Volcanes</span>
+              </div>
+            </div>
+            <div class="infografia-info">
+              <h3>Tipos de Volcanes</h3>
+              <p>Clasificación morfológica volcánica</p>
+              <div class="infografia-actions">
+                <button class="info-btn btn-view">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  Ver
+                </button>
+                <button class="info-btn btn-download">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  PDF
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ANIMACIONES SECTION
+         ============================================ -->
+    <section id="animaciones" class="content-section animaciones-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-icon">🎞️</div>
+          <span class="section-badge">Procesos Dinámicos</span>
+          <h2 class="section-title">Animaciones</h2>
+          <p class="section-description">
+            Visualiza procesos geológicos que toman millones de años en segundos
+          </p>
+        </div>
+        
+        <div class="animaciones-grid">
+          <!-- Animación 1 -->
+          <article class="animacion-card">
+            <div class="animacion-preview">
+              <div class="animacion-placeholder">
+                <div class="anim-icon-wrapper">
+                  <span class="anim-icon">🔄</span>
+                  <div class="anim-ring"></div>
+                </div>
+              </div>
+              <button class="anim-play">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </button>
+            </div>
+            <div class="animacion-info">
+              <h3>Formación de Montañas</h3>
+              <p>Proceso orogénico y colisión de placas</p>
+              <span class="animacion-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                2:30
+              </span>
+            </div>
+          </article>
+          
+          <!-- Animación 2 -->
+          <article class="animacion-card">
+            <div class="animacion-preview">
+              <div class="animacion-placeholder">
+                <div class="anim-icon-wrapper">
+                  <span class="anim-icon">🌊</span>
+                  <div class="anim-ring"></div>
+                </div>
+              </div>
+              <button class="anim-play">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </button>
+            </div>
+            <div class="animacion-info">
+              <h3>Erosión Costera</h3>
+              <p>Acción del mar sobre la línea de costa</p>
+              <span class="animacion-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                1:45
+              </span>
+            </div>
+          </article>
+          
+          <!-- Animación 3 -->
+          <article class="animacion-card">
+            <div class="animacion-preview">
+              <div class="animacion-placeholder">
+                <div class="anim-icon-wrapper">
+                  <span class="anim-icon">🌋</span>
+                  <div class="anim-ring"></div>
+                </div>
+              </div>
+              <button class="anim-play">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </button>
+            </div>
+            <div class="animacion-info">
+              <h3>Erupción Volcánica</h3>
+              <p>Dinámica de una erupción explosiva</p>
+              <span class="animacion-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                3:15
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="multimedia-cta">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <span class="cta-badge">¿Te gusta lo que ves?</span>
+          <h2>Explora más recursos educativos</h2>
+          <p>Complementa tu aprendizaje con modelos 3D, aulas virtuales y práctica de campo</p>
+          <div class="cta-buttons">
+            <a href="/modelos-3d.html" class="cta-btn cta-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <span>Ver Modelos 3D</span>
+            </a>
+            <a href="/aulas-virtuales.html" class="cta-btn cta-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/>
+                <circle cx="8" cy="12" r="2"/>
+                <circle cx="16" cy="12" r="2"/>
+              </svg>
+              <span>Aulas Virtuales</span>
+            </a>
           </div>
         </div>
       </div>
@@ -105,31 +933,198 @@
 
   <!-- footer.html — parcial con créditos y logos -->
 <footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Créditos del Proyecto</h3>
-        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
-        <p class="copyright">© 2025 UNAM</p>
+      <!-- Logo y descripción -->
+      <div class="footer-section footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M12 28 L20 12 L28 28 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <circle cx="20" cy="22" r="4" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-logo-title">PAPIME</span>
+            <span class="footer-logo-subtitle">Geología 3D</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Proyecto educativo desarrollado con el apoyo de DGAPA-UNAM para la enseñanza 
+          de Geología mediante tecnologías 3D y realidad virtual.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a1a2e"/></svg>
+          </a>
+          <a href="mailto:papime@ingenieria.unam.mx" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
+      
+      <!-- Enlaces rápidos -->
       <div class="footer-section">
-        <h3>Contacto</h3>
-        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+        <h3 class="footer-title">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="/modelos-3d.html"><span class="link-icon">→</span> Modelos 3D</a></li>
+          <li><a href="/practica-virtual.html"><span class="link-icon">→</span> Práctica Virtual</a></li>
+          <li><a href="/aulas-virtuales.html"><span class="link-icon">→</span> Aulas Virtuales</a></li>
+          <li><a href="/catalogos.html"><span class="link-icon">→</span> Catálogos</a></li>
+          <li><a href="/material-multimedia.html"><span class="link-icon">→</span> Multimedia</a></li>
+        </ul>
       </div>
+      
+      <!-- Recursos -->
       <div class="footer-section">
-        <h3>Logos</h3>
-        <div class="institutional-logos">
-          <div class="logo-placeholder">UNAM</div>
-          <div class="logo-placeholder">DGAPA</div>
-          <div class="logo-placeholder">PAPIME</div>
+        <h3 class="footer-title">Recursos</h3>
+        <ul class="footer-links">
+          <li><a href="/manuales-recursos.html"><span class="link-icon">→</span> Manuales</a></li>
+          <li><a href="/proyecto.html"><span class="link-icon">→</span> Acerca del Proyecto</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Documentación</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Facultad de Ingeniería, UNAM<br>Ciudad de México</span>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Logos institucionales -->
+    <div class="footer-logos">
+      <div class="institutional-logos">
+        <div class="inst-logo" title="UNAM">
+          <span class="inst-logo-text">UNAM</span>
+        </div>
+        <div class="inst-logo" title="DGAPA">
+          <span class="inst-logo-text">DGAPA</span>
+        </div>
+        <div class="inst-logo" title="PAPIME">
+          <span class="inst-logo-text">PAPIME</span>
+        </div>
+        <div class="inst-logo" title="Facultad de Ingeniería">
+          <span class="inst-logo-text">FI</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Universidad Nacional Autónoma de México. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <span class="separator">•</span>
+          <a href="#">Términos de uso</a>
+          <span class="separator">•</span>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
+<script>
+// Update year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+  
+  <script>
+    // Counter animation
+    const counters = document.querySelectorAll('.stat-value[data-count]');
+    
+    const animateCounter = (counter) => {
+      const target = parseInt(counter.dataset.count);
+      const duration = 2000;
+      const startTime = performance.now();
+      
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        
+        counter.textContent = current;
+        
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      
+      requestAnimationFrame(update);
+    };
+    
+    // Intersection Observer for counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.video-card, .tour-card, .infografia-card, .animacion-card, .nav-card');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    console.log('🎬 Material Multimedia Premium cargada');
+  </script>
 </body>
 </html>

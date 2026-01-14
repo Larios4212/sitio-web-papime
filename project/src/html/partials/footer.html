@@ -1,27 +1,125 @@
 <!-- footer.html — parcial con créditos y logos -->
 <footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Créditos del Proyecto</h3>
-        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
-        <p class="copyright">© {{ year }} UNAM</p>
+      <!-- Logo y descripción -->
+      <div class="footer-section footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M12 28 L20 12 L28 28 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <circle cx="20" cy="22" r="4" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-logo-title">PAPIME</span>
+            <span class="footer-logo-subtitle">Geología 3D</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Proyecto educativo desarrollado con el apoyo de DGAPA-UNAM para la enseñanza 
+          de Geología mediante tecnologías 3D y realidad virtual.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a1a2e"/></svg>
+          </a>
+          <a href="mailto:papime@ingenieria.unam.mx" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
+      
+      <!-- Enlaces rápidos -->
       <div class="footer-section">
-        <h3>Contacto</h3>
-        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+        <h3 class="footer-title">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="/modelos-3d.html"><span class="link-icon">→</span> Modelos 3D</a></li>
+          <li><a href="/practica-virtual.html"><span class="link-icon">→</span> Práctica Virtual</a></li>
+          <li><a href="/aulas-virtuales.html"><span class="link-icon">→</span> Aulas Virtuales</a></li>
+          <li><a href="/catalogos.html"><span class="link-icon">→</span> Catálogos</a></li>
+          <li><a href="/material-multimedia.html"><span class="link-icon">→</span> Multimedia</a></li>
+        </ul>
       </div>
+      
+      <!-- Recursos -->
       <div class="footer-section">
-        <h3>Logos</h3>
-        <div class="institutional-logos">
-          <div class="logo-placeholder">UNAM</div>
-          <div class="logo-placeholder">DGAPA</div>
-          <div class="logo-placeholder">PAPIME</div>
+        <h3 class="footer-title">Recursos</h3>
+        <ul class="footer-links">
+          <li><a href="/manuales-recursos.html"><span class="link-icon">→</span> Manuales</a></li>
+          <li><a href="/proyecto.html"><span class="link-icon">→</span> Acerca del Proyecto</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Documentación</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Facultad de Ingeniería, UNAM<br>Ciudad de México</span>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Logos institucionales -->
+    <div class="footer-logos">
+      <div class="institutional-logos">
+        <div class="inst-logo" title="UNAM">
+          <span class="inst-logo-text">UNAM</span>
+        </div>
+        <div class="inst-logo" title="DGAPA">
+          <span class="inst-logo-text">DGAPA</span>
+        </div>
+        <div class="inst-logo" title="PAPIME">
+          <span class="inst-logo-text">PAPIME</span>
+        </div>
+        <div class="inst-logo" title="Facultad de Ingeniería">
+          <span class="inst-logo-text">FI</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Universidad Nacional Autónoma de México. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <span class="separator">•</span>
+          <a href="#">Términos de uso</a>
+          <span class="separator">•</span>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
+
+<script>
+// Update year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

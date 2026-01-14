@@ -368,10 +368,10 @@ function generateModelPreviewSVG(model) {
   return `data:image/svg+xml;base64,${btoa(svg)}`;
 }
 
-// Función simple para crear cards con vista previa 3D real
+// Función simple para crear cards con diseño premium
 function createSimpleModelCard(model) {
   const article = document.createElement('article');
-  article.className = 'card model-card';
+  article.className = 'model-card';
   
   // Mapear correctamente las categorías
   const categoryMap = {
@@ -384,48 +384,63 @@ function createSimpleModelCard(model) {
     'Limnología': 'limnologia'
   };
   
+  // Iconos por categoría
+  const categoryIcons = {
+    'Geomorfología': '🏔️',
+    'Minería': '⛏️', 
+    'Vulcanología': '🌋',
+    'Hidrología': '💧',
+    'Geología Costera': '🏖️',
+    'Espeleología': '🦇',
+    'Limnología': '🏞️'
+  };
+  
+  // Colores por categoría
+  const categoryColors = {
+    'Geomorfología': '#22c55e',
+    'Minería': '#f59e0b', 
+    'Vulcanología': '#ef4444',
+    'Hidrología': '#3b82f6',
+    'Geología Costera': '#14b8a6',
+    'Espeleología': '#64748b',
+    'Limnología': '#0ea5e9'
+  };
+  
   const categoryClass = categoryMap[model.category] || 'otros';
+  const categoryIcon = categoryIcons[model.category] || '🌍';
+  const categoryColor = categoryColors[model.category] || '#667eea';
   article.setAttribute('data-category', categoryClass);
   console.log(`🏷️ Card creada con categoría: ${model.category} -> ${categoryClass}`);
   
-  // Extraer ID de Sketchfab para thumbnail
-  const sketchfabId = extractSketchfabId(model.sketchfabUrl);
-  
-  // Crear vista previa embebida de Sketchfab
-  const previewContent = sketchfabId ? 
-    `<div class="model-preview-container" style="position: relative;">
-      <iframe 
-        src="https://sketchfab.com/models/${sketchfabId}/embed?ui_controls=0&ui_infos=0&ui_inspector=0&ui_watermark=0&ui_stop=0&ui_animations=0&ui_annotations=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_sound=0&preload=1&autostart=1&camera=0" 
-        width="100%" 
-        height="220" 
-        frameborder="0" 
-        allow="autoplay; fullscreen; xr-spatial-tracking" 
-        xr-spatial-tracking 
-        execution-while-out-of-viewport 
-        execution-while-not-rendered 
-        web-share
-        style="border-bottom: 1px solid #e2e8f0;"
-        loading="lazy">
-      </iframe>
-      <div class="model-3d-badge" style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">
-        🔮 3D
-      </div>
-    </div>` :
-    `<div style="width: 100%; height: 220px; background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0;">
-      <div style="font-size: 2rem; margin-bottom: 8px;">🏔️</div>
-      <div style="font-size: 0.875rem; font-weight: 600; color: #1f2937; text-align: center; padding: 0 16px;">${model.name}</div>
-      <div style="font-size: 0.75rem; color: #64748b; margin-top: 4px;">${model.category}</div>
-    </div>`;
-  
+  // Crear el HTML de la card premium
   article.innerHTML = `
-    ${previewContent}
+    <div class="model-preview-area">
+      <div class="preview-icon">${categoryIcon}</div>
+      <div class="preview-name">${model.name}</div>
+      <div class="preview-category" style="color: ${categoryColor}">${model.category}</div>
+      <div class="card-overlay">
+        <button class="overlay-btn view-3d-btn" data-model-id="${model.id}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Ver en 3D
+        </button>
+      </div>
+    </div>
     <div class="model-info">
       <h3 class="model-name">${model.name}</h3>
-      <span class="chip">${model.category}</span>
-      <p>${model.description}</p>
+      <span class="model-chip" style="color: ${categoryColor}">
+        <span>${categoryIcon}</span>
+        ${model.category}
+      </span>
+      <p class="model-description">${model.description}</p>
       <div class="model-actions">
-        <button class="btn btn-primary view-3d-btn" data-model-id="${model.id}">🔍 Ver en 3D</button>
-        <a href="${model.sketchfabUrl}" class="btn btn-ghost" rel="noopener" target="_blank">↗ Sketchfab</a>
+        <button class="btn btn-primary view-3d-btn" data-model-id="${model.id}">
+          🔍 Ver en 3D
+        </button>
+        <a href="${model.sketchfabUrl}" class="btn btn-ghost" rel="noopener" target="_blank">
+          ↗ Sketchfab
+        </a>
       </div>
     </div>
   `;

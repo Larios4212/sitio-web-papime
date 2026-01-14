@@ -28,80 +28,695 @@
 }
 </script>
 
+  <link rel="stylesheet" href="/css/pages/catalogos.css">
 </head>
 <body>
-  <!-- header.html — parcial con logo y navegación principal -->
+  <!-- header.html — Premium Navigation Header -->
 <header class="header">
+  <!-- Animated background effects -->
+  <div class="header-bg">
+    <div class="header-gradient"></div>
+    <div class="header-glow"></div>
+    <div class="header-particles"></div>
+  </div>
+  
   <div class="container">
     <div class="header-content">
-      <div class="logo">
-        <span class="logo-text">PAPIME</span>
-        <span class="logo-subtitle">Modelos 3D</span>
-      </div>
-      <nav aria-label="Principal">
+      <!-- Premium Logo -->
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="50%" style="stop-color:#764ba2"/>
+                <stop offset="100%" style="stop-color:#f093fb"/>
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2" fill="none" filter="url(#logoGlow)"/>
+            <path d="M12 28 L20 10 L28 28 Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="20" cy="21" r="5" fill="url(#logoGrad)" opacity="0.9"/>
+            <circle cx="20" cy="21" r="2" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-text">PAPIME</span>
+          <span class="logo-subtitle">Geología Interactiva</span>
+        </div>
+      </a>
+      
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <!-- Main Navigation -->
+      <nav class="nav-main" aria-label="Principal">
         <ul class="nav-list">
-          <li><a href="/index.html" class="nav-link">Inicio</a></li>
-          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
-          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
-          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
-          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
-          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
-          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
-          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+          <li>
+            <a href="/index.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="/proyecto.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Proyecto</span>
+            </a>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/aulas-virtuales.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Aulas</span>
+            </a>
+          </li>
+          <li>
+            <a href="/material-multimedia.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Multimedia</span>
+            </a>
+          </li>
+          <li>
+            <a href="/modelos-3d.html" class="nav-link nav-featured">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span>Modelos 3D</span>
+              <span class="nav-badge">Nuevo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/catalogos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Catálogos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/practica-virtual.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Práctica</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manuales-recursos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Recursos</span>
+            </a>
+          </li>
         </ul>
       </nav>
-      <div class="theme-toggle">
-        <!-- theme toggle control (visual only, no JS) -->
-        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
-        <label for="theme-switch" class="theme-label">🌙</label>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Empty - Clean minimal header -->
       </div>
     </div>
   </div>
 </header>
 
-
-  <main>
-    <section id="catalogos" class="section">
-      <div class="container">
-        <h1>Catálogos Educativos</h1>
-        <p class="section-intro">Colecciones temáticas organizadas para facilitar el acceso a los recursos educativos.</p>
+<script>
+// Premium Header Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMain = document.querySelector('.nav-main');
+  
+  // Mobile menu toggle
+  if (navToggle && navMain) {
+    navToggle.addEventListener('click', function() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMain.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    
+    // Close menu when clicking a link
+    navMain.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMain.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+  
+  // Header scroll effect with enhanced animation
+  let lastScroll = 0;
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
         
-        <div class="grid">
-          <article class="card">
-            <h2 class="card-title">🐠 Animales Marinos</h2>
-            <p class="card-description">Fauna bentónica y pelágica con especímenes de diferentes ambientes marinos.</p>
-            <a href="/catalogos/animales-marinos.html" class="btn btn-primary">Ver Catálogo</a>
+        if (currentScroll > 50) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+        
+        // Hide/show on scroll direction
+        if (currentScroll > lastScroll && currentScroll > 200) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Mark current page in nav
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === '/index.html')) {
+      link.classList.add('is-active');
+    }
+  });
+});
+</script>
+
+
+  <main class="catalogos-page">
+    
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="catalogos-hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-mesh"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-particles"></div>
+      </div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge-wrapper">
+            <span class="hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              Biblioteca de Recursos
+            </span>
+          </div>
+          
+          <h1 class="hero-title">
+            Catálogos
+            <span class="title-gradient">Educativos</span>
+          </h1>
+          
+          <p class="hero-description">
+            Colecciones temáticas cuidadosamente organizadas para facilitar 
+            el acceso a modelos 3D, especímenes y recursos de aprendizaje 
+            en ciencias de la tierra.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value" data-count="6">0</span>
+              <span class="stat-label">Catálogos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value" data-count="50">0</span>
+              <span class="stat-label">+ Modelos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Aprendizaje</span>
+            </div>
+          </div>
+          
+          <a href="#catalogos" class="hero-cta">
+            <span>Explorar Catálogos</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <polyline points="19 12 12 19 5 12"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="catalog-stack">
+            <div class="stack-card sc-1">
+              <span class="sc-icon">🐠</span>
+            </div>
+            <div class="stack-card sc-2">
+              <span class="sc-icon">🪨</span>
+            </div>
+            <div class="stack-card sc-3">
+              <span class="sc-icon">🏔️</span>
+            </div>
+            <div class="stack-card sc-4">
+              <span class="sc-icon">🦎</span>
+            </div>
+          </div>
+          <div class="visual-glow"></div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CATALOGOS GRID
+         ============================================ -->
+    <section id="catalogos" class="catalogos-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Colecciones Disponibles</span>
+          <h2 class="section-title">Nuestros Catálogos</h2>
+          <p class="section-description">
+            Selecciona un catálogo para explorar sus modelos 3D interactivos
+          </p>
+        </div>
+        
+        <div class="catalogos-grid">
+          
+          <!-- Catálogo 1: Animales Marinos -->
+          <article class="catalogo-card" data-category="fauna">
+            <div class="card-bg">
+              <div class="card-gradient gradient-ocean"></div>
+              <div class="card-pattern"></div>
+            </div>
+            
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon-wrapper icon-ocean">
+                  <span class="card-icon">🐠</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <span class="card-count">12 modelos</span>
+              </div>
+              
+              <h3 class="card-title">Animales Marinos</h3>
+              <p class="card-description">
+                Fauna bentónica y pelágica con especímenes de diferentes 
+                ambientes marinos. Explora la vida submarina en 3D.
+              </p>
+              
+              <div class="card-tags">
+                <span class="tag">Bentos</span>
+                <span class="tag">Pelágico</span>
+                <span class="tag">Fósiles</span>
+              </div>
+              
+              <a href="/catalogos/animales-marinos.html" class="card-btn btn-ocean">
+                <span>Ver Catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="card-decoration">
+              <div class="deco-bubbles">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
           </article>
           
-          <article class="card">
-            <h2 class="card-title">🦎 Animales Terrestres</h2>
-            <p class="card-description">Fauna fósil y actual de ecosistemas terrestres diversos.</p>
-            <a href="/catalogos/animales-terrestres.html" class="btn btn-primary">Ver Catálogo</a>
+          <!-- Catálogo 2: Animales Terrestres -->
+          <article class="catalogo-card" data-category="fauna">
+            <div class="card-bg">
+              <div class="card-gradient gradient-earth"></div>
+              <div class="card-pattern"></div>
+            </div>
+            
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon-wrapper icon-earth">
+                  <span class="card-icon">🦎</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <span class="card-count">8 modelos</span>
+              </div>
+              
+              <h3 class="card-title">Animales Terrestres</h3>
+              <p class="card-description">
+                Fauna fósil y actual de ecosistemas terrestres diversos. 
+                Vertebrados e invertebrados en detalle.
+              </p>
+              
+              <div class="card-tags">
+                <span class="tag">Vertebrados</span>
+                <span class="tag">Fósiles</span>
+                <span class="tag">Actual</span>
+              </div>
+              
+              <a href="/catalogos/animales-terrestres.html" class="card-btn btn-earth">
+                <span>Ver Catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
           </article>
           
-          <article class="card">
-            <h2 class="card-title">🪨 Rocas y Minerales</h2>
-            <p class="card-description">Clasificación completa de rocas ígneas, sedimentarias y metamórficas.</p>
-            <a href="/catalogos/rocas-minerales.html" class="btn btn-primary">Ver Catálogo</a>
+          <!-- Catálogo 3: Rocas y Minerales (Featured) -->
+          <article class="catalogo-card catalogo-featured" data-category="geologia">
+            <div class="card-bg">
+              <div class="card-gradient gradient-crystal"></div>
+              <div class="card-pattern"></div>
+            </div>
+            
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon-wrapper icon-crystal">
+                  <span class="card-icon">🪨</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <div class="card-badges">
+                  <span class="featured-badge">⭐ Destacado</span>
+                  <span class="card-count">15 modelos</span>
+                </div>
+              </div>
+              
+              <h3 class="card-title">Rocas y Minerales</h3>
+              <p class="card-description">
+                Clasificación completa de rocas ígneas, sedimentarias y 
+                metamórficas. Incluye minerales con cristalografía detallada.
+              </p>
+              
+              <div class="card-features">
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Rocas ígneas</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Sedimentarias</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Metamórficas</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Cristalografía</span>
+                </div>
+              </div>
+              
+              <a href="/catalogos/rocas-minerales.html" class="card-btn btn-crystal">
+                <span>Ver Catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="card-shine"></div>
           </article>
           
-          <article class="card">
-            <h2 class="card-title">🏔️ Formas del Relieve</h2>
-            <p class="card-description">Geomorfología y procesos que modelan la superficie terrestre.</p>
-            <a href="/catalogos/formas-relieve.html" class="btn btn-primary">Ver Catálogo</a>
+          <!-- Catálogo 4: Formas del Relieve -->
+          <article class="catalogo-card" data-category="geomorfologia">
+            <div class="card-bg">
+              <div class="card-gradient gradient-mountain"></div>
+              <div class="card-pattern"></div>
+            </div>
+            
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon-wrapper icon-mountain">
+                  <span class="card-icon">🏔️</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <span class="card-count">10 modelos</span>
+              </div>
+              
+              <h3 class="card-title">Formas del Relieve</h3>
+              <p class="card-description">
+                Geomorfología y procesos que modelan la superficie terrestre. 
+                Volcanes, cráteres, valles y más.
+              </p>
+              
+              <div class="card-tags">
+                <span class="tag">Volcánico</span>
+                <span class="tag">Erosivo</span>
+                <span class="tag">Tectónico</span>
+              </div>
+              
+              <a href="/catalogos/formas-relieve.html" class="card-btn btn-mountain">
+                <span>Ver Catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
           </article>
           
-          <article class="card">
-            <h2 class="card-title">🔬 Equipo de Campo</h2>
-            <p class="card-description">Instrumentos y herramientas para trabajo geológico de campo.</p>
-            <a href="/catalogos/equipo-campo.html" class="btn btn-primary">Ver Catálogo</a>
+          <!-- Catálogo 5: Equipo de Campo -->
+          <article class="catalogo-card" data-category="equipo">
+            <div class="card-bg">
+              <div class="card-gradient gradient-tech"></div>
+              <div class="card-pattern"></div>
+            </div>
+            
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon-wrapper icon-tech">
+                  <span class="card-icon">🔬</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <span class="card-count">6 modelos</span>
+              </div>
+              
+              <h3 class="card-title">Equipo de Campo</h3>
+              <p class="card-description">
+                Instrumentos y herramientas para trabajo geológico de campo. 
+                Aprende a usar el equipo profesional.
+              </p>
+              
+              <div class="card-tags">
+                <span class="tag">Brújulas</span>
+                <span class="tag">Martillos</span>
+                <span class="tag">GPS</span>
+              </div>
+              
+              <a href="/catalogos/equipo-campo.html" class="card-btn btn-tech">
+                <span>Ver Catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
           </article>
           
-          <article class="card">
-            <h2 class="card-title">🚗 Transporte</h2>
-            <p class="card-description">Vehículos y equipamiento para expediciones geológicas.</p>
-            <a href="/catalogos/transporte.html" class="btn btn-primary">Ver Catálogo</a>
+          <!-- Catálogo 6: Transporte -->
+          <article class="catalogo-card" data-category="equipo">
+            <div class="card-bg">
+              <div class="card-gradient gradient-vehicle"></div>
+              <div class="card-pattern"></div>
+            </div>
+            
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon-wrapper icon-vehicle">
+                  <span class="card-icon">🚗</span>
+                  <div class="icon-glow"></div>
+                </div>
+                <span class="card-count">4 modelos</span>
+              </div>
+              
+              <h3 class="card-title">Transporte</h3>
+              <p class="card-description">
+                Vehículos y equipamiento para expediciones geológicas. 
+                Logística de campo profesional.
+              </p>
+              
+              <div class="card-tags">
+                <span class="tag">4x4</span>
+                <span class="tag">Expedición</span>
+                <span class="tag">Campo</span>
+              </div>
+              
+              <a href="/catalogos/transporte.html" class="card-btn btn-vehicle">
+                <span>Ver Catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
           </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         INFO SECTION
+         ============================================ -->
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-content">
+            <span class="section-badge">¿Cómo funcionan?</span>
+            <h2 class="section-title">Catálogos Interactivos</h2>
+            <p>
+              Cada catálogo contiene una colección de modelos 3D de alta calidad 
+              que puedes explorar de forma interactiva. Rota, haz zoom y 
+              examina cada detalle.
+            </p>
+            
+            <div class="info-features">
+              <div class="info-feature">
+                <div class="if-icon">🖱️</div>
+                <div class="if-text">
+                  <strong>Interacción 3D</strong>
+                  <span>Rota y explora libremente</span>
+                </div>
+              </div>
+              <div class="info-feature">
+                <div class="if-icon">📱</div>
+                <div class="if-text">
+                  <strong>Responsive</strong>
+                  <span>Funciona en cualquier dispositivo</span>
+                </div>
+              </div>
+              <div class="info-feature">
+                <div class="if-icon">📖</div>
+                <div class="if-text">
+                  <strong>Fichas Técnicas</strong>
+                  <span>Información detallada</span>
+                </div>
+              </div>
+              <div class="info-feature">
+                <div class="if-icon">🎓</div>
+                <div class="if-text">
+                  <strong>Educativo</strong>
+                  <span>Diseñado para aprender</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-visual">
+            <div class="visual-demo">
+              <div class="demo-screen">
+                <div class="demo-header">
+                  <div class="demo-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="demo-title">Modelo 3D</span>
+                </div>
+                <div class="demo-body">
+                  <div class="demo-3d">
+                    <span class="demo-icon">💎</span>
+                    <div class="demo-ring"></div>
+                  </div>
+                </div>
+                <div class="demo-controls">
+                  <span class="ctrl">⟲</span>
+                  <span class="ctrl">+</span>
+                  <span class="ctrl">−</span>
+                  <span class="ctrl">⛶</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="catalogos-cta">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <span class="cta-badge">¿Quieres ver todo junto?</span>
+          <h2>Explora todos los Modelos 3D</h2>
+          <p>Accede a la galería completa con filtros avanzados y búsqueda</p>
+          <div class="cta-buttons">
+            <a href="/modelos-3d.html" class="cta-btn cta-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <span>Ver Modelos 3D</span>
+            </a>
+            <a href="/practica-virtual.html" class="cta-btn cta-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Práctica Virtual</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -109,31 +724,197 @@
 
   <!-- footer.html — parcial con créditos y logos -->
 <footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Créditos del Proyecto</h3>
-        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
-        <p class="copyright">© 2025 UNAM</p>
+      <!-- Logo y descripción -->
+      <div class="footer-section footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M12 28 L20 12 L28 28 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <circle cx="20" cy="22" r="4" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-logo-title">PAPIME</span>
+            <span class="footer-logo-subtitle">Geología 3D</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Proyecto educativo desarrollado con el apoyo de DGAPA-UNAM para la enseñanza 
+          de Geología mediante tecnologías 3D y realidad virtual.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a1a2e"/></svg>
+          </a>
+          <a href="mailto:papime@ingenieria.unam.mx" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
+      
+      <!-- Enlaces rápidos -->
       <div class="footer-section">
-        <h3>Contacto</h3>
-        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+        <h3 class="footer-title">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="/modelos-3d.html"><span class="link-icon">→</span> Modelos 3D</a></li>
+          <li><a href="/practica-virtual.html"><span class="link-icon">→</span> Práctica Virtual</a></li>
+          <li><a href="/aulas-virtuales.html"><span class="link-icon">→</span> Aulas Virtuales</a></li>
+          <li><a href="/catalogos.html"><span class="link-icon">→</span> Catálogos</a></li>
+          <li><a href="/material-multimedia.html"><span class="link-icon">→</span> Multimedia</a></li>
+        </ul>
       </div>
+      
+      <!-- Recursos -->
       <div class="footer-section">
-        <h3>Logos</h3>
-        <div class="institutional-logos">
-          <div class="logo-placeholder">UNAM</div>
-          <div class="logo-placeholder">DGAPA</div>
-          <div class="logo-placeholder">PAPIME</div>
+        <h3 class="footer-title">Recursos</h3>
+        <ul class="footer-links">
+          <li><a href="/manuales-recursos.html"><span class="link-icon">→</span> Manuales</a></li>
+          <li><a href="/proyecto.html"><span class="link-icon">→</span> Acerca del Proyecto</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Documentación</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Facultad de Ingeniería, UNAM<br>Ciudad de México</span>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Logos institucionales -->
+    <div class="footer-logos">
+      <div class="institutional-logos">
+        <div class="inst-logo" title="UNAM">
+          <span class="inst-logo-text">UNAM</span>
+        </div>
+        <div class="inst-logo" title="DGAPA">
+          <span class="inst-logo-text">DGAPA</span>
+        </div>
+        <div class="inst-logo" title="PAPIME">
+          <span class="inst-logo-text">PAPIME</span>
+        </div>
+        <div class="inst-logo" title="Facultad de Ingeniería">
+          <span class="inst-logo-text">FI</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Universidad Nacional Autónoma de México. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <span class="separator">•</span>
+          <a href="#">Términos de uso</a>
+          <span class="separator">•</span>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
+<script>
+// Update year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+  
+  <script>
+    // Counter animation
+    const counters = document.querySelectorAll('.stat-value[data-count]');
+    
+    const animateCounter = (counter) => {
+      const target = parseInt(counter.dataset.count);
+      const duration = 2000;
+      const startTime = performance.now();
+      
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        
+        counter.textContent = current;
+        
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      
+      requestAnimationFrame(update);
+    };
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.catalogo-card, .info-content, .info-visual');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    console.log('📚 Catálogos Premium cargada');
+  </script>
 </body>
 </html>

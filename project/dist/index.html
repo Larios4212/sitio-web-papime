@@ -28,84 +28,750 @@
 }
 </script>
 
+  <link rel="stylesheet" href="/css/pages/inicio.css">
 </head>
 <body>
-  <!-- header.html — parcial con logo y navegación principal -->
+  <!-- header.html — Premium Navigation Header -->
 <header class="header">
+  <!-- Animated background effects -->
+  <div class="header-bg">
+    <div class="header-gradient"></div>
+    <div class="header-glow"></div>
+    <div class="header-particles"></div>
+  </div>
+  
   <div class="container">
     <div class="header-content">
-      <div class="logo">
-        <span class="logo-text">PAPIME</span>
-        <span class="logo-subtitle">Modelos 3D</span>
-      </div>
-      <nav aria-label="Principal">
+      <!-- Premium Logo -->
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="50%" style="stop-color:#764ba2"/>
+                <stop offset="100%" style="stop-color:#f093fb"/>
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2" fill="none" filter="url(#logoGlow)"/>
+            <path d="M12 28 L20 10 L28 28 Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="20" cy="21" r="5" fill="url(#logoGrad)" opacity="0.9"/>
+            <circle cx="20" cy="21" r="2" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-text">PAPIME</span>
+          <span class="logo-subtitle">Geología Interactiva</span>
+        </div>
+      </a>
+      
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <!-- Main Navigation -->
+      <nav class="nav-main" aria-label="Principal">
         <ul class="nav-list">
-          <li><a href="/index.html" class="nav-link">Inicio</a></li>
-          <li><a href="/proyecto.html" class="nav-link">Proyecto</a></li>
-          <li><a href="/aulas-virtuales.html" class="nav-link">Aulas virtuales</a></li>
-          <li><a href="/material-multimedia.html" class="nav-link">Material multimedia</a></li>
-          <li><a href="/modelos-3d.html" class="nav-link">Modelos 3D</a></li>
-          <li><a href="/catalogos.html" class="nav-link">Catálogos</a></li>
-          <li><a href="/practica-virtual.html" class="nav-link">Práctica virtual</a></li>
-          <li><a href="/manuales-recursos.html" class="nav-link">Recursos</a></li>
+          <li>
+            <a href="/index.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="/proyecto.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Proyecto</span>
+            </a>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/aulas-virtuales.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span>Aulas</span>
+            </a>
+          </li>
+          <li>
+            <a href="/material-multimedia.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Multimedia</span>
+            </a>
+          </li>
+          <li>
+            <a href="/modelos-3d.html" class="nav-link nav-featured">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span>Modelos 3D</span>
+              <span class="nav-badge">Nuevo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/catalogos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Catálogos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/practica-virtual.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Práctica</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manuales-recursos.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Recursos</span>
+            </a>
+          </li>
         </ul>
       </nav>
-      <div class="theme-toggle">
-        <!-- theme toggle control (visual only, no JS) -->
-        <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Cambiar tema">
-        <label for="theme-switch" class="theme-label">🌙</label>
+      
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Empty - Clean minimal header -->
       </div>
     </div>
   </div>
 </header>
 
+<script>
+// Premium Header Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMain = document.querySelector('.nav-main');
+  
+  // Mobile menu toggle
+  if (navToggle && navMain) {
+    navToggle.addEventListener('click', function() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMain.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open');
+    });
+    
+    // Close menu when clicking a link
+    navMain.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMain.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+  
+  // Header scroll effect with enhanced animation
+  let lastScroll = 0;
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+        
+        // Hide/show on scroll direction
+        if (currentScroll > lastScroll && currentScroll > 200) {
+          header.classList.add('header-hidden');
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScroll = currentScroll;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // Mark current page in nav
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === '/index.html')) {
+      link.classList.add('is-active');
+    }
+  });
+});
+</script>
 
-  <main>
-    <section id="inicio" class="hero">
+
+  <main class="home-page">
+    
+    <!-- Hero Principal -->
+    <section class="home-hero">
+      <div class="hero-bg">
+        <div class="hero-mesh"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+      </div>
+      
       <div class="container">
-        <div class="hero-content">
-          <h1>Proyecto PAPIME: Innovación Educativa con Modelos 3D</h1>
-          <p class="hero-subtitle">Transformando la enseñanza de las ciencias de la tierra mediante visualización tridimensional.</p>
-          <a href="/project/src/html/pages/aulas-virtuales.html" class="btn btn-primary">Explorar Aulas Virtuales</a>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <div class="hero-badges">
+              <span class="badge badge-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                UNAM • Facultad de Ingeniería
+              </span>
+              <span class="badge badge-secondary">PAPIME PE101122</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Explora la Geología <br>
+              <span class="title-gradient">en Tercera Dimensión</span>
+            </h1>
+            
+            <p class="hero-description">
+              Sumérgete en una experiencia educativa única donde los paisajes geológicos 
+              de México cobran vida. Modelos 3D interactivos, fotos 360° inmersivas y 
+              recorridos virtuales de campo diseñados para transformar el aprendizaje.
+            </p>
+            
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-value" data-count="9">0</span>
+                <span class="stat-label">Modelos 3D</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value" data-count="8">0</span>
+                <span class="stat-label">Estaciones</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value" data-count="5">0</span>
+                <span class="stat-label">Estados</span>
+              </div>
+            </div>
+            
+            <div class="hero-cta">
+              <a href="/practica-virtual.html" class="btn-cta btn-primary-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Iniciar Práctica Virtual
+              </a>
+              <a href="/modelos-3d.html" class="btn-cta btn-ghost-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                Explorar Modelos
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="card-3d-preview">
+                <div class="preview-glow"></div>
+                <div class="preview-content">
+                  <div class="preview-icon">🌋</div>
+                  <div class="preview-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                  </div>
+                </div>
+                <div class="preview-label">Vista 3D Interactiva</div>
+              </div>
+              <div class="floating-badges">
+                <div class="float-badge fb-1">
+                  <span>🏔️</span> Geomorfología
+                </div>
+                <div class="float-badge fb-2">
+                  <span>💎</span> Minerales
+                </div>
+                <div class="float-badge fb-3">
+                  <span>🌊</span> Hidrología
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Descubre más</span>
+      </div>
+    </section>
+    
+    <!-- Sección: ¿Qué es PAPIME? -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="section-badge">Innovación Educativa</span>
+            <h2 class="section-title">¿Qué es el Proyecto PAPIME?</h2>
+            <p class="about-text">
+              El <strong>Programa de Apoyo a Proyectos para Innovar y Mejorar la Educación (PAPIME)</strong> 
+              de la DGAPA-UNAM impulsa el desarrollo de recursos educativos que transforman 
+              la manera en que estudiantes y profesores interactúan con el conocimiento.
+            </p>
+            <p class="about-text">
+              Este proyecto específico se enfoca en las <strong>Ciencias de la Tierra</strong>, 
+              creando herramientas digitales que permiten explorar formaciones geológicas, 
+              estructuras volcánicas, sistemas lacustres y otros fenómenos naturales de México 
+              sin necesidad de desplazarse físicamente a campo.
+            </p>
+            <div class="about-features">
+              <div class="feature">
+                <div class="feature-icon">🎓</div>
+                <div>
+                  <h4>Educación Accesible</h4>
+                  <p>Recursos gratuitos para toda la comunidad universitaria</p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">🔬</div>
+                <div>
+                  <h4>Base Científica</h4>
+                  <p>Modelos basados en datos reales de investigación de campo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="visual-stack">
+              <div class="stack-item item-1">
+                <img src="/assets/img/placeholder-geo-1.svg" alt="Formación geológica" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                  <span>🏔️</span>
+                </div>
+              </div>
+              <div class="stack-item item-2">
+                <img src="/assets/img/placeholder-geo-2.svg" alt="Modelo 3D" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                  <span>🌋</span>
+                </div>
+              </div>
+              <div class="stack-item item-3">
+                <img src="/assets/img/placeholder-geo-3.svg" alt="Vista 360" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                  <span>📸</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section id="proyecto" class="section">
+    
+    <!-- Sección: Características -->
+    <section class="features-section">
       <div class="container">
-        <h2>Acerca del Proyecto</h2>
-        <p>Proyecto PAPIME para crear recursos educativos con modelos 3D.</p>
+        <div class="section-header">
+          <span class="section-badge">Explora Nuestras Herramientas</span>
+          <h2 class="section-title">Todo lo que Necesitas para Aprender</h2>
+          <p class="section-description">
+            Una suite completa de recursos digitales diseñados para complementar 
+            y enriquecer la enseñanza de geología.
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          
+          <a href="/modelos-3d.html" class="feature-card feature-card-lg">
+            <div class="feature-bg">
+              <div class="feature-gradient"></div>
+            </div>
+            <div class="feature-content">
+              <div class="feature-icon-lg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3>Modelos 3D Interactivos</h3>
+              <p>9 modelos tridimensionales de alta precisión que puedes rotar, acercar y explorar desde cualquier ángulo. Desde cráteres volcánicos hasta sistemas de cavernas.</p>
+              <span class="feature-link">
+                Explorar modelos
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+            <div class="feature-decoration">
+              <div class="deco-cube"></div>
+            </div>
+          </a>
+          
+          <a href="/practica-virtual.html" class="feature-card">
+            <div class="feature-icon-sm">🥽</div>
+            <h3>Práctica Virtual</h3>
+            <p>8 estaciones de campo con fotos 360° inmersivas. Experimenta la geología como si estuvieras ahí.</p>
+            <span class="feature-link">
+              Ver estaciones
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/catalogos.html" class="feature-card">
+            <div class="feature-icon-sm">📚</div>
+            <h3>Catálogos</h3>
+            <p>Colecciones organizadas de minerales, rocas y fósiles con información detallada.</p>
+            <span class="feature-link">
+              Ver catálogos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/aulas-virtuales.html" class="feature-card">
+            <div class="feature-icon-sm">🏫</div>
+            <h3>Aulas Virtuales</h3>
+            <p>Espacios de aprendizaje en línea con actividades interactivas y evaluaciones.</p>
+            <span class="feature-link">
+              Acceder
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/material-multimedia.html" class="feature-card">
+            <div class="feature-icon-sm">🎬</div>
+            <h3>Material Multimedia</h3>
+            <p>Videos educativos, animaciones y recursos visuales para reforzar conceptos.</p>
+            <span class="feature-link">
+              Ver material
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+          <a href="/manuales-recursos.html" class="feature-card">
+            <div class="feature-icon-sm">📖</div>
+            <h3>Manuales y Recursos</h3>
+            <p>Documentación, guías de campo y materiales de apoyo descargables.</p>
+            <span class="feature-link">
+              Ver recursos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+          
+        </div>
       </div>
     </section>
+    
+    <!-- Sección: Mapa de Sitios -->
+    <section class="locations-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Ubicaciones Reales</span>
+          <h2 class="section-title">Sitios Geológicos de México</h2>
+          <p class="section-description">
+            Nuestros modelos y recorridos capturan formaciones únicas de diferentes estados del país.
+          </p>
+        </div>
+        
+        <div class="locations-grid">
+          <div class="location-card">
+            <div class="location-icon">🌋</div>
+            <h4>Puebla</h4>
+            <p>Cráteres, lagunas y estructuras volcánicas del Cuaternario</p>
+            <span class="location-count">5 sitios</span>
+          </div>
+          <div class="location-card">
+            <div class="location-icon">🏔️</div>
+            <h4>Morelos</h4>
+            <p>Formaciones geomorfológicas y relieves característicos</p>
+            <span class="location-count">1 sitio</span>
+          </div>
+          <div class="location-card">
+            <div class="location-icon">💧</div>
+            <h4>Tlaxcala</h4>
+            <p>Sistemas hidráulicos y cascadas con erosión fluvial</p>
+            <span class="location-count">1 sitio</span>
+          </div>
+          <div class="location-card">
+            <div class="location-icon">🏖️</div>
+            <h4>Oaxaca</h4>
+            <p>Geología costera y morfología de playas</p>
+            <span class="location-count">1 sitio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección: CTA Final -->
+    <section class="cta-section">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Listo para Explorar?</h2>
+          <p>Comienza tu viaje por la geología de México con nuestras herramientas interactivas.</p>
+          <div class="cta-buttons">
+            <a href="/practica-virtual.html" class="btn-cta-final btn-primary-final">
+              Comenzar Ahora
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="/proyecto.html" class="btn-cta-final btn-ghost-final">
+              Conocer el Proyecto
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </main>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Counter animation
+    const counters = document.querySelectorAll('[data-count]');
+    const observerOptions = { threshold: 0.5 };
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.dataset.count);
+          let current = 0;
+          const increment = target / 40;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, 40);
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.feature-card, .location-card, .about-content, .about-visual');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Parallax on hero
+    const heroContent = document.querySelector('.hero-content');
+    const heroVisual = document.querySelector('.hero-visual');
+    
+    window.addEventListener('scroll', () => {
+      const scroll = window.pageYOffset;
+      if (scroll < 800) {
+        if (heroContent) {
+          heroContent.style.transform = `translateY(${scroll * 0.1}px)`;
+        }
+        if (heroVisual) {
+          heroVisual.style.transform = `translateY(${scroll * 0.15}px)`;
+        }
+      }
+    });
+    
+    // Smooth scroll for scroll indicator
+    document.querySelector('.scroll-indicator')?.addEventListener('click', () => {
+      document.querySelector('.about-section')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  </script>
 
   <!-- footer.html — parcial con créditos y logos -->
 <footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  
   <div class="container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Créditos del Proyecto</h3>
-        <p>Proyecto PAPIME desarrollado con el apoyo de DGAPA - UNAM.</p>
-        <p class="copyright">© 2025 UNAM</p>
+      <!-- Logo y descripción -->
+      <div class="footer-section footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M12 28 L20 12 L28 28 Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <circle cx="20" cy="22" r="4" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-logo-title">PAPIME</span>
+            <span class="footer-logo-subtitle">Geología 3D</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Proyecto educativo desarrollado con el apoyo de DGAPA-UNAM para la enseñanza 
+          de Geología mediante tecnologías 3D y realidad virtual.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1a1a2e"/></svg>
+          </a>
+          <a href="mailto:papime@ingenieria.unam.mx" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
+      
+      <!-- Enlaces rápidos -->
       <div class="footer-section">
-        <h3>Contacto</h3>
-        <p><a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a></p>
+        <h3 class="footer-title">Explorar</h3>
+        <ul class="footer-links">
+          <li><a href="/modelos-3d.html"><span class="link-icon">→</span> Modelos 3D</a></li>
+          <li><a href="/practica-virtual.html"><span class="link-icon">→</span> Práctica Virtual</a></li>
+          <li><a href="/aulas-virtuales.html"><span class="link-icon">→</span> Aulas Virtuales</a></li>
+          <li><a href="/catalogos.html"><span class="link-icon">→</span> Catálogos</a></li>
+          <li><a href="/material-multimedia.html"><span class="link-icon">→</span> Multimedia</a></li>
+        </ul>
       </div>
+      
+      <!-- Recursos -->
       <div class="footer-section">
-        <h3>Logos</h3>
-        <div class="institutional-logos">
-          <div class="logo-placeholder">UNAM</div>
-          <div class="logo-placeholder">DGAPA</div>
-          <div class="logo-placeholder">PAPIME</div>
+        <h3 class="footer-title">Recursos</h3>
+        <ul class="footer-links">
+          <li><a href="/manuales-recursos.html"><span class="link-icon">→</span> Manuales</a></li>
+          <li><a href="/proyecto.html"><span class="link-icon">→</span> Acerca del Proyecto</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Documentación</a></li>
+          <li><a href="#"><span class="link-icon">→</span> Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:papime@ingenieria.unam.mx">papime@ingenieria.unam.mx</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Facultad de Ingeniería, UNAM<br>Ciudad de México</span>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Logos institucionales -->
+    <div class="footer-logos">
+      <div class="institutional-logos">
+        <div class="inst-logo" title="UNAM">
+          <span class="inst-logo-text">UNAM</span>
+        </div>
+        <div class="inst-logo" title="DGAPA">
+          <span class="inst-logo-text">DGAPA</span>
+        </div>
+        <div class="inst-logo" title="PAPIME">
+          <span class="inst-logo-text">PAPIME</span>
+        </div>
+        <div class="inst-logo" title="Facultad de Ingeniería">
+          <span class="inst-logo-text">FI</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
     <div class="footer-bottom">
-      <p class="accessibility-notice">Este sitio cumple con WCAG AA (marcador)</p>
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © <span id="current-year">2024</span> Universidad Nacional Autónoma de México. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <span class="separator">•</span>
+          <a href="#">Términos de uso</a>
+          <span class="separator">•</span>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
+<script>
+// Update year automatically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
 </body>
-</html>
+</html> 

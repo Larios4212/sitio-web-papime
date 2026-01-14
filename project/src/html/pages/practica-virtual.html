@@ -2,162 +2,1155 @@
 <html lang="es">
 <head>
   <!-- include partials/head.html -->
+  <link rel="stylesheet" href="/css/pages/practica-virtual.css">
 </head>
 <body>
   <!-- include partials/header.html -->
 
-  <main>
-    <section id="practica-virtual" class="section">
-      <div class="container">
-        <h1>Práctica Virtual</h1>
-        <p class="section-intro">Guía interactiva para realizar prácticas de laboratorio y campo de manera virtual usando los recursos disponibles en las aulas virtuales.</p>
-        
-        <div class="practice-layout">
-          <div class="practice-main">
-            <div class="practice-intro">
-              <h2>Introducción a la Práctica Virtual</h2>
-              <p>Esta práctica virtual te permitirá explorar conceptos geológicos fundamentales utilizando modelos 3D, aulas virtuales inmersivas y recursos multimedia. La práctica está diseñada para complementar el aprendizaje teórico con experiencias prácticas simuladas.</p>
+  <main class="practica-page">
+    
+    <!-- ============================================
+         HERO SECTION PREMIUM
+         ============================================ -->
+    <section class="practica-hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+      </div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="hero-badge badge-tour">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="10 8 16 12 10 16 10 8"/>
+              </svg>
+              Recorrido Interactivo
+            </span>
+            <span class="hero-badge badge-stations">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              8 Estaciones
+            </span>
+          </div>
+          
+          <h1 class="hero-title">
+            Práctica Virtual de
+            <span class="title-gradient">Geología de Campo</span>
+          </h1>
+          
+          <p class="hero-description">
+            Explora 8 estaciones geológicas únicas en una experiencia inmersiva. 
+            Cada parada incluye galerías fotográficas, modelos 3D interactivos, 
+            fotografías 360° y fichas técnicas descargables.
+          </p>
+          
+          <div class="hero-features">
+            <div class="hero-feature">
+              <div class="feature-icon">📸</div>
+              <div class="feature-text">
+                <strong>Galerías HD</strong>
+                <span>Fotos de alta resolución</span>
+              </div>
             </div>
-
-            <div class="practice-objectives">
-              <h2>Objetivos de Aprendizaje</h2>
-              <ul class="objectives-list">
-                <li>Identificar diferentes tipos de minerales y sus propiedades físicas</li>
-                <li>Analizar estructuras geológicas en modelos tridimensionales</li>
-                <li>Comprender procesos geomorfológicos mediante simulaciones virtuales</li>
-                <li>Aplicar técnicas de campo en entornos virtuales controlados</li>
-              </ul>
+            <div class="hero-feature">
+              <div class="feature-icon">🔮</div>
+              <div class="feature-text">
+                <strong>Modelos 3D</strong>
+                <span>Interactivos en Sketchfab</span>
+              </div>
             </div>
-
-            <div class="practice-steps">
-              <h2>Desarrollo de la Práctica</h2>
-              <div class="steps-container">
-                <div class="step">
-                  <div class="step-number">1</div>
-                  <div class="step-content">
-                    <h3>Preparación</h3>
-                    <p>Accede al aula virtual de <strong>Geología y Mineralogía</strong> y familiarízate con el entorno virtual. Descarga la guía de práctica en formato PDF.</p>
-                    <a href="/aulas-virtuales.html" class="btn btn-ghost">Ir a Aulas Virtuales</a>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <div class="step-number">2</div>
-                  <div class="step-content">
-                    <h3>Observación de Especímenes</h3>
-                    <p>Selecciona al menos 5 minerales diferentes del catálogo virtual. Utiliza las herramientas de análisis disponibles para examinar sus propiedades.</p>
-                    <a href="/modelos-3d.html" class="btn btn-ghost">Ver Modelos 3D</a>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <div class="step-number">3</div>
-                  <div class="step-content">
-                    <h3>Análisis Estructural</h3>
-                    <p>Utiliza el aula de <strong>Geomorfología</strong> para estudiar formas del relieve. Identifica procesos erosivos y deposicionales en los modelos interactivos.</p>
-                    <a href="/catalogos.html" class="btn btn-ghost">Ver Catálogos</a>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <div class="step-number">4</div>
-                  <div class="step-content">
-                    <h3>Registro de Observaciones</h3>
-                    <p>Completa la hoja de trabajo incluida en la guía. Registra las características observadas, mediciones realizadas y conclusiones preliminares.</p>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <div class="step-number">5</div>
-                  <div class="step-content">
-                    <h3>Análisis de Resultados</h3>
-                    <p>Compara tus observaciones con los ejemplos de referencia disponibles en el material multimedia. Utiliza los recursos educativos para profundizar en los conceptos.</p>
-                    <a href="/material-multimedia.html" class="btn btn-ghost">Ver Material Multimedia</a>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <div class="step-number">6</div>
-                  <div class="step-content">
-                    <h3>Evaluación</h3>
-                    <p>Completa el cuestionario de evaluación disponible en la plataforma. Revisa los conceptos clave utilizando los manuales y recursos adicionales.</p>
-                    <a href="/manuales-recursos.html" class="btn btn-ghost">Ver Recursos</a>
-                  </div>
-                </div>
+            <div class="hero-feature">
+              <div class="feature-icon">🌐</div>
+              <div class="feature-text">
+                <strong>Fotos 360°</strong>
+                <span>Inmersión total</span>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <div class="feature-icon">📄</div>
+              <div class="feature-text">
+                <strong>Fichas PDF</strong>
+                <span>Material descargable</span>
               </div>
             </div>
           </div>
-
-          <div class="practice-sidebar">
-            <div class="practice-resources">
-              <h3>Recursos de la Práctica</h3>
-              <div class="resource-downloads">
-                <div class="download-item">
-                  <div class="download-info">
-                    <h4>Guía de Práctica Virtual</h4>
-                    <p>Manual completo con instrucciones detalladas y hojas de trabajo</p>
-                    <span class="file-info">PDF - 2.5 MB</span>
-                  </div>
-                  <!-- TODO: Reemplazar con enlace real a PDF -->
-                  <a href="#" class="btn btn-primary" download>
-                    <span>📄</span>
-                    Descargar
-                  </a>
-                </div>
-
-                <div class="download-item">
-                  <div class="download-info">
-                    <h4>Hoja de Trabajo</h4>
-                    <p>Formulario para registro de observaciones y análisis</p>
-                    <span class="file-info">PDF - 0.8 MB</span>
-                  </div>
-                  <!-- TODO: Reemplazar con enlace real a PDF -->
-                  <a href="#" class="btn btn-primary" download>
-                    <span>📋</span>
-                    Descargar
-                  </a>
-                </div>
-
-                <div class="download-item">
-                  <div class="download-info">
-                    <h4>Rúbrica de Evaluación</h4>
-                    <p>Criterios de evaluación y escala de calificaciones</p>
-                    <span class="file-info">PDF - 0.5 MB</span>
-                  </div>
-                  <!-- TODO: Reemplazar con enlace real a PDF -->
-                  <a href="#" class="btn btn-primary" download>
-                    <span>✅</span>
-                    Descargar
-                  </a>
-                </div>
+          
+          <a href="#estaciones" class="hero-cta-btn">
+            <span>Comenzar Recorrido</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <polyline points="19 12 12 19 5 12"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="visual-map">
+            <div class="map-glow"></div>
+            <div class="map-icon">🗺️</div>
+            <div class="map-pins">
+              <div class="map-pin pin-1" data-station="1">
+                <span>1</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-2" data-station="2">
+                <span>2</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-3" data-station="3">
+                <span>3</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-4" data-station="4">
+                <span>4</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-5" data-station="5">
+                <span>5</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-6" data-station="6">
+                <span>6</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-7" data-station="7">
+                <span>7</span>
+                <div class="pin-pulse"></div>
+              </div>
+              <div class="map-pin pin-8" data-station="8">
+                <span>8</span>
+                <div class="pin-pulse"></div>
               </div>
             </div>
-
-            <div class="practice-tips">
-              <h3>Consejos Importantes</h3>
-              <ul class="tips-list">
-                <li><strong>Tiempo estimado:</strong> 2-3 horas de trabajo virtual</li>
-                <li><strong>Navegador recomendado:</strong> Chrome o Firefox actualizado</li>
-                <li><strong>Conexión:</strong> Asegúrate de tener buena conexión a internet</li>
-                <li><strong>Dispositivo:</strong> Computadora con mouse para mejor experiencia 3D</li>
-                <li><strong>Sonido:</strong> Utiliza auriculares para mejor inmersión</li>
-              </ul>
+            <div class="map-route"></div>
+          </div>
+          
+          <div class="floating-cards">
+            <div class="float-card fc-1">
+              <span class="fc-icon">🌋</span>
+              <span class="fc-text">Cráteres</span>
             </div>
-
-            <div class="practice-support">
-              <h3>Soporte Técnico</h3>
-              <p>Si tienes problemas técnicos durante la práctica, contacta al equipo de soporte:</p>
-              <!-- TODO: Reemplazar con email real -->
-              <a href="mailto:soporte@papime.unam.mx" class="btn btn-ghost">
-                📧 Contactar Soporte
-              </a>
+            <div class="float-card fc-2">
+              <span class="fc-icon">💎</span>
+              <span class="fc-text">Minerales</span>
             </div>
+            <div class="float-card fc-3">
+              <span class="fc-icon">🏔️</span>
+              <span class="fc-text">Formaciones</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ÍNDICE DE ESTACIONES PREMIUM
+         ============================================ -->
+    <section id="estaciones" class="stations-index-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Navegación</span>
+          <h2 class="section-title">Índice de Estaciones</h2>
+          <p class="section-description">Selecciona cualquier estación para saltar directamente a su contenido</p>
+        </div>
+        
+        <div class="stations-nav">
+          <a href="#estacion-1" class="station-nav-card">
+            <div class="nav-card-number">01</div>
+            <div class="nav-card-content">
+              <h3>Hummock</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-2" class="station-nav-card">
+            <div class="nav-card-number">02</div>
+            <div class="nav-card-content">
+              <h3>Laguna de Atexcac</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-3" class="station-nav-card">
+            <div class="nav-card-number">03</div>
+            <div class="nav-card-content">
+              <h3>Laguna La Preciosa</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-4" class="station-nav-card">
+            <div class="nav-card-number">04</div>
+            <div class="nav-card-content">
+              <h3>Mina La Preciosa</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-5" class="station-nav-card">
+            <div class="nav-card-number">05</div>
+            <div class="nav-card-content">
+              <h3>Laguna de Aljojuca</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-6" class="station-nav-card">
+            <div class="nav-card-number">06</div>
+            <div class="nav-card-content">
+              <h3>Lahar San Isidro</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-7" class="station-nav-card">
+            <div class="nav-card-number">07</div>
+            <div class="nav-card-content">
+              <h3>Cráter San Isidro</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+          
+          <a href="#estacion-8" class="station-nav-card">
+            <div class="nav-card-number">08</div>
+            <div class="nav-card-content">
+              <h3>Cráter de Tecuitlapa</h3>
+              <span class="nav-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Puebla
+              </span>
+            </div>
+            <div class="nav-card-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ESTACIONES
+         ============================================ -->
+    <section class="stations-section">
+      <div class="container">
+        <div class="stations-grid">
+
+        <!-- Estaciones -->
+        <div class="stations-grid">
+          
+          <!-- ESTACIÓN 1 - Hummock -->
+          <article class="station-card" id="estacion-1">
+            <div class="station-header">
+              <div class="station-badge">1</div>
+              <div class="station-title-group">
+                <h2>HUMMOCK</h2>
+                <p class="station-location">📍 Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <!-- Carrusel de fotos -->
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-1">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%201%20HUMOCK/HUMOCK1.jpg" alt="Hummock - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%201%20HUMOCK/HUMOCK2.jpg" alt="Hummock - Foto 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%201%20HUMOCK/HUMOCK3.jpg" alt="Hummock - Foto 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%201%20HUMOCK/HUMOCK4.jpg" alt="Hummock - Foto 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%201%20HUMOCK/HUMOCK5.jpg" alt="Hummock - Foto 5" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(1, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(1, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-1">1</span> / <span id="total-1">5</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-1">
+                  <button class="carousel-dot active" onclick="goToSlide(1, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(1, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(1, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(1, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(1, 4)"></button>
+                </div>
+              </div>
+              
+              <!-- Botones de acción -->
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 1)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 1)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-1-hummock.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 2 - Laguna de Atexcac -->
+          <article class="station-card" id="estacion-2">
+            <div class="station-header">
+              <div class="station-badge">2</div>
+              <div class="station-title-group">
+                <h2>LAGUNA DE ATEXCAC</h2>
+                <p class="station-location">📍 Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-2">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%202%20LAGUNA%20ATEXCAC/ATEXCAC1.jpg" alt="Atexcac - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%202%20LAGUNA%20ATEXCAC/ATEXCAC%202.jpg" alt="Atexcac - Foto 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <video controls>
+                        <source src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%202%20LAGUNA%20ATEXCAC/ATEXCAC%203.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%202%20LAGUNA%20ATEXCAC/ATEXCAC%204.jpg" alt="Atexcac - Foto 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%202%20LAGUNA%20ATEXCAC/ATEXCAC%205.jpg" alt="Atexcac - Foto 5" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(2, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(2, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-2">1</span> / <span id="total-2">5</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-2">
+                  <button class="carousel-dot active" onclick="goToSlide(2, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(2, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(2, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(2, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(2, 4)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 2)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 2)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-2-atexcac.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 3 - Laguna La Preciosa -->
+          <article class="station-card" id="estacion-3">
+            <div class="station-header">
+              <div class="station-badge">3</div>
+              <div class="station-title-group">
+                <h2>LAGUNA LA PRECIOSA</h2>
+                <p class="station-location">📍 Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-3">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%203%20LAGUNA%20LA%20PRECIOSA/PRECIOSA1.jpg" alt="La Preciosa - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%203%20LAGUNA%20LA%20PRECIOSA/PRECIOSA2.jpg" alt="La Preciosa - Foto 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%203%20LAGUNA%20LA%20PRECIOSA/PRECIOSA3.jpg" alt="La Preciosa - Foto 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%203%20LAGUNA%20LA%20PRECIOSA/PRECIOSA4.jpg" alt="La Preciosa - Foto 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%203%20LAGUNA%20LA%20PRECIOSA/PRECIOSA5.jpg" alt="La Preciosa - Foto 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%203%20LAGUNA%20LA%20PRECIOSA/PRECIOSA6.jpg" alt="La Preciosa - Foto 6" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(3, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(3, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-3">1</span> / <span id="total-3">6</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-3">
+                  <button class="carousel-dot active" onclick="goToSlide(3, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(3, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(3, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(3, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(3, 4)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(3, 5)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 3)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 3)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-3-la-preciosa.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 4 - Mina La Preciosa -->
+          <article class="station-card" id="estacion-4">
+            <div class="station-header">
+              <div class="station-badge">4</div>
+              <div class="station-title-group">
+                <h2>MINA LA PRECIOSA</h2>
+                <p class="station-location">📍 Cerca de Chichicuautla, Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-4">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%204%20MINA%20LA%20PRECIOSA/MINA%201.jpg" alt="Mina - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%204%20MINA%20LA%20PRECIOSA/MINA%202.jpg" alt="Mina - Foto 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <video controls>
+                        <source src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%204%20MINA%20LA%20PRECIOSA/MINA%203.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%204%20MINA%20LA%20PRECIOSA/MINA%204.jpg" alt="Mina - Foto 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%204%20MINA%20LA%20PRECIOSA/MINA%205.jpg" alt="Mina - Foto 5" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(4, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(4, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-4">1</span> / <span id="total-4">5</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-4">
+                  <button class="carousel-dot active" onclick="goToSlide(4, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(4, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(4, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(4, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(4, 4)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 4)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 4)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-4-mina.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 5 - Laguna de Aljojuca -->
+          <article class="station-card" id="estacion-5">
+            <div class="station-header">
+              <div class="station-badge">5</div>
+              <div class="station-title-group">
+                <h2>LAGUNA DE ALJOJUCA</h2>
+                <p class="station-location">📍 Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-5">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%205%20ALJOJUCA/ALJOJUCA%201.jpg" alt="Aljojuca - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <video controls>
+                        <source src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%205%20ALJOJUCA/ALJOJUCA%202.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%205%20ALJOJUCA/ALJOJUCA%203.jpg" alt="Aljojuca - Foto 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%205%20ALJOJUCA/ALJOJUCA%204.jpg" alt="Aljojuca - Foto 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%205%20ALJOJUCA/ALJOJUCA%205.jpg" alt="Aljojuca - Foto 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%205%20ALJOJUCA/ALJOJUCA%206.jpg" alt="Aljojuca - Foto 6" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(5, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(5, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-5">1</span> / <span id="total-5">6</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-5">
+                  <button class="carousel-dot active" onclick="goToSlide(5, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(5, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(5, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(5, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(5, 4)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(5, 5)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d disabled" title="Modelo 3D no disponible">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 5)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-5-aljojuca.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 6 - Lahar San Isidro -->
+          <article class="station-card" id="estacion-6">
+            <div class="station-header">
+              <div class="station-badge">6</div>
+              <div class="station-title-group">
+                <h2>LAHAR SAN ISIDRO</h2>
+                <p class="station-location">📍 Cerca de Cráter San Isidro, Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-6">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%201.jpg" alt="Lahar - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%202.jpg" alt="Lahar - Foto 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%203.jpg" alt="Lahar - Foto 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%204.jpg" alt="Lahar - Foto 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%205.jpg" alt="Lahar - Foto 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%206.jpg" alt="Lahar - Foto 6" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%207.jpg" alt="Lahar - Foto 7" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%208.jpg" alt="Lahar - Foto 8" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%206%20LAHAR%20SAN%20ISIDRO/LAHAR%209.jpg" alt="Lahar - Foto 9" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(6, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(6, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-6">1</span> / <span id="total-6">9</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-6">
+                  <button class="carousel-dot active" onclick="goToSlide(6, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 4)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 5)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 6)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 7)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(6, 8)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 6)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 6)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-6-lahar.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 7 - Cráter San Isidro -->
+          <article class="station-card" id="estacion-7">
+            <div class="station-header">
+              <div class="station-badge">7</div>
+              <div class="station-title-group">
+                <h2>CRÁTER SAN ISIDRO</h2>
+                <p class="station-location">📍 Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-7">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%207%20CRATER%20SAN%20ISIDRO/CRATER%20SAN%20ISIDRO%201.jpg" alt="Cráter San Isidro - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%207%20CRATER%20SAN%20ISIDRO/CRATER%20SAN%20ISIDRO%202.jpg" alt="Cráter San Isidro - Foto 2" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(7, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(7, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-7">1</span> / <span id="total-7">2</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-7">
+                  <button class="carousel-dot active" onclick="goToSlide(7, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(7, 1)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 7)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360 disabled" title="Foto 360° no disponible">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-7-crater-san-isidro.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESTACIÓN 8 - Cráter de Tecuitlapa -->
+          <article class="station-card" id="estacion-8">
+            <div class="station-header">
+              <div class="station-badge">8</div>
+              <div class="station-title-group">
+                <h2>CRÁTER DE TECUITLAPA</h2>
+                <p class="station-location">📍 Puebla</p>
+              </div>
+            </div>
+            <div class="station-content">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel-8">
+                  <div class="carousel-slides">
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%201.jpg" alt="Tecuitlapa - Foto 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%202.jpg" alt="Tecuitlapa - Foto 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%203.jpg" alt="Tecuitlapa - Foto 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <video controls>
+                        <source src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%204.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%205.jpg" alt="Tecuitlapa - Foto 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%206.jpg" alt="Tecuitlapa - Foto 6" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%207.jpg" alt="Tecuitlapa - Foto 7" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%208.jpg" alt="Tecuitlapa - Foto 8" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%209.jpg" alt="Tecuitlapa - Foto 9" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="/assets/FOTOS%20PARA%20CARRUSEL/estacion%208%20CRATER%20TECUITLAPA/TECUITLAPA%2010.jpg" alt="Tecuitlapa - Foto 10" loading="lazy">
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" onclick="moveCarousel(8, -1)">❮</button>
+                  <button class="carousel-btn next" onclick="moveCarousel(8, 1)">❯</button>
+                  <div class="carousel-counter"><span id="counter-8">1</span> / <span id="total-8">10</span></div>
+                </div>
+                <div class="carousel-indicators" id="indicators-8">
+                  <button class="carousel-dot active" onclick="goToSlide(8, 0)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 1)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 2)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 3)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 4)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 5)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 6)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 7)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 8)"></button>
+                  <button class="carousel-dot" onclick="goToSlide(8, 9)"></button>
+                </div>
+              </div>
+              
+              <div class="station-actions">
+                <button class="action-btn btn-3d" onclick="openModal('3d', 8)">
+                  <span class="icon">🔮</span> MODELO 3D
+                </button>
+                <button class="action-btn btn-360" onclick="openModal('360', 8)">
+                  <span class="icon">🌐</span> FOTO 360
+                </button>
+                <a href="/assets/fichas/estacion-8-tecuitlapa.pdf" target="_blank" class="action-btn btn-pdf">
+                  <span class="icon">📄</span> FICHA PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA FINAL
+         ============================================ -->
+    <section class="practica-cta">
+      <div class="cta-bg">
+        <div class="cta-gradient"></div>
+        <div class="cta-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content">
+          <span class="cta-badge">¿Te gustó el recorrido?</span>
+          <h2>Explora más recursos educativos</h2>
+          <p>Descubre modelos 3D adicionales, catálogos de muestras y material multimedia complementario</p>
+          <div class="cta-buttons">
+            <a href="/modelos-3d.html" class="cta-btn cta-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <span>Ver todos los modelos 3D</span>
+            </a>
+            <a href="/catalogos.html" class="cta-btn cta-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <span>Explorar catálogos</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Modal Premium para Modelo 3D y Foto 360 -->
+  <div class="modal-overlay" id="content-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon" id="modal-icon">🔮</span>
+          <div>
+            <h3 class="modal-title" id="modal-title">Título</h3>
+            <span class="modal-subtitle" id="modal-subtitle">Interactúa con el contenido</span>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-loader" id="modal-loader">
+          <div class="loader-spinner"></div>
+          <span>Cargando contenido...</span>
+        </div>
+        <iframe id="modal-iframe" src="" allowfullscreen onload="hideModalLoader()"></iframe>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-tips">
+          <span class="tip" id="tip-rotate">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 4v6h-6"/>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+            </svg>
+            Arrastra para rotar
+          </span>
+          <span class="tip" id="tip-zoom">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="11" y1="8" x2="11" y2="14"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            Scroll para zoom
+          </span>
+          <span class="tip" id="tip-fullscreen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 3 21 3 21 9"/>
+              <polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/>
+              <line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+            Pantalla completa
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- include partials/footer.html -->
+  
+  <script>
+    // Datos de las estaciones
+    const stationData = {
+      1: {
+        name: 'Hummock',
+        model3d: 'https://sketchfab.com/models/9472268074d344dca9d702a988d8cb50/embed?autostart=1&ui_theme=dark',
+        photo360: 'https://kuula.co/share/hQtTx?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      },
+      2: {
+        name: 'Laguna de Atexcac',
+        model3d: 'https://sketchfab.com/models/3e255f3be2734836bc48b63a9374d70d/embed?autostart=1&ui_theme=dark',
+        photo360: 'https://kuula.co/share/hQtqY?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      },
+      3: {
+        name: 'Laguna La Preciosa',
+        model3d: 'https://sketchfab.com/models/ecb501c4839248e3b8403c375c97f49e/embed?autostart=1&ui_theme=dark',
+        photo360: 'https://kuula.co/share/collection/7HZfn?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      },
+      4: {
+        name: 'Mina La Preciosa',
+        model3d: 'https://sketchfab.com/models/6ffb294237b24fbe873864a2dd4fdf26/embed?autostart=1&ui_theme=dark',
+        photo360: 'https://kuula.co/share/collection/7HK6b?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      },
+      5: {
+        name: 'Laguna de Aljojuca',
+        model3d: null,
+        photo360: 'https://kuula.co/share/hQtqt/collection/7HZ0w?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      },
+      6: {
+        name: 'Lahar San Isidro',
+        model3d: 'https://sketchfab.com/models/255996e722b54256ada4c5780160a793/embed?autostart=1&ui_theme=dark',
+        photo360: 'https://kuula.co/share/hyHSp/collection/7HlBz?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      },
+      7: {
+        name: 'Cráter San Isidro',
+        model3d: 'https://sketchfab.com/models/853853c786e84f779c1b5ab62857f667/embed?autostart=1&ui_theme=dark',
+        photo360: null
+      },
+      8: {
+        name: 'Cráter de Tecuitlapa',
+        model3d: 'https://sketchfab.com/models/7cfecd3086e44ee5947541db2ef497d3/embed?autostart=1&ui_theme=dark',
+        photo360: 'https://kuula.co/share/collection/7HK6q?logo=0&info=0&fs=1&vr=1&zoom=1&autorotate=0.1&thumbs=-1&margin=0'
+      }
+    };
+
+    // Índices de carrusel por estación
+    const carouselIndices = {};
+    for (let i = 1; i <= 8; i++) carouselIndices[i] = 0;
+
+    // Mover carrusel
+    function moveCarousel(station, direction) {
+      const carousel = document.getElementById(`carousel-${station}`);
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      
+      carouselIndices[station] = (carouselIndices[station] + direction + totalSlides) % totalSlides;
+      
+      const slidesContainer = carousel.querySelector('.carousel-slides');
+      slidesContainer.style.transform = `translateX(-${carouselIndices[station] * 100}%)`;
+      
+      // Actualizar contador
+      document.getElementById(`counter-${station}`).textContent = carouselIndices[station] + 1;
+      
+      // Actualizar indicadores
+      const indicators = document.querySelectorAll(`#indicators-${station} .carousel-dot`);
+      indicators.forEach((dot, index) => {
+        dot.classList.toggle('active', index === carouselIndices[station]);
+      });
+    }
+
+    // Ir a slide específico
+    function goToSlide(station, index) {
+      carouselIndices[station] = index;
+      
+      const carousel = document.getElementById(`carousel-${station}`);
+      const slidesContainer = carousel.querySelector('.carousel-slides');
+      slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+      
+      document.getElementById(`counter-${station}`).textContent = index + 1;
+      
+      const indicators = document.querySelectorAll(`#indicators-${station} .carousel-dot`);
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    // Hide modal loader
+    function hideModalLoader() {
+      const loader = document.getElementById('modal-loader');
+      if (loader) loader.style.display = 'none';
+    }
+
+    // Abrir modal
+    function openModal(type, station) {
+      const data = stationData[station];
+      const modal = document.getElementById('content-modal');
+      const iframe = document.getElementById('modal-iframe');
+      const title = document.getElementById('modal-title');
+      const icon = document.getElementById('modal-icon');
+      const subtitle = document.getElementById('modal-subtitle');
+      const loader = document.getElementById('modal-loader');
+      
+      if (loader) loader.style.display = 'flex';
+      
+      if (type === '3d' && data.model3d) {
+        icon.textContent = '🔮';
+        title.textContent = `Modelo 3D - ${data.name}`;
+        subtitle.textContent = 'Explora el modelo interactivo';
+        iframe.src = data.model3d;
+        iframe.allow = 'autoplay; fullscreen; xr-spatial-tracking';
+        document.getElementById('tip-rotate').style.display = 'flex';
+        document.getElementById('tip-zoom').style.display = 'flex';
+      } else if (type === '360' && data.photo360) {
+        icon.textContent = '🌐';
+        title.textContent = `Foto 360° - ${data.name}`;
+        subtitle.textContent = 'Vista panorámica inmersiva';
+        iframe.src = data.photo360;
+        iframe.allow = 'xr-spatial-tracking; gyroscope; accelerometer; fullscreen';
+        document.getElementById('tip-rotate').textContent = '↔️ Arrastra para girar';
+        document.getElementById('tip-rotate').style.display = 'flex';
+        document.getElementById('tip-zoom').style.display = 'flex';
+      } else {
+        return; // No disponible
+      }
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Cerrar modal
+    function closeModal() {
+      const modal = document.getElementById('content-modal');
+      const iframe = document.getElementById('modal-iframe');
+      
+      modal.classList.remove('active');
+      iframe.src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Cerrar modal con Escape o click fuera
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('content-modal').addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-backdrop')) {
+        closeModal();
+      }
+    });
+
+    // =========================================
+    // ANIMACIONES DE APARICIÓN AL SCROLL
+    // =========================================
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const animateOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          animateOnScroll.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observar elementos para animación
+    document.querySelectorAll('.station-card, .station-nav-card').forEach((el) => {
+      animateOnScroll.observe(el);
+    });
+
+    // Touch swipe para carruseles móviles
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      let startX = 0;
+      let isDragging = false;
+      const stationNum = parseInt(carousel.id.split('-')[1]);
+
+      carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      });
+
+      carousel.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            moveCarousel(stationNum, 1);
+          } else {
+            moveCarousel(stationNum, -1);
+          }
+        }
+        isDragging = false;
+      });
+    });
+
+    // Smooth scroll para índice de estaciones
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#estacion-') || href === '#estaciones') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    console.log('✨ Práctica Virtual Premium cargada');
+  </script>
 </body>
 </html>
