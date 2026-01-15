@@ -57,6 +57,15 @@ class StaticSiteBuilder {
     });
   }
 
+  // Convertir rutas absolutas a relativas para GitHub Pages
+  convertToRelativePaths(content) {
+    // Convertir href="/..." a href="..."
+    content = content.replace(/href="\/([^"]+)"/g, 'href="$1"');
+    // Convertir src="/..." a src="..."
+    content = content.replace(/src="\/([^"]+)"/g, 'src="$1"');
+    return content;
+  }
+
   // Crear directorio si no existe
   ensureDir(dirPath) {
     if (!fs.existsSync(dirPath)) {
@@ -124,6 +133,9 @@ class StaticSiteBuilder {
             pageName: path.basename(entry.name, '.html'),
             relativePath: relativePath
           });
+
+          // Convertir rutas absolutas a relativas
+          content = this.convertToRelativePaths(content);
 
           // Escribir al directorio dist
           const destPath = path.join(this.distDir, relativeFilePath);
