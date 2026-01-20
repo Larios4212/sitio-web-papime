@@ -7,7 +7,7 @@ let modelsData = {};
 async function loadModelsData() {
   try {
     console.log('📊 Cargando datos de modelos...');
-    const response = await fetch('/data/modelos.json');
+    const response = await fetch('data/modelos.json');
     const data = await response.json();
     
     // Crear mapa de ID -> datos
