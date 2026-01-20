@@ -47,7 +47,7 @@ class StaticSiteBuilder {
     const defaultVars = {
       year: new Date().getFullYear(),
       buildTime: new Date().toISOString(),
-      siteName: 'PAPIME - Visualización 3D'
+      siteName: 'PAPIME PE101825'
     };
     
     const allVars = { ...defaultVars, ...variables };
