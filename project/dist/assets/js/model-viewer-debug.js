@@ -251,11 +251,17 @@ function createModelCard(model) {
     'hidrología': 'hidrologia',
     'geología costera': 'geologia-costera',
     'espeleología': 'espeleologia',
-    'limnología': 'limnologia'
+    'limnología': 'limnologia',
+    'ambientes sedimentarios': 'ambientes-sedimentarios'
   };
   
-  const categoryClass = categoryMap[model.category.toLowerCase()] || 'otros';
-  article.setAttribute('data-category', categoryClass);
+  // Manejar categorías múltiples o únicas
+  const categories = model.categories || [model.category];
+  const categoryClasses = categories.map(cat => categoryMap[cat.toLowerCase()] || 'otros');
+  article.setAttribute('data-category', categoryClasses.join(' '));
+  article.setAttribute('data-categories', JSON.stringify(categoryClasses));
+  
+  const categoryDisplay = categories.join(' / ');
   
   // Usar siempre SVG personalizado como vista previa
   const imageUrl = generateModelPreviewSVG(model);
@@ -265,7 +271,7 @@ function createModelCard(model) {
     <img src="${imageUrl}" alt="Vista previa de ${model.name}" class="model-preview">
     <div class="model-info">
       <h3 class="model-name">${model.name}</h3>
-      <span class="chip">${model.category}</span>
+      <span class="chip">${categoryDisplay}</span>
       <p>${model.description}</p>
       <div class="model-actions">
         <button class="btn btn-primary view-3d-btn" data-model-id="${model.id}">🔍 Ver en 3D</button>
@@ -313,10 +319,19 @@ function filterModels(category) {
   console.log(`🔍 Aplicando filtro: ${category}`);
   
   modelCards.forEach(card => {
-    const cardCategory = card.dataset.category;
-    console.log(`📋 Card categoría: ${cardCategory}`);
+    // Obtener todas las categorías de la card
+    let cardCategories = [];
+    try {
+      cardCategories = JSON.parse(card.dataset.categories || '[]');
+    } catch (e) {
+      cardCategories = [card.dataset.category];
+    }
+    console.log(`📋 Card categorías: ${cardCategories.join(', ')}`);
     
-    if (category === 'all' || cardCategory === category) {
+    // Verificar si alguna categoría coincide
+    const matches = category === 'all' || cardCategories.includes(category);
+    
+    if (matches) {
       card.style.display = '';
       card.classList.remove('hidden');
       visibleCount++;
@@ -348,10 +363,14 @@ function generateModelPreviewSVG(model) {
     'Hidrología': '#3b82f6',
     'Geología Costera': '#14b8a6',
     'Espeleología': '#64748b',
-    'Limnología': '#0ea5e9'
+    'Limnología': '#0ea5e9',
+    'Ambientes Sedimentarios': '#06b6d4'
   };
   
-  const color = categoryColors[model.category] || '#64748b';
+  // Manejar categorías múltiples
+  const categories = model.categories || [model.category];
+  const primaryCategory = categories[0];
+  const color = categoryColors[primaryCategory] || '#64748b';
   const shortName = model.name.length > 25 ? model.name.substring(0, 22) + '...' : model.name;
   
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
@@ -360,7 +379,7 @@ function generateModelPreviewSVG(model) {
     <circle cx="150" cy="80" r="20" fill="${color}" opacity="0.2"/>
     <text x="150" y="85" text-anchor="middle" font-size="16" fill="${color}">🏔️</text>
     <text x="150" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2937">${shortName}</text>
-    <text x="150" y="140" text-anchor="middle" font-size="10" fill="${color}">${model.category}</text>
+    <text x="150" y="140" text-anchor="middle" font-size="10" fill="${color}">${categories.join(' / ')}</text>
     <rect x="10" y="10" width="25" height="12" rx="6" fill="${color}"/>
     <text x="22.5" y="18" text-anchor="middle" font-size="7" fill="white">3D</text>
   </svg>`;
@@ -381,7 +400,8 @@ function createSimpleModelCard(model) {
     'Hidrología': 'hidrologia',
     'Geología Costera': 'geologia-costera',
     'Espeleología': 'espeleologia',
-    'Limnología': 'limnologia'
+    'Limnología': 'limnologia',
+    'Ambientes Sedimentarios': 'ambientes-sedimentarios'
   };
   
   // Iconos por categoría
@@ -392,7 +412,8 @@ function createSimpleModelCard(model) {
     'Hidrología': '💧',
     'Geología Costera': '🏖️',
     'Espeleología': '🦇',
-    'Limnología': '🏞️'
+    'Limnología': '🏞️',
+    'Ambientes Sedimentarios': '🌊'
   };
   
   // Colores por categoría
@@ -403,21 +424,32 @@ function createSimpleModelCard(model) {
     'Hidrología': '#3b82f6',
     'Geología Costera': '#14b8a6',
     'Espeleología': '#64748b',
-    'Limnología': '#0ea5e9'
+    'Limnología': '#0ea5e9',
+    'Ambientes Sedimentarios': '#06b6d4'
   };
   
-  const categoryClass = categoryMap[model.category] || 'otros';
-  const categoryIcon = categoryIcons[model.category] || '🌍';
-  const categoryColor = categoryColors[model.category] || '#667eea';
-  article.setAttribute('data-category', categoryClass);
-  console.log(`🏷️ Card creada con categoría: ${model.category} -> ${categoryClass}`);
+  // Manejar categorías múltiples (array) o categoría única (string)
+  const categories = model.categories || [model.category];
+  const primaryCategory = categories[0];
+  
+  // Generar clases de categorías para filtrado múltiple
+  const categoryClasses = categories.map(cat => categoryMap[cat] || 'otros');
+  article.setAttribute('data-category', categoryClasses.join(' '));
+  article.setAttribute('data-categories', JSON.stringify(categoryClasses));
+  
+  const categoryIcon = categoryIcons[primaryCategory] || '🌍';
+  const categoryColor = categoryColors[primaryCategory] || '#667eea';
+  console.log(`🏷️ Card creada con categorías: ${categories.join(', ')} -> ${categoryClasses.join(', ')}`);
+  
+  // Texto para mostrar las categorías
+  const categoryDisplay = categories.join(' / ');
   
   // Crear el HTML de la card premium
   article.innerHTML = `
     <div class="model-preview-area">
       <div class="preview-icon">${categoryIcon}</div>
       <div class="preview-name">${model.name}</div>
-      <div class="preview-category" style="color: ${categoryColor}">${model.category}</div>
+      <div class="preview-category" style="color: ${categoryColor}">${categoryDisplay}</div>
       <div class="card-overlay">
         <button class="overlay-btn view-3d-btn" data-model-id="${model.id}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -431,7 +463,7 @@ function createSimpleModelCard(model) {
       <h3 class="model-name">${model.name}</h3>
       <span class="model-chip" style="color: ${categoryColor}">
         <span>${categoryIcon}</span>
-        ${model.category}
+        ${categoryDisplay}
       </span>
       <p class="model-description">${model.description}</p>
       <div class="model-actions">
