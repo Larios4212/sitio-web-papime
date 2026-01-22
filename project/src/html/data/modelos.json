@@ -71,6 +71,38 @@
       "description": "Sistema lacuestre de La Preciosa mostrando morfología de cuenca endorreica",
       "sketchfabUrl": "https://sketchfab.com/3d-models/laguna-la-preciosa-ecb501c4839248e3b8403c375c97f49e",
       "preview": "/assets/img/laguna-preciosa-preview.jpg"
+    },
+    {
+      "id": "laguna-atexcac",
+      "name": "Laguna de Atexcac",
+      "categories": ["Geomorfología", "Vulcanología"],
+      "description": "Laguna volcánica de Atexcac, un maar formado por actividad volcánica explosiva que muestra características geomorfológicas y vulcanológicas",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/laguna-de-atexcac-3e255f3be2734836bc48b63a9374d70d",
+      "preview": "/assets/img/laguna-atexcac-preview.jpg"
+    },
+    {
+      "id": "lahar-san-isidro",
+      "name": "Lahar cerca de Cráter San Isidro, Puebla",
+      "categories": ["Geomorfología", "Vulcanología"],
+      "description": "Depósito de lahar (flujo de lodo volcánico) en las cercanías del Cráter San Isidro, Puebla, mostrando procesos geomorfológicos y vulcanológicos",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/lahar-cerca-de-crater-san-isidro-puebla-255996e722b54256ada4c5780160a793",
+      "preview": "/assets/img/lahar-san-isidro-preview.jpg"
+    },
+    {
+      "id": "maqueta-rio",
+      "name": "Maqueta de río",
+      "category": "Ambientes Sedimentarios",
+      "description": "Maqueta didáctica que representa un sistema fluvial y sus procesos de sedimentación",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/maqueta-de-rio-7f6b1598ae154f948e5d178338b6a283",
+      "preview": "/assets/img/maqueta-rio-preview.jpg"
+    },
+    {
+      "id": "maqueta-estratovolcan",
+      "name": "Maqueta de estratovolcán",
+      "category": "Vulcanología",
+      "description": "Maqueta didáctica de un estratovolcán mostrando su estructura interna y características morfológicas",
+      "sketchfabUrl": "https://sketchfab.com/3d-models/maqueta-de-estratovolcan-23f7e92312224f1cbd1ee5307f2acede",
+      "preview": "/assets/img/maqueta-estratovolcan-preview.jpg"
     }
   ]
 }
