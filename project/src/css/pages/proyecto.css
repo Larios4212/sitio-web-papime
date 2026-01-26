@@ -628,6 +628,22 @@
   border-radius: 2px;
 }
 
+/* Developer Card Special Styles */
+.developer-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.developer-card:hover {
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+}
+
+.developer-avatar {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white;
+}
+
 .participante-hover {
   position: absolute;
   right: 20px;
