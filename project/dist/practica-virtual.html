@@ -638,9 +638,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 1)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-1-hummock.pdf" target="_blank" class="action-btn btn-pdf">
+                <span class="action-btn btn-pdf disabled" title="Infografía no disponible">
                   <span class="icon">📄</span> FICHA PDF
-                </a>
+                </span>
               </div>
             </div>
           </article>
@@ -696,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 2)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-2-atexcac.pdf" target="_blank" class="action-btn btn-pdf">
+                <a href="assets/fichas/Laguna%20de%20Atexcac.pdf" target="_blank" class="action-btn btn-pdf">
                   <span class="icon">📄</span> FICHA PDF
                 </a>
               </div>
@@ -756,7 +756,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 3)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-3-la-preciosa.pdf" target="_blank" class="action-btn btn-pdf">
+                <a href="assets/fichas/Laguna%20La%20Preciosa.pdf" target="_blank" class="action-btn btn-pdf">
                   <span class="icon">📄</span> FICHA PDF
                 </a>
               </div>
@@ -814,7 +814,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 4)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-4-mina.pdf" target="_blank" class="action-btn btn-pdf">
+                <a href="assets/fichas/Mina%20la%20Preciosa.pdf" target="_blank" class="action-btn btn-pdf">
                   <span class="icon">📄</span> FICHA PDF
                 </a>
               </div>
@@ -876,7 +876,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 5)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-5-aljojuca.pdf" target="_blank" class="action-btn btn-pdf">
+                <a href="assets/fichas/Laguna%20Aljojuca.pdf" target="_blank" class="action-btn btn-pdf">
                   <span class="icon">📄</span> FICHA PDF
                 </a>
               </div>
@@ -948,9 +948,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 6)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-6-lahar.pdf" target="_blank" class="action-btn btn-pdf">
+                <span class="action-btn btn-pdf disabled" title="Infografía no disponible">
                   <span class="icon">📄</span> FICHA PDF
-                </a>
+                </span>
               </div>
             </div>
           </article>
@@ -992,9 +992,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360 disabled" title="Foto 360° no disponible">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-7-crater-san-isidro.pdf" target="_blank" class="action-btn btn-pdf">
+                <span class="action-btn btn-pdf disabled" title="Infografía no disponible">
                   <span class="icon">📄</span> FICHA PDF
-                </a>
+                </span>
               </div>
             </div>
           </article>
@@ -1070,7 +1070,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="action-btn btn-360" onclick="openModal('360', 8)">
                   <span class="icon">🌐</span> FOTO 360
                 </button>
-                <a href="assets/fichas/estacion-8-tecuitlapa.pdf" target="_blank" class="action-btn btn-pdf">
+                <a href="assets/fichas/Cr%C3%A1ter%20de%20Tecuitlapa.pdf" target="_blank" class="action-btn btn-pdf">
                   <span class="icon">📄</span> FICHA PDF
                 </a>
               </div>
@@ -1121,6 +1121,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="modal-backdrop"></div>
     <div class="modal-content">
       <div class="modal-header">
+        <a href="https://www.ingenieria.unam.mx/" target="_blank" rel="noopener" class="modal-header-logo" title="Facultad de Ingeniería UNAM">
+          <img src="assets/img/logo-fi-unam.gif" alt="Logo Facultad de Ingeniería UNAM" class="modal-logo modal-logo-unam">
+        </a>
         <div class="modal-title-group">
           <span class="modal-icon" id="modal-icon">🔮</span>
           <div>
@@ -1128,6 +1131,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <span class="modal-subtitle" id="modal-subtitle">Interactúa con el contenido</span>
           </div>
         </div>
+        <a href="https://dgapa.unam.mx/" target="_blank" rel="noopener" class="modal-header-logo modal-header-logo-right" title="DGAPA UNAM">
+          <img src="assets/img/logo-dgapa.png" alt="Logo DGAPA" class="modal-logo modal-logo-dgapa">
+          <span class="modal-papime-text">PAPIME PE101825</span>
+        </a>
         <button class="modal-close" onclick="closeModal()">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"/>

@@ -717,15 +717,65 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 28px;
+  padding: 15px 28px;
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: #fff;
+  gap: 15px;
 }
 
 .modal-header h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}
+
+/* Logos en el header del modal */
+.modal-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.modal-header-logo-right {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.modal-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.modal-logo-unam {
+  height: 50px;
+}
+
+.modal-logo-dgapa {
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+a.modal-header-logo {
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+a.modal-header-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.modal-papime-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
 }
 
 .modal-close {
@@ -865,6 +915,28 @@
   .model-controls {
     flex-wrap: wrap;
   }
+
+  /* Responsive logos modal */
+  .modal-header {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .modal-header h3 {
+    font-size: 0.9rem;
+  }
+
+  .modal-logo-unam {
+    height: 35px;
+  }
+
+  .modal-logo-dgapa {
+    height: 22px;
+  }
+
+  .modal-papime-text {
+    font-size: 0.55rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -885,4 +957,19 @@
   .model-actions {
     flex-direction: column;
   }
-}
+
+  /* Logos más pequeños en móvil */
+  .modal-logo-unam {
+    height: 28px;
+  }
+
+  .modal-logo-dgapa {
+    height: 18px;
+  }
+
+  .modal-papime-text {
+    font-size: 0.5rem;
+  }
+
+  .modal-header h3 {
+    font-size: 0.8rem;

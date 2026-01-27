@@ -7,7 +7,8 @@
       "descripcion": "Estructura volcánica característica formada por el colapso y deslizamiento de material durante erupciones explosivas.",
       "foto360": "https://kuula.co/post/hQtTx",
       "modelo3d": "https://sketchfab.com/3d-models/hummock3d-9472268074d344dca9d702a988d8cb50",
-      "sketchfabId": "9472268074d344dca9d702a988d8cb50"
+      "sketchfabId": "9472268074d344dca9d702a988d8cb50",
+      "ficha": null
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "descripcion": "Lago de cráter maar con aguas de tonalidad azul turquesa, formado por actividad volcánica freatomagmática.",
       "foto360": "https://kuula.co/post/hQtqY",
       "modelo3d": "https://sketchfab.com/3d-models/laguna-de-atexcac-3e255f3be2734836bc48b63a9374d70d",
-      "sketchfabId": "3e255f3be2734836bc48b63a9374d70d"
+      "sketchfabId": "3e255f3be2734836bc48b63a9374d70d",
+      "ficha": "assets/fichas/Laguna de Atexcac.pdf"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "descripcion": "Cráter maar con lago interior, ejemplo representativo de vulcanismo explosivo en la región de los Llanos de San Juan.",
       "foto360": "https://kuula.co/post/n1/collection/7HZfn",
       "modelo3d": "https://sketchfab.com/3d-models/laguna-la-preciosa-ecb501c4839248e3b8403c375c97f49e",
-      "sketchfabId": "ecb501c4839248e3b8403c375c97f49e"
+      "sketchfabId": "ecb501c4839248e3b8403c375c97f49e",
+      "ficha": "assets/fichas/Laguna La Preciosa.pdf"
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "descripcion": "Sitio de extracción minera que expone secuencias estratigráficas y estructuras geológicas de interés educativo.",
       "foto360": "https://kuula.co/post/n1/collection/7HK6b",
       "modelo3d": "https://sketchfab.com/3d-models/mina-cerca-de-chichicuautla-puebla-6ffb294237b24fbe873864a2dd4fdf26",
-      "sketchfabId": "6ffb294237b24fbe873864a2dd4fdf26"
+      "sketchfabId": "6ffb294237b24fbe873864a2dd4fdf26",
+      "ficha": "assets/fichas/Mina la Preciosa.pdf"
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "descripcion": "Lago de cráter volcánico con paredes pronunciadas, ideal para el estudio de procesos volcánicos y limnológicos.",
       "foto360": "https://kuula.co/post/hQtqt/collection/7HZ0w",
       "modelo3d": null,
-      "sketchfabId": null
+      "sketchfabId": null,
+      "ficha": "assets/fichas/Laguna Aljojuca.pdf"
     },
     {
       "id": 6,
@@ -61,7 +66,8 @@
         }
       ],
       "modelo3d": "https://sketchfab.com/3d-models/lahar-cerca-de-crater-san-isidro-puebla-255996e722b54256ada4c5780160a793",
-      "sketchfabId": "255996e722b54256ada4c5780160a793"
+      "sketchfabId": "255996e722b54256ada4c5780160a793",
+      "ficha": null
     },
     {
       "id": 7,
@@ -70,7 +76,8 @@
       "descripcion": "Estructura volcánica tipo maar que permite estudiar la morfología de cráteres y procesos eruptivos freatomagmáticos.",
       "foto360": null,
       "modelo3d": "https://sketchfab.com/3d-models/crater-san-isidro-puebla-853853c786e84f779c1b5ab62857f667",
-      "sketchfabId": "853853c786e84f779c1b5ab62857f667"
+      "sketchfabId": "853853c786e84f779c1b5ab62857f667",
+      "ficha": null
     },
     {
       "id": 8,
@@ -79,7 +86,8 @@
       "descripcion": "Cráter maar seco con excelente preservación morfológica, utilizado para estudios de vulcanología y geomorfología.",
       "foto360": "https://kuula.co/embed/collection/7HK6q",
       "modelo3d": "https://sketchfab.com/3d-models/crater-de-tecuitlapa-puebla-mexico-7cfecd3086e44ee5947541db2ef497d3",
-      "sketchfabId": "7cfecd3086e44ee5947541db2ef497d3"
+      "sketchfabId": "7cfecd3086e44ee5947541db2ef497d3",
+      "ficha": "assets/fichas/Cráter de Tecuitlapa.pdf"
     }
   ]
 }
