@@ -559,6 +559,32 @@
   transition: all 0.3s ease;
 }
 
+/* Avatar placeholder cuando no hay foto */
+.participante-avatar .avatar-placeholder {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.participante-avatar .avatar-placeholder svg {
+  width: 36px;
+  height: 36px;
+  color: #94a3b8;
+}
+
+.participante-card:hover .avatar-placeholder {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.participante-card:hover .avatar-placeholder svg {
+  color: white;
+}
+
 .participante-card:hover .avatar-img,
 .participante-card:hover .avatar-photo {
   background: linear-gradient(135deg, #667eea, #764ba2);

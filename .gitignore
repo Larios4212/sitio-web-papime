@@ -19,3 +19,9 @@ npm-debug.log*
 # Archivos temporales
 *.tmp
 *.temp
+
+# Videos originales HEVC (superan 100 MB de GitHub, solo se usan los -web.mp4)
+project/src/assets/videos/estacion-*.mp4
+project/dist/assets/videos/estacion-*.mp4
+!project/src/assets/videos/*-web.mp4
+!project/dist/assets/videos/*-web.mp4

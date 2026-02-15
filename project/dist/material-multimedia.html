@@ -442,108 +442,87 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
     <!-- ============================================
-         VIDEOS SECTION
+         VIDEOS DEL PROYECTO - ESTACIONES (CARRUSEL)
          ============================================ -->
     <section id="videos" class="content-section videos-section">
       <div class="container">
         <div class="section-header">
-          <div class="section-icon">🎬</div>
-          <span class="section-badge">Contenido Audiovisual</span>
-          <h2 class="section-title">Videos Educativos</h2>
+          <div class="section-icon">🎥</div>
+          <span class="section-badge">Videos del Proyecto PAPIME</span>
+          <h2 class="section-title">Recorridos por las Estaciones</h2>
           <p class="section-description">
-            Explora nuestra colección de videos que explican conceptos geológicos 
-            de manera clara y visual
+            Videos grabados en campo de las estaciones geológicas de la práctica virtual
           </p>
         </div>
-        
-        <div class="videos-grid">
-          <!-- Video 1 - Geología General UNAM -->
-          <article class="video-card video-featured">
-            <div class="video-wrapper">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/O-WVbqOO2KY" title="Geología de México" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+
+        <!-- Carrusel de videos -->
+        <div class="video-carousel-container">
+          <div class="video-carousel" id="video-carousel">
+            <div class="video-carousel-slides">
+              <!-- Slide 1: Hummock -->
+              <div class="video-carousel-slide" data-title="Hummock" data-station="Estación 1" data-desc="Estructura volcánica formada por colapso y deslizamiento durante erupciones explosivas" data-location="Puebla">
+                <video controls preload="metadata" playsinline>
+                  <source src="assets/videos/estacion-1-hummock-web.mp4" type="video/mp4">
+                  Tu navegador no soporta video HTML5.
+                </video>
               </div>
-              <div class="video-overlay">
-                <span class="video-duration">12:47</span>
+              <!-- Slide 2: Laguna de Atexcac -->
+              <div class="video-carousel-slide" data-title="Laguna de Atexcac" data-station="Estación 2" data-desc="Lago de cráter maar con aguas de tonalidad azul turquesa" data-location="Puebla">
+                <video controls preload="metadata" playsinline>
+                  <source src="assets/videos/estacion-2-atexcac-web.mp4" type="video/mp4">
+                  Tu navegador no soporta video HTML5.
+                </video>
               </div>
-            </div>
-            <div class="video-info">
-              <span class="video-badge">⭐ Destacado</span>
-              <h3>Geología de México</h3>
-              <p>Introducción a la diversidad geológica del territorio mexicano</p>
-              <div class="video-meta">
-                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 12 min</span>
-                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 15.2k</span>
+              <!-- Slide 3: Laguna La Preciosa -->
+              <div class="video-carousel-slide" data-title="Laguna La Preciosa" data-station="Estación 3" data-desc="Cráter maar con lago interior, ejemplo de vulcanismo explosivo" data-location="Puebla">
+                <video controls preload="metadata" playsinline>
+                  <source src="assets/videos/estacion-3-la-preciosa-web.mp4" type="video/mp4">
+                  Tu navegador no soporta video HTML5.
+                </video>
               </div>
-            </div>
-          </article>
-          
-          <!-- Video 2 - Vulcanología -->
-          <article class="video-card">
-            <div class="video-wrapper">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/LQwZwKS9RPs" title="Volcanes de México" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <!-- Slide 4: Mina La Preciosa -->
+              <div class="video-carousel-slide" data-title="Mina La Preciosa" data-station="Estación 4" data-desc="Sitio de extracción minera con secuencias estratigráficas" data-location="Chichicuautla, Puebla">
+                <video controls preload="metadata" playsinline>
+                  <source src="assets/videos/estacion-4-mina-web.mp4" type="video/mp4">
+                  Tu navegador no soporta video HTML5.
+                </video>
               </div>
-              <div class="video-overlay">
-                <span class="video-duration">18:32</span>
-              </div>
-            </div>
-            <div class="video-info">
-              <h3>Volcanes de México</h3>
-              <p>Principales volcanes activos y su monitoreo</p>
-              <div class="video-meta">
-                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 18 min</span>
-              </div>
-            </div>
-          </article>
-          
-          <!-- Video 3 - Rocas y Minerales -->
-          <article class="video-card">
-            <div class="video-wrapper">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/uPE5jX6vRmI" title="Tipos de Rocas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="video-overlay">
-                <span class="video-duration">10:15</span>
+              <!-- Slide 5: Cráter de Tecuitlapa -->
+              <div class="video-carousel-slide" data-title="Cráter de Tecuitlapa" data-station="Estación 8" data-desc="Cráter maar seco con excelente preservación morfológica" data-location="Puebla">
+                <video controls preload="metadata" playsinline>
+                  <source src="assets/videos/estacion-8-tecuitlapa-web.mp4" type="video/mp4">
+                  Tu navegador no soporta video HTML5.
+                </video>
               </div>
             </div>
-            <div class="video-info">
-              <h3>Tipos de Rocas</h3>
-              <p>Clasificación: ígneas, sedimentarias y metamórficas</p>
-              <div class="video-meta">
-                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 min</span>
-              </div>
+
+            <!-- Botones prev/next -->
+            <button class="vcarousel-btn vcarousel-prev" aria-label="Video anterior">❮</button>
+            <button class="vcarousel-btn vcarousel-next" aria-label="Video siguiente">❯</button>
+
+            <!-- Contador -->
+            <div class="vcarousel-counter"><span id="vc-current">1</span> / <span id="vc-total">5</span></div>
+          </div>
+
+          <!-- Info del video actual -->
+          <div class="vcarousel-info">
+            <span class="vcarousel-badge" id="vc-badge">⭐ Estación 1</span>
+            <h3 id="vc-title">Hummock</h3>
+            <p id="vc-desc">Estructura volcánica formada por colapso y deslizamiento durante erupciones explosivas</p>
+            <div class="vcarousel-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="vc-location">Puebla</span>
             </div>
-          </article>
-          
-          <!-- Video 4 - Tectónica de Placas -->
-          <article class="video-card">
-            <div class="video-wrapper">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ryrXAGY1dmE" title="Tectónica de Placas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="video-overlay">
-                <span class="video-duration">14:20</span>
-              </div>
-            </div>
-            <div class="video-info">
-              <h3>Tectónica de Placas</h3>
-              <p>Movimiento de las placas tectónicas y sus efectos</p>
-              <div class="video-meta">
-                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 14 min</span>
-              </div>
-            </div>
-          </article>
-        </div>
-        
-        <div class="section-action">
-          <button class="load-more-btn">
-            <span>Ver más videos</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="5" x2="12" y2="19"/>
-              <polyline points="19 12 12 19 5 12"/>
-            </svg>
-          </button>
+          </div>
+
+          <!-- Indicadores / dots -->
+          <div class="vcarousel-indicators" id="vc-indicators">
+            <button class="vcarousel-dot active" data-index="0"></button>
+            <button class="vcarousel-dot" data-index="1"></button>
+            <button class="vcarousel-dot" data-index="2"></button>
+            <button class="vcarousel-dot" data-index="3"></button>
+            <button class="vcarousel-dot" data-index="4"></button>
+          </div>
         </div>
       </div>
     </section>
@@ -1133,6 +1112,52 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
     });
     
     console.log('🎬 Material Multimedia Premium cargada');
+
+    /* =============================================
+       VIDEO CAROUSEL
+       ============================================= */
+    (function() {
+      const slides = document.querySelectorAll('.video-carousel-slide');
+      const slidesContainer = document.querySelector('.video-carousel-slides');
+      const dots = document.querySelectorAll('.vcarousel-dot');
+      const prevBtn = document.querySelector('.vcarousel-prev');
+      const nextBtn = document.querySelector('.vcarousel-next');
+      const counterCurrent = document.getElementById('vc-current');
+      const badge = document.getElementById('vc-badge');
+      const title = document.getElementById('vc-title');
+      const desc = document.getElementById('vc-desc');
+      const location = document.getElementById('vc-location');
+      let current = 0;
+      const total = slides.length;
+
+      function goTo(index) {
+        // Pausar video actual
+        const currentVideo = slides[current].querySelector('video');
+        if (currentVideo) { currentVideo.pause(); }
+
+        current = (index + total) % total;
+        slidesContainer.style.transform = 'translateX(-' + (current * 100) + '%)';
+
+        // Actualizar contador
+        counterCurrent.textContent = current + 1;
+
+        // Actualizar dots
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+
+        // Actualizar info
+        var slide = slides[current];
+        badge.textContent = (current === 0 ? '⭐ ' : '') + slide.dataset.station;
+        title.textContent = slide.dataset.title;
+        desc.textContent = slide.dataset.desc;
+        location.textContent = slide.dataset.location;
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() { goTo(parseInt(this.dataset.index)); });
+      });
+    })();
   </script>
 </body>
 </html>
